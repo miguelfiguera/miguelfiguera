@@ -1,13 +1,14 @@
 import React from "react";
 
 export default function Home() {
+//had to check for the writing on this part... should be less than this.
+
   return (
     <main className="container">
         <div className="row">
       <p>
         I'm a Musician turn Developer, I finished my studies in music and later,
-        through the pandemic I choose a different path, not leaving music
-        behind, but beginning a new journey. I've been studying with
+        through the pandemic, I choose a different path beginning a new journey. I've been studying with
         <strong>
           <a href="https://www.freecodecamp.org/perrosaurio725">
             {" "}

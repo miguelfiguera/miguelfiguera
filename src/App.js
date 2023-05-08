@@ -12,8 +12,8 @@ function App() {
       Personal web Site
     <Header/>
     <Navbar/>
-      <Home />
-      <Footer/>
+    <Home />
+    <Footer/>
     </div>
   );
 }
