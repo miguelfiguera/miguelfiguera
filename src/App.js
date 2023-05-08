@@ -4,6 +4,7 @@ import bootstrap from 'bootstrap'
 import Home from './Componentes/Home';
 import Header from './Componentes/Header';
 import Navbar from './Componentes/Navbar'
+import Footer from './Componentes/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Header/>
     <Navbar/>
       <Home />
+      <Footer/>
     </div>
   );
 }
