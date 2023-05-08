@@ -45,19 +45,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="row align-items-start">
-        <h2 className="text-center">Tools & Languages</h2>
 
-        <div className="col ">
-          <h3 className="text-center">Languages</h3>
-          JS, HTML, Ruby, CSS, SASS, Python(Beginner)
-        </div>
-        <div className="col">
-          <h3 className="text-center">Dev-Tools</h3>
-          React, Node.js, Rails, Git, Bootstrap, Jest, Minitest, Capybara,
-          PostgreSQL, SQL, NPM, VSCode, gitHub, Bash.
-        </div>
-      </div>
     </main>
   );
 }

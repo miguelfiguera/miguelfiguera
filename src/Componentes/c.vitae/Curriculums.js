@@ -5,9 +5,7 @@ import { useState } from "react";
 
 export function Curriculums() {
   const [modalMusic, setModalMusic] = useState(false);
-  const [modalDev,setModalDev] = useState(false);
-
-
+  const [modalDev, setModalDev] = useState(false);
 
   return (
     <div className="container ">

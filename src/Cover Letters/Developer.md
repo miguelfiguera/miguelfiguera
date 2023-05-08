@@ -2,9 +2,10 @@
 
 I graduated from college as a **Musician**, this may sound too far away from the developer ecosystem, and it is. Becoming a developer was a self-taught journey most of the time. I had the help of some really extensive free resources like [The Odin Project](https://www.theodinproject.com/) (where I took the Ruby on Rails path, React, Node.js, and Next.js) and [Free Code Camp](https://www.freecodecamp.org/perrosaurio725) (where I centered my attention to JavaScript and Python).
 
-Both of them gave me the content, but I had to earn all the knowledge with reading, practice, developing small toy projects up to big ones, and *walking the path* as some say. I did this with only my will to learn.
+Both of them gave me the content, but I had to earn all the knowledge with reading, practice, developing small toy projects up to big ones, and _walking the path_ as some say. I did this with only my will to learn.
 
 My toolkit is composed of:
+
 1. Ruby & Ruby on Rails
 2. React
 3. Vite & webpack.

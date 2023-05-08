@@ -16,13 +16,17 @@ export default function Curriculum({ curriculum }) {
     });
   };
 
-  const experience = () => {curriculum.experience.map((e)=>{
-    return <li>{e}</li>
-  })};
+  const experience = () => {
+    curriculum.experience.map((e) => {
+      return <li>{e}</li>;
+    });
+  };
 
-  const programmingLanguages = () => {curriculum.programmingLanguages.map((e)=>{
-    return <li>{e}</li>}
-  )};
+  const programmingLanguages = () => {
+    curriculum.programmingLanguages.map((e) => {
+      return <li>{e}</li>;
+    });
+  };
 
   const education = () => {
     curriculum.education.map((e) => {
@@ -55,7 +59,9 @@ export default function Curriculum({ curriculum }) {
             <h3>Experience</h3>
             <ul>{experience}</ul>
 
-            {curriculum.type === "music" ? null : <ul>{programmingLanguages}</ul>}
+            {curriculum.type === "music" ? null : (
+              <ul>{programmingLanguages}</ul>
+            )}
           </div>
         </div>
       </div>
