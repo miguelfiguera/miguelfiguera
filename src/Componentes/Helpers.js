@@ -111,65 +111,61 @@ const Languages = [
   { id: uniqid(), name: "Css3", level: "proficient", logo: cssLogo },
 ];
 
-const MusicCV = [
+const MusicCV =
   {
     type: "music",
-    photo: myPhoto,
+   photo: myPhoto,
     title: "B.A. In Jazz Music.",
     profile: "I'm a musician, arranger, teacher, and web-developer. ",
     profile2: "Going boldly to become a videogame Composer.",
-    languages: {
-      first: "English: conversational.",
-      second: "Spanish: Native.",
-    },
-    experience: {
-      BonnieRot: "BonnieRot Jazz Trio (2014-2015)",
-      Malay: "Malay Reggae (2014-2015)",
-      Toto: "Drum Teacher in Toto Music Las mercedes. (2014-2015)",
-      Hebraica: "Drum Teacher in Hebraica. (2016-2017)",
-      Yamaha: "Drum teacher for Audioline-Yamaha Venezuela. (2017)",
-      Myself: "Private drum teacher (2018 to the date).",
-      alsoMyself:
+    languages: [ 
+       "English: conversational.",
+       "Spanish: Native.",
+    ],
+    experience: [ 
+    "BonnieRot Jazz Trio (2014-2015)",
+     "Malay Reggae (2014-2015)",
+       "Drum Teacher in Toto Music Las mercedes. (2014-2015)",
+       "Drum Teacher in Hebraica. (2016-2017)",
+       "Drum teacher for Audioline-Yamaha Venezuela. (2017)",
+       "Private drum teacher (2018 to the date).",
         "Functional Harmony & Non Functional Harmony teacher. (2016 to the date).",
-    },
-    programmingLanguages: {},
-    education: {
-      2017: "B.A In Jazz Music - UNEARTE (2017)",
-      2020: "Diploma on techno - pedagogy and new technologies for teaching. UPEL(2020) ",
-      2021: "Advanced trading course. CEIF (2021)",
-    },
-  },
-];
+    ],
+    programmingLanguages:[],
+    education: [
+       "B.A In Jazz Music - UNEARTE (2017)",
+       "Diploma on techno - pedagogy and new technologies for teaching. UPEL(2020) ",
+       "Advanced trading course. CEIF (2021)",
+    ]
+  };
 
-const DeveloperCV = [
+const DeveloperCV =
   {
     type: "dev",
     photo: myPhoto,
     title: "B.A. In Jazz Music.",
     profile: "I'm a musician, arranger, teacher, and web-developer. ",
     profile2: "Going boldly to become an ethical hacker.",
-    languages: {
-      first: "English: conversational.",
-      second: "Spanish: Native.",
-    },
-    experience: {
-      Projects: "See the projects on my website.",
-    },
-    programmingLanguages: {
-      python: "Python: begginner.",
-      ruby: "Ruby: proficient.",
-      js: "JavaScript: proficient.",
-      html: "Html5: proficient.",
-      css3: "Css3: Proficient.",
-    },
-    education: {
-      2023: "FreeCodeCamp.org Curriculum (2023)",
-      2022: "The Odin Project: Ruby Path (2022)",
-      2021: "Advanced trading course. CEIF (2021)",
-      2020: "Diploma on techno - pedagogy and new technologies for teaching. UPEL(2020) ",
-    },
-  },
-];
+    languages:[
+     "English: conversational.",
+   "Spanish: Native.",
+    ],
+    experience:[
+    "See the projects on my website."
+    ],
+    programmingLanguages: [ 
+       "Python: begginner.",
+       "Ruby: proficient.",
+       "JavaScript: proficient.",
+       "Html5: proficient.",
+       "Css3: Proficient."],
+    education: [ 
+       "FreeCodeCamp.org Curriculum (2023)",
+       "The Odin Project: Ruby Path (2022)",
+       "Advanced trading course. CEIF (2021)",
+       "Diploma on techno - pedagogy and new technologies for teaching. UPEL(2020) ",
+    ]
+  };
 
 export function theTools() {
   return Tools;

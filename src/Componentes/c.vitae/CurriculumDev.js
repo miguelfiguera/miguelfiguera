@@ -1,40 +1,33 @@
 import React from "react";
 import { ReactDOM } from "react";
 import { Link } from "react-router-dom";
+import {DeveloperCv} from '../Helpers'
+import Li from "./Li";
 
 //Create a Modal using dialog may be, for this part
 
-export default function Curriculum({ curriculum }) {
-  const imgSize = {
-    maxWidth: 200,
-    maxHeight: 200,
-  };
+export default function CurriculumDev() {
+ 
+ const curriculum=DeveloperCv()
 
-  const languages = () => {
-    curriculum.languages.map((e) => {
-      return <li>{e}</li>;
+  const languages = curriculum.languages.map((e) => {
+      return <Li object={e}/>;
     });
-  };
-
-  const experience = () => {
-    curriculum.experience.map((e) => {
-      return <li>{e}</li>;
+  
+  const experience = curriculum.experience.map((e) => {
+      return <Li object={e}/>;
     });
-  };
-
-  const programmingLanguages = () => {
-    curriculum.programmingLanguages.map((e) => {
-      return <li>{e}</li>;
+  
+  const programmingLanguages =curriculum.programmingLanguages.map((e) => {
+      return <Li object={e}/>;
     });
-  };
-
-  const education = () => {
-    curriculum.education.map((e) => {
-      return <li>{e}</li>;
+  const education = curriculum.education.map((e) => {
+      return <Li object={e}/>;
     });
-  };
 
-  return (
+
+  return(
+    <div className="overlay" >
     <div className="container">
       <div className="row align-items-start">
         <img src={curriculum.photo} className="col" alt="Miguel Figuera" />
@@ -58,17 +51,21 @@ export default function Curriculum({ curriculum }) {
           <div className="container col">
             <h3>Experience</h3>
             <ul>{experience}</ul>
+            </div>
 
             {curriculum.type === "music" ? null : (
+                <div>
+                <h3>Programming Languages</h3>
               <ul>{programmingLanguages}</ul>
+              </div>
             )}
-          </div>
         </div>
       </div>
 
       <div className="modal-footer">
         <button className="btn btn-primary"> Print</button>
-        <button className="btn btn-danger"> Return</button>
+        <Link to='/'> <button className="btn btn-danger"> Return</button></Link>
+      </div>
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import uniqid from "uniqid";
 import bootstrap from "bootstrap";
 import GeneralHome from "./Componentes/GeneralHome";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CurriculumDev from "./Componentes/c.vitae/CurriculumDev";
+import CurriculumMusic from "./Componentes/c.vitae/CurriculumMusic";
 
 function App() {
   const backGround = {
@@ -16,8 +18,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" Component={GeneralHome} />
-        <Route exact path="/miguelfiguera/dev" />
-        <Route exact path="/miguelfiguera/music" />
+        <Route exact path="/miguelfiguera/dev" Component={CurriculumDev}/>
+        <Route exact path="/miguelfiguera/music" Component={CurriculumMusic} />
       </Routes>
     </div>
     </BrowserRouter>
