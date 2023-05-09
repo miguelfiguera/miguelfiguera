@@ -16,6 +16,8 @@ My toolkit is composed of:
 8. Html5
 9. Css3
 10. Bootstrap/Tailwind.
+11. gitHub
+12. Python (still learning).
 
 This journey gave me the tools to understand how is usually the workflow of a developer, the way to tackle new unknown obstacles, and the resilience to keep up, because somewhere, on some web, someone has the answer even if I do not.
 

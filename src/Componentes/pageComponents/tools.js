@@ -7,27 +7,29 @@ export default function About() {
 
 
 const toolsLogos=theTools().map((e)=>{
-    return <Imges key={e.id}  theObject={e} />
+    return <Imges key={e.id}  theObject={e}/>
 })
 
 const Languages= theLanguages().map((e)=>{
         return <Imges key={e.id} theObject={e} />
     })
 
+    const maxWidth={maxWidth:'450px'}
 
+    
   return (
-    <div className="row align-items-start flex-wrap">
+    <div className="row align-items-start flex-wrap" id='tools'>
       <h2 className="text-center mt-3 mb-3">Tools & Languages</h2>
 
       <div className="col text-center">
         <h3 className="text">Languages</h3>
-        <div className="container mb-5">
+        <div className="container d-flex p-2 flex-wrap justify-content-center" style={maxWidth}>
         {Languages}
         </div>
       </div>
       <div className="col text-center">
         <h3 className="text-center">Dev-Tools</h3>
-        <div className="container mb-5">
+        <div className="container d-flex p-2 flex-wrap justify-content-center" style={maxWidth}>
 
         {toolsLogos}
       </div>

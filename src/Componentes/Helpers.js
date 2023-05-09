@@ -28,72 +28,84 @@ const Tools = [
     name: "bootstrap",
     level: "proficient",
     logo: bootstrapLogo,
+    style:'',
   },
   {
     id: uniqid(),
     name: "git",
     level: "proficient",
     logo: gitLogo,
+    style:{color:'white',maxHeight:'50px',maxWidth:'50px'},
   },
   {
     id: uniqid(),
     name: "gitHub",
     level: "proficient",
     logo: gitHubLogo,
+    style:{color:'white',maxHeight:'50px',maxWidth:'50px'},
   },
   {
     id: uniqid(),
     name: "Jest",
     level: "intermediate",
     logo: jestLogo,
+    style:'',
   },
   {
     id: uniqid(),
     name: "Mint",
     level: "proficient",
     logo: mintLogo,
+    style:'',
   },
   {
     id: uniqid(),
     name: "Next.js",
     level: "intermediate",
     logo: nextLogo,
+    style:{color:'white',maxHeight:'50px',maxWidth:'50px'},
   },
   {
     id: uniqid(),
     name: "Nodejs",
     level: "proficient",
     logo: nodeLogo,
+    style:'',
   },
   {
     id: uniqid(),
     name: "Npm",
     level: "proficient",
     logo: npmLogo,
+    style:'',
   },
   {
     id: uniqid(),
     name: "Rails",
     level: "proficient",
     logo: railsLogo,
+    style:'',
   },
   {
     id: uniqid(),
     name: "React",
     level: "proficient",
     logo: reactLogo,
+    style:'',
   },
   {
     id: uniqid(),
     name: "TailWind",
     level: "intermediate",
     logo: tailwindLogo,
+    style:'',
   },
   {
     id: uniqid(),
     name: "Vitejs",
     level: "Intermediate",
     logo: viteLogo,
+    style:'',
   },
 ];
 
@@ -129,6 +141,7 @@ const MusicCV =
        "Drum Teacher in Hebraica. (2016-2017)",
        "Drum teacher for Audioline-Yamaha Venezuela. (2017)",
        "Private drum teacher (2018 to the date).",
+       'Freelancer-Arranger (2018 to the date)',
         "Functional Harmony & Non Functional Harmony teacher. (2016 to the date).",
     ],
     programmingLanguages:[],
@@ -136,7 +149,27 @@ const MusicCV =
        "B.A In Jazz Music - UNEARTE (2017)",
        "Diploma on techno - pedagogy and new technologies for teaching. UPEL(2020) ",
        "Advanced trading course. CEIF (2021)",
-    ]
+    ],
+    contact:[
+      'Telf: +58-4241727988',
+      'email: miguelqui725@gmail.com'
+    ],
+    skills:[
+      'MuseScore: intermediate.',
+      'Reaper: intermediate.',
+      'Virtual Instruments: intermediate.',
+      'I like handwrited sheets.',
+      'Functional Harmony: Advance',
+      'Non Functional Harmony: Advance',
+      'Arranging: Good, I prefer small formats but I like bigBands too.'
+    ],
+    softSkills:[
+      'Problem Solver',
+      'Organized',
+      'Strong Discipline',
+      'Good communication',
+      'Conflict Management'
+        ]
   };
 
 const DeveloperCV =
@@ -164,7 +197,29 @@ const DeveloperCV =
        "The Odin Project: Ruby Path (2022)",
        "Advanced trading course. CEIF (2021)",
        "Diploma on techno - pedagogy and new technologies for teaching. UPEL(2020) ",
-    ]
+    ],
+    contact:[
+      'Telf: +58-4241727988',
+      'email: miguelqui725@gmail.com'
+    ],
+    skills:[
+      'JavaScript',
+      'Bootstrap',
+      'React',
+      'Nextjs',
+      'Nodejs',
+      'Ruby',
+      'Ruby on Rails',
+      'Vitejs',
+      'Heroku'
+    ],
+    softSkills:[
+      'Problem Solver',
+      'Organized',
+      'Strong Discipline',
+      'Good communication',
+      'Conflict Management',
+      'We are Humans first, musicians second.'    ]
   };
 
 export function theTools() {

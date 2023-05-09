@@ -4,7 +4,7 @@ export default function Home() {
   //had to check for the writing on this part... should be less than this.
 
   return (
-    <main className="container">
+    <div className="container" id="about">
       <div className="row">
         <p>
           I'm a Musician turn Developer, I finished my studies in music and
@@ -25,11 +25,11 @@ export default function Home() {
           <strong>
             <em>awesome people</em>
           </strong>{" "}
-          put together the formation needed, so paraphrasing Newton
+          put together the formation I needed, so paraphrasing Newton
           <strong>
             <em> I can see this far because some giants lifted me up</em>
           </strong>{" "}
-          and I'm very thankful to them.
+          and I'm very thankful to all of them.
         </p>
 
         <p>
@@ -39,13 +39,13 @@ export default function Home() {
           develop, compose, or teach, please feel free to{" "}
           <strong>
             <em>
-              <a href=""> contact me.</a>
+              <a href="https://wa.me/584241727988"> contact me.</a>
             </em>
           </strong>
         </p>
       </div>
 
 
-    </main>
+    </div>
   );
 }

@@ -11,11 +11,12 @@ function App() {
     background: "rgb(0,0,0)",
     background:
       " linear-gradient(45deg, rgba(0,0,0,1) 45%, rgba(70,68,73,1) 98%)",
+      color:'rgb(202,202,202)'
   };
 
   return (
     <BrowserRouter>
-    <div className="App">
+    <div className="App" style={backGround}>
       <Routes>
         <Route exact path="/" Component={GeneralHome} />
         <Route exact path="/miguelfiguera/dev" Component={CurriculumDev}/>

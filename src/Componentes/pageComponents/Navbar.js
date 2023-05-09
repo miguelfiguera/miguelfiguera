@@ -4,11 +4,11 @@ import { HashLink as Link } from "react-router-hash-link";
 export default function Navbar() {
   //REMEMBER TO CENTER THE ITEMS
   return (
-    <nav className=" mb-5 navbar navbar-expand-lg bg-body-tertiary ">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+    <nav className=" mb-5 navbar navbar-expand-lg bg-body-tertiary  mt-0 pt-0 pb-0  "  >
+      <div className="container-fluid mt-0 pt-0" style={{backgroundColor:'black'}}>
+        <Link className="navbar-brand" to="/#projects">
           projects
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,24 +23,29 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" to="/#about">
                 about
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/#tools">
+                Tools
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="#">
                 contact
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/#resume">
                 resume
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="https://github.com/miguelfiguera">
                 gitHub
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
