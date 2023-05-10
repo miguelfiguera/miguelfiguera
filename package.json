@@ -1,4 +1,5 @@
-{ "homepage":"https://miguelfiguera.github.io/miguelfiguera/",
+{
+  "homepage": "https://miguelfiguera.github.io/miguelfiguera/",
   "name": "miguelfiguera",
   "version": "0.1.0",
   "private": true,

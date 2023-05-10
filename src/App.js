@@ -10,19 +10,23 @@ function App() {
   const backGround = {
     background: "rgb(0,0,0)",
     background:
-      "linear-gradient(45deg, rgba(0,0,0,1) 38%, rgba(41,41,43,1) 81%)",
-      color:'rgb(202,202,202)'
+      "linear-gradient(90deg, rgba(0,0,0,1) 45%, rgba(41,41,43,1) 93%)",
+    color: "rgb(202,202,202)",
   };
 
   return (
     <BrowserRouter>
-    <div className="App" style={backGround}>
-      <Routes>
-        <Route exact path="/miguelfiguera/" Component={GeneralHome} />
-        <Route exact path="/miguelfiguera/dev" Component={CurriculumDev}/>
-        <Route exact path="/miguelfiguera/music" Component={CurriculumMusic} />
-      </Routes>
-    </div>
+      <div className="App" style={backGround}>
+        <Routes>
+          <Route exact path="/miguelfiguera/" Component={GeneralHome} />
+          <Route exact path="/miguelfiguera/dev" Component={CurriculumDev} />
+          <Route
+            exact
+            path="/miguelfiguera/music"
+            Component={CurriculumMusic}
+          />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

@@ -7,12 +7,11 @@ import Footer from "./pageComponents/Footer";
 import Projects from "./projects/Projects";
 import { theTools, theLanguages, MusicCv, DeveloperCv } from "./Helpers";
 import { Curriculums } from "./c.vitae/Curriculums";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function GeneralHome() {
-
   return (
-    <main className="container-fluid pt-5 mt-0" >
+    <main className="container-fluid pt-5 mt-0">
       <Header />
       <Navbar />
       <Projects />

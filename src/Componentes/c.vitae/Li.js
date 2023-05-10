@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function Li({object}) {
-  return (
-    <li>{object}</li>
-  )
+export default function Li({ object }) {
+  return <li>{object}</li>;
 }

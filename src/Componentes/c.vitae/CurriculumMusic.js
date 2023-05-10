@@ -80,17 +80,17 @@ export default function CurriculumMusic() {
             </div>
 
             <div className="container col">
-              <h3 className='mt-4'>Experience</h3>
+              <h3 className="mt-4">Experience</h3>
               <ul>{experience}</ul>
 
               {curriculum.type === "music" ? null : (
                 <div>
-                  <h3 className='mt-4' >Programming Languages</h3>
+                  <h3 className="mt-4">Programming Languages</h3>
                   <ul>{programmingLanguages}</ul>
                 </div>
               )}
 
-              <h3 className='mt-4'>Soft Skills</h3>
+              <h3 className="mt-4">Soft Skills</h3>
               <ul>{softSkills}</ul>
             </div>
           </div>
