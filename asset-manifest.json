@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/miguelfiguera/static/css/main.e6c13ad2.css",
+    "main.js": "/miguelfiguera/static/js/main.0fe509bb.js",
+    "static/js/787.a390d296.chunk.js": "/miguelfiguera/static/js/787.a390d296.chunk.js",
+    "static/media/myphoto.jpeg": "/miguelfiguera/static/media/myphoto.2cc0ba85e9258d801f46.jpeg",
+    "static/media/bash.svg": "/miguelfiguera/static/media/bash.880411064945b23ee5bbf88bd3a701fe.svg",
+    "static/media/nodejsreal.svg": "/miguelfiguera/static/media/nodejsreal.4d8b9a0c5a604b6b68d3750273f913d6.svg",
+    "static/media/rubylogo.svg": "/miguelfiguera/static/media/rubylogo.9accbd1ada77d78fb50fa6822ebf5e9f.svg",
+    "static/media/mint.svg": "/miguelfiguera/static/media/mint.2629c417464a3429713e8814ed5c8e6c.svg",
+    "static/media/rails2.svg": "/miguelfiguera/static/media/rails2.d9a4ab53af3014a5b343cc7d349bc4ae.svg",
+    "static/media/react.svg": "/miguelfiguera/static/media/react.f57b349b4d9df56c9b48c916a8d5adfb.svg",
+    "static/media/nextjs.svg": "/miguelfiguera/static/media/nextjs.8b2cf6b873df994f77755e3d468b9323.svg",
+    "static/media/npm.svg": "/miguelfiguera/static/media/npm.3c4e956c8e64ae7604c215b3b65f9e78.svg",
+    "static/media/bootstrap.svg": "/miguelfiguera/static/media/bootstrap.93fe84041cc1b588f15c332248529333.svg",
+    "static/media/jest.svg": "/miguelfiguera/static/media/jest.61d2e3e240596ca044212b25ada3c84e.svg",
+    "static/media/python.svg": "/miguelfiguera/static/media/python.4298525c028749eb4fa154f8f5bd1931.svg",
+    "static/media/github.svg": "/miguelfiguera/static/media/github.8b27649e0e21556e99cd9bbd08c6e945.svg",
+    "static/media/vitejs.svg": "/miguelfiguera/static/media/vitejs.41adc49884a136155c2e57ea5470194c.svg",
+    "static/media/git.svg": "/miguelfiguera/static/media/git.f5e9f6725e0acc6e44809bd5bf62dc6e.svg",
+    "index.html": "/miguelfiguera/index.html",
+    "static/media/jslogo.svg": "/miguelfiguera/static/media/jslogo.7bb08cdbe94fc2dfc1b51be8c2dae551.svg",
+    "static/media/tailwind.svg": "/miguelfiguera/static/media/tailwind.973c73e85d4daa24b257ba20298716c4.svg",
+    "static/media/css3.svg": "/miguelfiguera/static/media/css3.315b8fdb9dbf75ae965b80bf368895cd.svg",
+    "static/media/html5.svg": "/miguelfiguera/static/media/html5.0107c93943a8f415b5db64ebb0a9d12d.svg",
+    "main.e6c13ad2.css.map": "/miguelfiguera/static/css/main.e6c13ad2.css.map",
+    "main.0fe509bb.js.map": "/miguelfiguera/static/js/main.0fe509bb.js.map",
+    "787.a390d296.chunk.js.map": "/miguelfiguera/static/js/787.a390d296.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.0fe509bb.js"
+  ]
+}
