@@ -4,8 +4,12 @@ export default function Home() {
   //had to check for the writing on this part... should be less than this.
 
   return (
-    <div className="container" id="about">
-      <div className="row">
+    <div className="container pt-5 pb-5" id="about">
+<h2 className="text-center fs-1 pt-5 pb-1 mb-3">About me</h2>
+
+    <div className="row align-items-start">
+
+      <div className="col" style={{maxWidth:'500px'}}>
         <p>
           I'm a Musician turn Developer, I finished my studies in music and
           later, through the pandemic, I choose a different path beginning a new
@@ -21,7 +25,7 @@ export default function Home() {
         </p>
 
         <p>
-          I am, in a way of speaking, self-taught, but that is because{" "}
+          I'm self-taught, but that is because{" "}
           <strong>
             <em>awesome people</em>
           </strong>{" "}
@@ -32,10 +36,8 @@ export default function Home() {
           and I'm very thankful to all of them.
         </p>
 
-        <p>
-          In this webpage of mine, you can find: my projects (and links to
-          them), credentials, personal projects, my different resumes (one for
-          each job), and my cover letters. If you are looking for someone to
+        <p className="pb-5">
+        If you are looking for someone to
           develop, compose, or teach, please feel free to{" "}
           <strong>
             <em>
@@ -44,7 +46,8 @@ export default function Home() {
           </strong>
         </p>
       </div>
-
+      <img src="" alt="" className="col" />
+      </div>
 
     </div>
   );

@@ -15,9 +15,10 @@ export default function GeneralHome() {
     <main className="container-fluid pt-5 mt-0" >
       <Header />
       <Navbar />
+      <Projects />
+
       <Home />
       <About />
-      <Projects />
       <Curriculums />
       <Footer />
     </main>

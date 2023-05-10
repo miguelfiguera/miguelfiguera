@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="container-fluid pb-3" >
+    <div className="container-fluid pb-3" id="footer">
       <div className="row align-items-start mt-5" >
         <h6 className="col text-center" >
           <a href="https://twitter.com/Perrosaurio725">

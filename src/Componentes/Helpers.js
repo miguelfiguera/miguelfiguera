@@ -197,6 +197,7 @@ const DeveloperCV =
        "The Odin Project: Ruby Path (2022)",
        "Advanced trading course. CEIF (2021)",
        "Diploma on techno - pedagogy and new technologies for teaching. UPEL(2020) ",
+       'B.A. in Jazz Music - UNEARTE (2018)'
     ],
     contact:[
       'Telf: +58-4241727988',
@@ -221,6 +222,28 @@ const DeveloperCV =
       'Conflict Management',
       'We are Humans first, musicians second.'    ]
   };
+
+const Projects=[{
+  id:uniqid(),
+  name:'',
+  description:'',
+  tools:'',
+  link:'',
+  code:'',
+  picture:'',
+},{
+  id:uniqid(),
+  name:'Sol y Artes',
+  description:'Static Page for a small Business.',
+  tools:'React,Bootstrap',
+  link:'https://miguelfiguera.github.io/sol-y-artes/',
+  code:'https://github.com/miguelfiguera/sol-y-artes',
+  picture:'',
+}]
+
+export function theProjects(){
+  return Projects
+}
 
 export function theTools() {
   return Tools;

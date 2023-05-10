@@ -7,7 +7,7 @@ export function Curriculums() {
 
   return (
     <div className="container mb-5 pb-3" id='resume'>
-      <h2 className="text-center"> Resume</h2>
+      <h2 className="text-center fs-1"> Resume</h2>
       <div className="row mb-5">
         <div className="container col text-center">
         <Link to='/miguelfiguera/dev' className="mb-3 btn btn-primary"> Dev </Link> <br />

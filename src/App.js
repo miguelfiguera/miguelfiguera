@@ -10,7 +10,7 @@ function App() {
   const backGround = {
     background: "rgb(0,0,0)",
     background:
-      " linear-gradient(45deg, rgba(0,0,0,1) 45%, rgba(70,68,73,1) 98%)",
+      "linear-gradient(45deg, rgba(0,0,0,1) 38%, rgba(41,41,43,1) 81%)",
       color:'rgb(202,202,202)'
   };
 
@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
     <div className="App" style={backGround}>
       <Routes>
-        <Route exact path="/" Component={GeneralHome} />
+        <Route exact path="/miguelfiguera/" Component={GeneralHome} />
         <Route exact path="/miguelfiguera/dev" Component={CurriculumDev}/>
         <Route exact path="/miguelfiguera/music" Component={CurriculumMusic} />
       </Routes>
