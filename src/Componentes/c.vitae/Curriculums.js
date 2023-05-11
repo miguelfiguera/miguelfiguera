@@ -43,8 +43,9 @@ const certifications=theCert().filter((e)=>e.photo!=='').map((e)=>{
           <a href=""> Download Musician Cover Letter </a>
         </div>
       </div>
-      <div className="container d-flex p-2 flex-wrap justify-content-center">
+      <h2 className="fs-1 text-center">Certifications</h2>
 
+      <div className="container d-flex p-2 flex-wrap justify-content-center">
       {certifications}
       </div>
     </div>

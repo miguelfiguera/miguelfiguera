@@ -32,7 +32,7 @@ useEffect(()=>{
         <h2 className="fs-1 text-center pb-3">Contact</h2>
         <form onSubmit={handleSubmit} style={{maxWidth:'450px'}} className="rounded-3 mx-auto">
           <div className="mb-3">
-            <label for="full-name" className="form-label text-light">
+            <label htmlFor="full-name" className="form-label text-light">
               Nombre y apellido:
             </label>
             <input
@@ -40,7 +40,7 @@ useEffect(()=>{
               name="name"
               id="full-name"
               placeholder="Nombre completo"
-              required="true"
+              required={true}
               className="form-control"
             />
           </div>
@@ -73,7 +73,7 @@ useEffect(()=>{
             />
           </div>
 
-          <div class="modal-footer">
+          <div className="modal-footer">
             <button
               type="submit"
               disabled={state.submitting}
