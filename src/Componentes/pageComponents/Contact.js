@@ -1,8 +1,22 @@
 import React from "react";
 import { useForm, ValidationError } from '@formspree/react';
+import {useRef,useEffect,useState} from 'react'
 
 
 export default function Contact() {
+  const myRef=useRef()
+const [visible,setVisible]=useState('myHidden')
+
+useEffect(()=>{
+  const observer=new IntersectionObserver((entries)=>{
+    const entry=entries[0]
+    if(entry.isIntersecting){
+    setVisible('myShow')}
+    else{ setVisible('myHidden')}
+  })
+  observer.observe(myRef.current)
+},[])
+
     const [state, handleSubmit] = useForm("xlekveyv");
     if (state.succeeded) {
         return( 
@@ -14,7 +28,7 @@ export default function Contact() {
 
     return(
 
-      <div className="container pt-5 pb-5" id="contact">
+      <div ref={myRef} className={`container pt-5 pb-5 ${visible}`} id="contact">
         <h2 className="fs-1 text-center pb-3">Contact</h2>
         <form onSubmit={handleSubmit} style={{maxWidth:'450px'}} className="rounded-3 mx-auto">
           <div className="mb-3">

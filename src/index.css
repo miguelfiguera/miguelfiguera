@@ -38,7 +38,7 @@ a {
 }
 
 .hovering-hover:hover {
-  animation: growth 1s alternate forwards;
+  animation: growth 1s ease-in forwards ;
 }
 
 @keyframes growth {
@@ -48,7 +48,27 @@ a {
 }
 
 
+.myHidden{
+  opacity:0;
+}
 
+.myShow{
+  animation: specialisRevelo 1s ease-in forwards
+}
+
+@keyframes specialisRevelo {
+  0%{opacity: 0;
+    filter: blur(5px);
+    scale:0.8;
+  }
+
+  100%{
+    opacity: 1;
+    filter: blur(0);
+    scale: 1;
+  }
+  
+}
 
 .myName{
   animation: intro 1.5s ease-in forwards
@@ -72,6 +92,7 @@ a {
     filter:blur(0px);
     translate:0%;
     opacity: 1;
+    scale:1.2;
   }
 }
 

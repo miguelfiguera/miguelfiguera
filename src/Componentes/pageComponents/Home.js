@@ -1,10 +1,26 @@
 import React from "react";
+import OdinProject from "../../graphic_resources/teachers_logos/logo.svg";
+import FreeCodeCamp from "../../graphic_resources/teachers_logos/fcc_primary_large.svg";
+import { useRef, useEffect, useState } from "react";
 
 export default function Home() {
-  //had to check for the writing on this part... should be less than this.
+  const myRefHome = useRef();
+  const [visibleHome, setvisibleHome] = useState("myHidden");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setvisibleHome("myShow");
+      } else {
+        setvisibleHome("myHidden");
+      }
+    });
+    observer.observe(myRefHome.current);
+  }, []);
 
   return (
-    <div className="container pt-5" id="about">
+    <div className={`container pt-5 ${visibleHome}`} ref={myRefHome} id="about">
       <h2 className="text-center fs-1 pt-5 pb-4 mb-5">About me</h2>
 
       <div className="row align-items-start">
@@ -45,7 +61,11 @@ export default function Home() {
             </strong>
           </p>
         </div>
-        <img src="" alt="" className="col" />
+        <div className="col row">
+          <img src={OdinProject} alt="Odin Project Logo" className="" />
+          <img src={FreeCodeCamp} alt="Free Code Camp logo" className="mt-5"/>
+
+        </div>
       </div>
     </div>
   );

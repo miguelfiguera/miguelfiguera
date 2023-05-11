@@ -1,8 +1,22 @@
 import React from "react";
 import Imges from "./imges";
 import { theTools, theLanguages } from "../Helpers";
+import {useRef,useEffect,useState} from 'react'
 
 export default function About() {
+  const myRef=useRef()
+  const [visible,setVisible]=useState('myHidden')
+  
+  useEffect(()=>{
+    const observer=new IntersectionObserver((entries)=>{
+      const entry=entries[0]
+      if(entry.isIntersecting){
+      setVisible('myShow')}
+      else{ setVisible('myHidden')}
+    })
+    observer.observe(myRef.current)
+  },[])
+
   const toolsLogos = theTools().map((e) => {
     return <Imges key={e.id} theObject={e} />;
   });
@@ -14,7 +28,7 @@ export default function About() {
   const maxWidth = { maxWidth: "450px" };
 
   return (
-    <div className="row align-items-start flex-wrap pt-5 pb-5" id="tools">
+    <div ref={myRef} className={`row align-items-start flex-wrap pt-5 pb-5 ${visible}`} id="tools">
       <h2 className="text-center fs-1 mt-3 mb-3 pb-3">Tools & Languages</h2>
 
       <div className="col text-center pb-5 mb-3">

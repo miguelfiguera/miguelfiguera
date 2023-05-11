@@ -1,10 +1,23 @@
 import React from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import {useRef,useEffect,useState} from 'react'
 
 export function Curriculums() {
+  const myRef=useRef()
+const [visible,setVisible]=useState('myHidden')
+
+useEffect(()=>{
+  const observer=new IntersectionObserver((entries)=>{
+    const entry=entries[0]
+    if(entry.isIntersecting){
+    setVisible('myShow')}
+    else{ setVisible('myHidden')}
+  })
+  observer.observe(myRef.current)
+},[])
+
   return (
-    <div className="container mb-5 pb-3" id="resume">
+    <div ref={myRef} className={`container mb-5 pb-3 ${visible}`} id="resume">
       <h2 className="text-center fs-1"> Resume</h2>
       <div className="row mb-5">
         <div className="container col text-center">

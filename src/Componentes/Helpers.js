@@ -286,3 +286,24 @@ export function MusicCv() {
 export function DeveloperCv() {
   return DeveloperCV;
 }
+
+
+//Intersection observer
+
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    console.log(entry)
+    if(entry.isIntersecting){
+      entry.target.classList.remove('myHidden')
+      entry.target.classList.add('myShow')
+    }
+    else{
+      entry.target.classList.remove('myShow')
+      entry.target.classList.add('myHidden')
+    }
+  })
+});
+
+const hiddenElements=document.querySelectorAll('.myHidden')
+
+hiddenElements.forEach((e)=> observer.observe(e))

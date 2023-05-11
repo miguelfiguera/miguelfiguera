@@ -1,7 +1,8 @@
 import React from "react";
-import myPhoto from "../../graphic_resources/myphoto.jpeg";
+
 
 export default function Header() {
+
   return (
     <div className="container-fluid mt-5 mb-5" >
       <div className="row">

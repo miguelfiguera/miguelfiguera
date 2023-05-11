@@ -1,19 +1,34 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import { useInView } from 'react-intersection-observer';
+import {useRef,useEffect,useState} from 'react'
 
 export default function Navbar() {
-  //REMEMBER TO CENTER THE ITEMS
+const myRef=useRef()
+const [visible,setVisible]=useState('myHidden')
+
+useEffect(()=>{
+  const observer=new IntersectionObserver((entries)=>{
+    const entry=entries[0]
+    if(entry.isIntersecting){
+    setVisible('myShow')}
+    else{ setVisible('myHidden')}
+  })
+  observer.observe(myRef.current)
+},[])
+
+
   return (
-    <div className="container mt-5 mb-3">
+    <div className={ `container mt-5 mb-3 ${visible}`} ref={myRef}>
       <div className="row align-items-start text-center mb-5">
-        <Link className="fs-6 text-reset col mx-2" to="/#projects">
+        <Link className="fs-6 text-reset col mx-2" to="/miguelfiguera/#projects">
           projects
         </Link>
 
         <Link
           className="nav-link active text-reset col mx-2"
           aria-current="page"
-          to="/#about"
+          to="/miguelfiguera/#about"
         >
           about
         </Link>
