@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/miguelfiguera/static/css/main.5d19a656.css",
-    "main.js": "/miguelfiguera/static/js/main.47f6624f.js",
+    "main.css": "/miguelfiguera/static/css/main.a168f42d.css",
+    "main.js": "/miguelfiguera/static/js/main.9b262fb0.js",
     "static/js/787.a390d296.chunk.js": "/miguelfiguera/static/js/787.a390d296.chunk.js",
     "static/media/solyartes.png": "/miguelfiguera/static/media/solyartes.8509e739756755968a95.png",
     "static/media/Connect4.png": "/miguelfiguera/static/media/Connect4.d5652599e2f026cffd34.png",
@@ -27,12 +27,12 @@
     "static/media/tailwind.svg": "/miguelfiguera/static/media/tailwind.973c73e85d4daa24b257ba20298716c4.svg",
     "static/media/css3.svg": "/miguelfiguera/static/media/css3.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html5.svg": "/miguelfiguera/static/media/html5.0107c93943a8f415b5db64ebb0a9d12d.svg",
-    "main.5d19a656.css.map": "/miguelfiguera/static/css/main.5d19a656.css.map",
-    "main.47f6624f.js.map": "/miguelfiguera/static/js/main.47f6624f.js.map",
+    "main.a168f42d.css.map": "/miguelfiguera/static/css/main.a168f42d.css.map",
+    "main.9b262fb0.js.map": "/miguelfiguera/static/js/main.9b262fb0.js.map",
     "787.a390d296.chunk.js.map": "/miguelfiguera/static/js/787.a390d296.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d19a656.css",
-    "static/js/main.47f6624f.js"
+    "static/css/main.a168f42d.css",
+    "static/js/main.9b262fb0.js"
   ]
 }
