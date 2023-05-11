@@ -26,6 +26,8 @@ import SolYArtes from "../graphic_resources/project_pictures/solyartes.png";
 import pixelSketch from "../graphic_resources/project_pictures/pixelsketching.png";
 import connect4 from "../graphic_resources/project_pictures/Connect4.png";
 import laVieja from "../graphic_resources/project_pictures/tictactoe.png";
+//Certifications photos
+import JavaScriptCertification from '../graphic_resources/certifications/Captura de pantalla de 2023-05-09 11-23-10.png'
 
 const Tools = [
   {
@@ -267,6 +269,25 @@ const Projects = [
   },
 ];
 
+//Certificacions
+
+const certifications=[{
+  id:uniqid(),
+  title:'',
+  link:'',
+  photo:''
+},
+{
+  id:uniqid(),
+  title:'JavaScript Algorithms and Data Structures',
+  link:'https://www.freecodecamp.org/certification/perrosaurio725/javascript-algorithms-and-data-structures',
+  photo:JavaScriptCertification
+}]
+
+export function theCert(){
+  return certifications
+}
+
 export function theProjects() {
   return Projects;
 }
@@ -288,22 +309,3 @@ export function DeveloperCv() {
 }
 
 
-//Intersection observer
-
-const observer=new IntersectionObserver((entries)=>{
-  entries.forEach((entry)=>{
-    console.log(entry)
-    if(entry.isIntersecting){
-      entry.target.classList.remove('myHidden')
-      entry.target.classList.add('myShow')
-    }
-    else{
-      entry.target.classList.remove('myShow')
-      entry.target.classList.add('myHidden')
-    }
-  })
-});
-
-const hiddenElements=document.querySelectorAll('.myHidden')
-
-hiddenElements.forEach((e)=> observer.observe(e))

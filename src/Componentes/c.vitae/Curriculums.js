@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {useRef,useEffect,useState} from 'react'
+import { theCert } from "../Helpers";
+import Certifications from'./Certifications'
 
 export function Curriculums() {
   const myRef=useRef()
@@ -16,11 +18,15 @@ useEffect(()=>{
   observer.observe(myRef.current)
 },[])
 
+const certifications=theCert().filter((e)=>e.photo!=='').map((e)=>{
+  return <Certifications key={e.id} object={e}/>
+})
+
   return (
     <div ref={myRef} className={`container mb-5 pb-3 ${visible}`} id="resume">
       <h2 className="text-center fs-1"> Resume</h2>
-      <div className="row mb-5">
-        <div className="container col text-center">
+      <div className="row mb-5 mt-5">
+        <div className="container col text-center border-end">
           <Link to="/miguelfiguera/dev" className="mb-3 btn btn-primary">
             {" "}
             Dev{" "}
@@ -36,6 +42,10 @@ useEffect(()=>{
           <br />
           <a href=""> Download Musician Cover Letter </a>
         </div>
+      </div>
+      <div className="container d-flex p-2 flex-wrap justify-content-center">
+
+      {certifications}
       </div>
     </div>
   );
