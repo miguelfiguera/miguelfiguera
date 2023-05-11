@@ -15,7 +15,7 @@ export default function About() {
 
   return (
     <div className="row align-items-start flex-wrap pt-5 pb-5" id="tools">
-      <h2 className="text-center fs-1 mt-3 mb-3">Tools & Languages</h2>
+      <h2 className="text-center fs-1 mt-3 mb-3 pb-3">Tools & Languages</h2>
 
       <div className="col text-center pb-5 mb-3">
         <h3 className="text-center">Languages</h3>
@@ -26,10 +26,10 @@ export default function About() {
           {Languages}
         </div>
       </div>
-      <div className="col text-center">
+      <div className="col text-center border-start">
         <h3 className="text-center">Dev-Tools</h3>
         <div
-          className="container d-flex p-2 flex-wrap justify-content-center"
+          className="container d-flex p-2 flex-wrap justify-content-center pb-5 mb-1 "
           style={maxWidth}
         >
           {toolsLogos}

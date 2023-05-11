@@ -4,8 +4,8 @@ export default function Home() {
   //had to check for the writing on this part... should be less than this.
 
   return (
-    <div className="container pt-5 pb-5" id="about">
-      <h2 className="text-center fs-1 pt-5 pb-1 mb-3">About me</h2>
+    <div className="container pt-5" id="about">
+      <h2 className="text-center fs-1 pt-5 pb-4 mb-5">About me</h2>
 
       <div className="row align-items-start">
         <div className="col">

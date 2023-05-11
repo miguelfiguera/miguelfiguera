@@ -8,6 +8,7 @@ import Projects from "./projects/Projects";
 import { theTools, theLanguages, MusicCv, DeveloperCv } from "./Helpers";
 import { Curriculums } from "./c.vitae/Curriculums";
 import { useState, useEffect } from "react";
+import Contact from "./pageComponents/Contact";
 
 export default function GeneralHome() {
   return (
@@ -15,9 +16,9 @@ export default function GeneralHome() {
       <Header />
       <Navbar />
       <Projects />
-
       <Home />
       <About />
+      <Contact/>
       <Curriculums />
       <Footer />
     </main>

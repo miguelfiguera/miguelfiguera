@@ -10,7 +10,7 @@ export default function Projects() {
     });
 
   return (
-    <div className="container pt-5 pb-5" id="projects">
+    <div className="container pt-5 pb-5"  id="projects">
       <h2 className="text-center fs-1">Projects</h2>
 
       <div className="container d-flex p-2 flex-wrap justify-content-center">
