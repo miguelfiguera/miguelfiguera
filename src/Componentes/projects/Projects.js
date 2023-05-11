@@ -14,7 +14,7 @@ export default function Projects() {
       if(entry.isIntersecting){
       setVisible('myShow')}
       else{ setVisible('myHidden')}
-    })
+    },{threshold:0.1})
     observer.observe(myRef.current)
   },[])
   

@@ -15,7 +15,7 @@ export default function Home() {
       } else {
         setvisibleHome("myHidden");
       }
-    });
+    },{threshold:0.3});
     observer.observe(myRefHome.current);
   }, []);
 

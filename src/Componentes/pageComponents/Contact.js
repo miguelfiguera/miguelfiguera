@@ -13,7 +13,7 @@ useEffect(()=>{
     if(entry.isIntersecting){
     setVisible('myShow')}
     else{ setVisible('myHidden')}
-  })
+  },{threshold:0.3})
   observer.observe(myRef.current)
 },[])
 
