@@ -27,7 +27,7 @@ import pixelSketch from "../graphic_resources/project_pictures/pixelsketching.pn
 import connect4 from "../graphic_resources/project_pictures/Connect4.png";
 import laVieja from "../graphic_resources/project_pictures/tictactoe.png";
 //Certifications photos
-import JavaScriptCertification from '../graphic_resources/certifications/Captura de pantalla de 2023-05-09 11-23-10.png'
+import JavaScriptCertification from '../graphic_resources/certifications/javascriptbasics.png'
 
 const Tools = [
   {

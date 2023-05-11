@@ -12,7 +12,7 @@ export default function Certifications({object}) {
   >
     <img
       className="card-img-top"
-      src={object.picture}
+      src={object.photo}
       alt={object.name}
       style={{ height: "66%" }}
     />
