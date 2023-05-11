@@ -5,7 +5,10 @@ import { useForm, ValidationError } from '@formspree/react';
 export default function Contact() {
     const [state, handleSubmit] = useForm("xlekveyv");
     if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
+        return( 
+        <div className="container mx-auto text-center py-5"> <strong><p className="fs-1 ">Thanks for Writing!</p></strong>
+          <p className="fs-3">I'll answer as soon as possible.</p></div>
+        );
     }
 
 

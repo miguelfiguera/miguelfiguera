@@ -6,8 +6,8 @@ export default function Header() {
     <div className="container-fluid mt-5 mb-5" >
       <div className="row">
         <div className="col text-center ">
-          <h1 className="text-decoration-underline">Miguel Figuera Q.</h1>
-          <h2 className="fw-lighter fs-5 fst-italic">
+          <h1 className="text-decoration-underline myName">Miguel Figuera Q.</h1>
+          <h2 className="fw-lighter fs-5 fst-italic mySubtitle">
             {" "}
             FullStack web-developer
           </h2>

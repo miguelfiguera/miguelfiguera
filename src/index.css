@@ -47,6 +47,34 @@ a {
   }
 }
 
+
+
+
+.myName{
+  animation: intro 1.5s ease-in forwards
+}
+.mySubtitle{
+  opacity: 0;
+  animation: intro 1.5s ease-in forwards;
+  animation-delay: 1s;
+}
+@keyframes intro {
+  0%{
+    display:none;
+    opacity: 0;
+    filter: blur(5px);
+    translate:-100%;
+  }
+  
+
+  100%{
+    display: contents;
+    filter:blur(0px);
+    translate:0%;
+    opacity: 1;
+  }
+}
+
 input,#full-name,#email,#message{
   background-color: rgb(40, 43, 40);
   color:rgb(202, 202, 202)
