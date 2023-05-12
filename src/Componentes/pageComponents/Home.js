@@ -72,11 +72,27 @@ export default function Home() {
         </div>
         <div className="col row">
           {size < 800 ? (
-            <div
-              className='mx-auto d-flex justify-content-center'
-              style={{ backgroundColor: "rgb(202,202,202)", opacity: "0.5" }}
-            >
-              <img src={OdinProject} alt="Odin Project Logo" style={{color:'white',opacity:'1.0',width:'(100%)'}} />
+            <div className="container">
+
+
+              <div
+                className="mx-auto d-flex justify-content-center"
+                style={{
+                  backgroundColor: "rgb(202,202,202)",
+                  opacity: "0.4",
+                  height: "6rem",
+                }}
+              ></div>
+                            <img
+                src={OdinProject}
+                alt="Odin Project Logo"
+                style={{
+                  color: "white",
+                  width: "(100%)",
+                  translate: "55% -126%",
+                  scale:'1.5'
+                }}
+              />
             </div>
           ) : (
             <img src={OdinProject} alt="Odin Project Logo" className="" />
