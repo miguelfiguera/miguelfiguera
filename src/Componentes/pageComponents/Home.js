@@ -1,7 +1,7 @@
 import React from "react";
-import OdinProject from "../../graphic_resources/teachers_logos/logo.svg";
 import FreeCodeCamp from "../../graphic_resources/teachers_logos/fcc_primary_large.svg";
 import { useRef, useEffect, useState } from "react";
+import theOtherLogoOfTop from "../../graphic_resources/teachers_logos/odinformobile.svg"
 
 export default function Home() {
   const myRefHome = useRef();
@@ -27,6 +27,7 @@ export default function Home() {
   }, []);
 
   const thisClass = size < 800 ? "container" : " row align-items-start";
+
 
   return (
     <div className={`container pt-5 ${visibleHome}`} ref={myRefHome} id="about">
@@ -71,32 +72,7 @@ export default function Home() {
           </p>
         </div>
         <div className="col row">
-          {size < 800 ? (
-            <div className="container">
-
-
-              <div
-                className="mx-auto d-flex justify-content-center"
-                style={{
-                  backgroundColor: "rgb(202,202,202)",
-                  opacity: "0.4",
-                  height: "6rem",
-                }}
-              ></div>
-                            <img
-                src={OdinProject}
-                alt="Odin Project Logo"
-                style={{
-                  color: "white",
-                  width: "(100%)",
-                  translate: "55% -126%",
-                  scale:'1.5'
-                }}
-              />
-            </div>
-          ) : (
-            <img src={OdinProject} alt="Odin Project Logo" className="" />
-          )}
+            <img src={theOtherLogoOfTop} alt="Odin Project Logo" className="" />
           <img src={FreeCodeCamp} alt="Free Code Camp logo" className="mt-5" />
         </div>
       </div>
