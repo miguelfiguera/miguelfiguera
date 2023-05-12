@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/miguelfiguera/static/css/main.6a9fc2ec.css",
-    "main.js": "/miguelfiguera/static/js/main.2a14ad58.js",
+    "main.js": "/miguelfiguera/static/js/main.fc5dc672.js",
     "static/js/227.1a33a670.chunk.js": "/miguelfiguera/static/js/227.1a33a670.chunk.js",
     "static/js/526.f1fbe67f.chunk.js": "/miguelfiguera/static/js/526.f1fbe67f.chunk.js",
     "static/js/232.3b42bade.chunk.js": "/miguelfiguera/static/js/232.3b42bade.chunk.js",
@@ -16,7 +16,7 @@
     "static/media/fcc_primary_large.svg": "/miguelfiguera/static/media/fcc_primary_large.2847bc12544317f79647dc18d67a0930.svg",
     "static/media/bash.svg": "/miguelfiguera/static/media/bash.880411064945b23ee5bbf88bd3a701fe.svg",
     "static/media/nodejsreal.svg": "/miguelfiguera/static/media/nodejsreal.4d8b9a0c5a604b6b68d3750273f913d6.svg",
-    "static/media/logo.svg": "/miguelfiguera/static/media/logo.3e2cee3a3ccd99111f1af099de5b28b1.svg",
+    "static/media/odinformobile.svg": "/miguelfiguera/static/media/odinformobile.7cd3c0242694033ced45a36c7cac6fcc.svg",
     "static/media/rubylogo.svg": "/miguelfiguera/static/media/rubylogo.9accbd1ada77d78fb50fa6822ebf5e9f.svg",
     "static/media/mint.svg": "/miguelfiguera/static/media/mint.2629c417464a3429713e8814ed5c8e6c.svg",
     "static/media/rails2.svg": "/miguelfiguera/static/media/rails2.d9a4ab53af3014a5b343cc7d349bc4ae.svg",
@@ -35,7 +35,7 @@
     "static/media/css3.svg": "/miguelfiguera/static/media/css3.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html5.svg": "/miguelfiguera/static/media/html5.0107c93943a8f415b5db64ebb0a9d12d.svg",
     "main.6a9fc2ec.css.map": "/miguelfiguera/static/css/main.6a9fc2ec.css.map",
-    "main.2a14ad58.js.map": "/miguelfiguera/static/js/main.2a14ad58.js.map",
+    "main.fc5dc672.js.map": "/miguelfiguera/static/js/main.fc5dc672.js.map",
     "227.1a33a670.chunk.js.map": "/miguelfiguera/static/js/227.1a33a670.chunk.js.map",
     "526.f1fbe67f.chunk.js.map": "/miguelfiguera/static/js/526.f1fbe67f.chunk.js.map",
     "232.3b42bade.chunk.js.map": "/miguelfiguera/static/js/232.3b42bade.chunk.js.map",
@@ -44,6 +44,6 @@
   },
   "entrypoints": [
     "static/css/main.6a9fc2ec.css",
-    "static/js/main.2a14ad58.js"
+    "static/js/main.fc5dc672.js"
   ]
 }
