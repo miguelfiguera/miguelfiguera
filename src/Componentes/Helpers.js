@@ -26,6 +26,7 @@ import SolYArtes from "../graphic_resources/project_pictures/solyartes.png";
 import pixelSketch from "../graphic_resources/project_pictures/pixelsketching.png";
 import connect4 from "../graphic_resources/project_pictures/Connect4.png";
 import laVieja from "../graphic_resources/project_pictures/tictactoe.png";
+import RandomQuote from '../graphic_resources/project_pictures/randomQuoteGenerator.png'
 //Certifications photos
 import JavaScriptCertification from '../graphic_resources/certifications/javascriptbasics.png'
 
@@ -267,6 +268,14 @@ const Projects = [
     picture: pixelSketch,
     type: "portfolio",
   },
+  {id:uniqid(),
+  name:'Random Quote Generator',
+  description:'React project for FreeCodeCamp.org certification.',
+  tools:'React+boostrap',
+  link:'https://miguelfiguera.github.io/random-quote-generator',
+  code:'https://github.com/miguelfiguera/random-quote-generator/',
+  picture: RandomQuote,
+  type:'portfolio',}
 ];
 
 //Certificacions
