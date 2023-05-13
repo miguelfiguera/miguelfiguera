@@ -27,6 +27,7 @@ import pixelSketch from "../graphic_resources/project_pictures/pixelsketching.pn
 import connect4 from "../graphic_resources/project_pictures/Connect4.png";
 import laVieja from "../graphic_resources/project_pictures/tictactoe.png";
 import RandomQuote from '../graphic_resources/project_pictures/randomQuoteGenerator.png'
+import MarkDownpart from '../graphic_resources/project_pictures/markDownPreviewer.png'
 //Certifications photos
 import JavaScriptCertification from '../graphic_resources/certifications/javascriptbasics.png'
 
@@ -275,7 +276,15 @@ const Projects = [
   link:'https://miguelfiguera.github.io/random-quote-generator',
   code:'https://github.com/miguelfiguera/random-quote-generator/',
   picture: RandomQuote,
-  type:'portfolio',}
+  type:'portfolio',},
+  {id:uniqid(),
+  name:'MarkDown Previewer',
+description:'React project for the FreeCodeCamp.org certification',
+tools:'React, bootstrap, marked.js',
+link:'https://miguelfiguera.github.io/MarkDown-previewer/',
+code:'https://github.com/miguelfiguera/MarkDown-previewer',
+picture:MarkDownpart,
+type:'portfolio'}
 ];
 
 //Certificacions
