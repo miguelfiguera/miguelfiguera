@@ -30,6 +30,7 @@ import RandomQuote from '../graphic_resources/project_pictures/randomQuoteGenera
 import MarkDownpart from '../graphic_resources/project_pictures/markDownPreviewer.png'
 //Certifications photos
 import JavaScriptCertification from '../graphic_resources/certifications/javascriptbasics.png'
+import FrontEndLibraries from '../graphic_resources/certifications/FrontEndLibraries.png'
 
 const Tools = [
   {
@@ -300,7 +301,12 @@ const certifications=[{
   title:'JavaScript Algorithms and Data Structures',
   link:'https://www.freecodecamp.org/certification/perrosaurio725/javascript-algorithms-and-data-structures',
   photo:JavaScriptCertification
-}]
+},{
+  id:uniqid(),
+  title:'Front End Libraries',
+  link:'https://www.freecodecamp.org/certification/perrosaurio725/front-end-development-libraries',
+  photo:FrontEndLibraries
+},]
 
 export function theCert(){
   return certifications
