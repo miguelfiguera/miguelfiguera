@@ -1,0 +1,32 @@
+Estimado empleador,
+
+Me gradué de la universidad como músico, esto puede sonar demasiado lejos del ecosistema de desarrolladores, y lo es. Convertirse en desarrollador fue un viaje autodidacta la mayor parte del tiempo. Tuve la ayuda de algunos recursos gratuitos realmente extensos como The Odin Project: https://www.theodinproject.com/ (donde tomé el camino de Ruby on Rails, React, Node.js y Next.js) y Free Code Camp : https://www.freecodecamp.org/perrosaurio725 (donde centré mi atención en JavaScript y Python).
+
+Ambos me dieron el contenido, pero yo tuve que ganar todo el conocimiento con la lectura, la práctica, desarrollando pequeños proyectos de juguetes hasta grandes, y _recorriendo el camino_ como dicen algunos. Hice esto con sólo mi voluntad de aprender.
+
+Mi kit de herramientas está compuesto por:
+
+1. Ruby, Ruby on Rails
+2. React
+3. Vite y webpack.
+4. git.
+5. JavaScript.
+6. Next.JS
+7. Node.js
+8. Html5
+9. CSS3
+10. Bootstrap/TailWind.
+11. GitHub
+12. Python (todavía aprendiendo).
+
+Este viaje me dio las herramientas para entender cómo suele ser el flujo de trabajo de un desarrollador, la forma de abordar nuevos obstáculos desconocidos y la resiliencia para seguir el ritmo, porque en algún lugar, en alguna web, alguien tiene la respuesta aunque yo no.
+
+Mi experiencia como músico me dio las herramientas para trabajar con cualquier tipo de equipo bajo presión o con tiempo suficiente para entregar un plan para un proyecto. Esto también me enseñó que puedes lograr cualquier meta o fecha límite con disciplina, trabajo duro y una buena comprensión de las capacidades de los miembros del equipo. Parte de la filosofía de un músico de jazz es que "la música es lo primero". Esto se extrapola a cualquier trabajo que haya realizado como mi pauta favorita para el trabajo en equipo.
+
+No tengo ninguna experiencia previa trabajando como desarrollador para ninguna empresa, solo tengo mis proyectos y algunos trabajos independientes realizados, pero tengo muchas ganas de aprender y crecer en esta comunidad. Me gusta afrontar nuevos retos y busco oportunidades para hacerlo.'.
+
+Gracias por su tiempo y consideración. te deseo lo mejor
+
+Atentamente
+
+miguel figuera
