@@ -93,6 +93,7 @@ a {
     translate:0%;
     opacity: 1;
     scale:1.2;
+    width: calc(100% / 1.2);
   }
 }
 

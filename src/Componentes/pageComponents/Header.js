@@ -12,8 +12,8 @@ export default function Header() {
       </div>
       <div className="row">
         <div className="col text-center ">
-          <h1 className="text-decoration-underline myName">Miguel Figuera Q.</h1>
-          <h2 className="fw-lighter fs-5 fst-italic mySubtitle">
+          <h1 className="text-decoration-underline mx-auto myName">Miguel Figuera Q.</h1>
+          <h2 className="fw-lighter fs-5 fst-italic mx-auto mySubtitle">
             {" "}
             FullStack web-developer
           </h2>
