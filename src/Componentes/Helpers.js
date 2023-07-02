@@ -28,6 +28,7 @@ import connect4 from "../graphic_resources/project_pictures/Connect4.png";
 import laVieja from "../graphic_resources/project_pictures/tictactoe.png";
 import RandomQuote from '../graphic_resources/project_pictures/randomQuoteGenerator.png'
 import MarkDownpart from '../graphic_resources/project_pictures/markDownPreviewer.png'
+import creativeDirection from '../graphic_resources/project_pictures/gsapParallax.png'
 //Certifications photos
 import JavaScriptCertification from '../graphic_resources/certifications/javascriptbasics.png'
 import FrontEndLibraries from '../graphic_resources/certifications/FrontEndLibraries.png'
@@ -258,7 +259,7 @@ const Projects = [
     link: "https://replit.com/@MiguelFiguera/Connect-Four#main.rb",
     code: "https://github.com/miguelfiguera/Connect-Four",
     picture: connect4,
-    type: "portfolio",
+    type: "",
   },
   {
     id: uniqid(),
@@ -285,7 +286,17 @@ tools:'React, bootstrap, marked.js',
 link:'https://miguelfiguera.github.io/MarkDown-previewer/',
 code:'https://github.com/miguelfiguera/MarkDown-previewer',
 picture:MarkDownpart,
-type:'portfolio'}
+type:'portfolio'},
+{
+  id: uniqid(),
+  name: "Scrolling Animation",
+  description: "Bubble Message animation for static website.",
+  tools: "GSAP, HTML, JS, CSS",
+  link: "https://miguelfiguera.github.io/creativedirection_parallax/",
+  code: "https://github.com/miguelfiguera/creativedirection_parallax",
+  picture: creativeDirection,
+  type: "portfolio",}
+
 ];
 
 //Certificacions

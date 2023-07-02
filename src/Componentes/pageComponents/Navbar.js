@@ -10,8 +10,12 @@ const [visible,setVisible]=useState('myHidden')
 useEffect(()=>{
   const observer=new IntersectionObserver((entries)=>{
     const entry=entries[0]
-    if(entry.isIntersecting){
-    setVisible('myShow')}
+    if(entry.isIntersecting &&window.innerWidth<650 ){
+      setVisible('myshowMobile')
+    }
+    else if (entry.isIntersecting) {
+      setVisible("myShow");
+    }
     else{ setVisible('myHidden')}
   },{threshold:0})
   observer.observe(myRef.current)

@@ -15,7 +15,10 @@ export default function Home() {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting &&size<650 ){
+          setvisibleHome('myshowMobile')
+        }
+        else if (entry.isIntersecting) {
           setvisibleHome("myShow");
         } else {
           setvisibleHome("myHidden");
