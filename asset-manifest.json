@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/miguelfiguera/static/css/main.9de2bf8e.css",
-    "main.js": "/miguelfiguera/static/js/main.a4375394.js",
+    "main.css": "/miguelfiguera/static/css/main.62160b7b.css",
+    "main.js": "/miguelfiguera/static/js/main.1d1b7b08.js",
     "static/js/227.1a33a670.chunk.js": "/miguelfiguera/static/js/227.1a33a670.chunk.js",
     "static/js/526.f1fbe67f.chunk.js": "/miguelfiguera/static/js/526.f1fbe67f.chunk.js",
     "static/js/232.3b42bade.chunk.js": "/miguelfiguera/static/js/232.3b42bade.chunk.js",
@@ -15,6 +15,7 @@
     "static/media/javascriptbasics.png": "/miguelfiguera/static/media/javascriptbasics.644178347980433eea22.png",
     "static/media/markDownPreviewer.png": "/miguelfiguera/static/media/markDownPreviewer.0a1b5735a01e2dd340a9.png",
     "static/media/FrontEndLibraries.png": "/miguelfiguera/static/media/FrontEndLibraries.4175de961e3736191ce3.png",
+    "static/media/gsapParallax.png": "/miguelfiguera/static/media/gsapParallax.bd7575be1389f52503c2.png",
     "static/media/pixelsketching.png": "/miguelfiguera/static/media/pixelsketching.e2e46ca4af57caa921dd.png",
     "static/media/fcc_primary_large.svg": "/miguelfiguera/static/media/fcc_primary_large.2847bc12544317f79647dc18d67a0930.svg",
     "static/media/bash.svg": "/miguelfiguera/static/media/bash.880411064945b23ee5bbf88bd3a701fe.svg",
@@ -37,8 +38,8 @@
     "static/media/tailwind.svg": "/miguelfiguera/static/media/tailwind.973c73e85d4daa24b257ba20298716c4.svg",
     "static/media/css3.svg": "/miguelfiguera/static/media/css3.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html5.svg": "/miguelfiguera/static/media/html5.0107c93943a8f415b5db64ebb0a9d12d.svg",
-    "main.9de2bf8e.css.map": "/miguelfiguera/static/css/main.9de2bf8e.css.map",
-    "main.a4375394.js.map": "/miguelfiguera/static/js/main.a4375394.js.map",
+    "main.62160b7b.css.map": "/miguelfiguera/static/css/main.62160b7b.css.map",
+    "main.1d1b7b08.js.map": "/miguelfiguera/static/js/main.1d1b7b08.js.map",
     "227.1a33a670.chunk.js.map": "/miguelfiguera/static/js/227.1a33a670.chunk.js.map",
     "526.f1fbe67f.chunk.js.map": "/miguelfiguera/static/js/526.f1fbe67f.chunk.js.map",
     "232.3b42bade.chunk.js.map": "/miguelfiguera/static/js/232.3b42bade.chunk.js.map",
@@ -46,7 +47,7 @@
     "787.a390d296.chunk.js.map": "/miguelfiguera/static/js/787.a390d296.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9de2bf8e.css",
-    "static/js/main.a4375394.js"
+    "static/css/main.62160b7b.css",
+    "static/js/main.1d1b7b08.js"
   ]
 }
