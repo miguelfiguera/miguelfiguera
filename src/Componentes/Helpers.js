@@ -26,12 +26,12 @@ import SolYArtes from "../graphic_resources/project_pictures/solyartes.png";
 import pixelSketch from "../graphic_resources/project_pictures/pixelsketching.png";
 import connect4 from "../graphic_resources/project_pictures/Connect4.png";
 import laVieja from "../graphic_resources/project_pictures/tictactoe.png";
-import RandomQuote from '../graphic_resources/project_pictures/randomQuoteGenerator.png'
-import MarkDownpart from '../graphic_resources/project_pictures/markDownPreviewer.png'
-import creativeDirection from '../graphic_resources/project_pictures/gsapParallax.png'
+import RandomQuote from "../graphic_resources/project_pictures/randomQuoteGenerator.png";
+import MarkDownpart from "../graphic_resources/project_pictures/markDownPreviewer.png";
+import creativeDirection from "../graphic_resources/project_pictures/gsapParallax.png";
 //Certifications photos
-import JavaScriptCertification from '../graphic_resources/certifications/javascriptbasics.png'
-import FrontEndLibraries from '../graphic_resources/certifications/FrontEndLibraries.png'
+import JavaScriptCertification from "../graphic_resources/certifications/javascriptbasics.png";
+import FrontEndLibraries from "../graphic_resources/certifications/FrontEndLibraries.png";
 
 const Tools = [
   {
@@ -129,7 +129,7 @@ const Languages = [
   },
   { id: uniqid(), name: "Bash", level: "intermediate", logo: BashLogo },
   { id: uniqid(), name: "Ruby", level: "proficient", logo: RubyLogo },
-  { id: uniqid(), name: "Python", level: "Begginer", logo: PythonLogo },
+  { id: uniqid(), name: "Python", level: "intermediate", logo: PythonLogo },
   { id: uniqid(), name: "Html5", level: "proficient", logo: htmlLogo },
   { id: uniqid(), name: "Css3", level: "proficient", logo: cssLogo },
 ];
@@ -271,56 +271,64 @@ const Projects = [
     picture: pixelSketch,
     type: "portfolio",
   },
-  {id:uniqid(),
-  name:'Random Quote Generator',
-  description:'React project for FreeCodeCamp.org certification.',
-  tools:'React+boostrap',
-  link:'https://miguelfiguera.github.io/random-quote-generator',
-  code:'https://github.com/miguelfiguera/random-quote-generator/',
-  picture: RandomQuote,
-  type:'portfolio',},
-  {id:uniqid(),
-  name:'MarkDown Previewer',
-description:'React project for the FreeCodeCamp.org certification',
-tools:'React, bootstrap, marked.js',
-link:'https://miguelfiguera.github.io/MarkDown-previewer/',
-code:'https://github.com/miguelfiguera/MarkDown-previewer',
-picture:MarkDownpart,
-type:'portfolio'},
-{
-  id: uniqid(),
-  name: "Scrolling Animation",
-  description: "Bubble Message animation for static website.",
-  tools: "GSAP, HTML, JS, CSS",
-  link: "https://miguelfiguera.github.io/creativedirection_parallax/",
-  code: "https://github.com/miguelfiguera/creativedirection_parallax",
-  picture: creativeDirection,
-  type: "portfolio",}
+  {
+    id: uniqid(),
+    name: "Random Quote Generator",
+    description: "React project for FreeCodeCamp.org certification.",
+    tools: "React+boostrap",
+    link: "https://miguelfiguera.github.io/random-quote-generator",
+    code: "https://github.com/miguelfiguera/random-quote-generator/",
+    picture: RandomQuote,
+    type: "portfolio",
+  },
 
+  {
+    id: uniqid(),
+    name: "MarkDown Previewer",
+    description: "React project for the FreeCodeCamp.org certification",
+    tools: "React, bootstrap, marked.js",
+    link: "https://miguelfiguera.github.io/MarkDown-previewer/",
+    code: "https://github.com/miguelfiguera/MarkDown-previewer",
+    picture: MarkDownpart,
+    type: "portfolio",
+  },
+  {
+    id: uniqid(),
+    name: "Scrolling Animation",
+    description: "Bubble Message animation for static website.",
+    tools: "GSAP, HTML, JS, CSS",
+    link: "https://miguelfiguera.github.io/creativedirection_parallax/",
+    code: "https://github.com/miguelfiguera/creativedirection_parallax",
+    picture: creativeDirection,
+    type: "portfolio",
+  },
 ];
 
 //Certificacions
 
-const certifications=[{
-  id:uniqid(),
-  title:'',
-  link:'',
-  photo:''
-},
-{
-  id:uniqid(),
-  title:'JavaScript Algorithms and Data Structures',
-  link:'https://www.freecodecamp.org/certification/perrosaurio725/javascript-algorithms-and-data-structures',
-  photo:JavaScriptCertification
-},{
-  id:uniqid(),
-  title:'Front End Libraries',
-  link:'https://www.freecodecamp.org/certification/perrosaurio725/front-end-development-libraries',
-  photo:FrontEndLibraries
-},]
+const certifications = [
+  {
+    id: uniqid(),
+    title: "",
+    link: "",
+    photo: "",
+  },
+  {
+    id: uniqid(),
+    title: "JavaScript Algorithms and Data Structures",
+    link: "https://www.freecodecamp.org/certification/perrosaurio725/javascript-algorithms-and-data-structures",
+    photo: JavaScriptCertification,
+  },
+  {
+    id: uniqid(),
+    title: "Front End Libraries",
+    link: "https://www.freecodecamp.org/certification/perrosaurio725/front-end-development-libraries",
+    photo: FrontEndLibraries,
+  },
+];
 
-export function theCert(){
-  return certifications
+export function theCert() {
+  return certifications;
 }
 
 export function theProjects() {
@@ -342,5 +350,3 @@ export function MusicCv() {
 export function DeveloperCv() {
   return DeveloperCV;
 }
-
-
