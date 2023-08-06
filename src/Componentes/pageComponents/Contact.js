@@ -33,20 +33,20 @@ useEffect(()=>{
         <form onSubmit={handleSubmit} style={{maxWidth:'450px'}} className="rounded-3 mx-auto">
           <div className="mb-3">
             <label htmlFor="full-name" className="form-label text-light">
-              Nombre y apellido:
+              Name and LastName:
             </label>
             <input
               type="text"
               name="name"
               id="full-name"
-              placeholder="Nombre completo"
+              placeholder="full name"
               required={true}
               className="form-control"
             />
           </div>
           <div className="mb-3">
             <label htmlFor="email" className="form-label text-light">
-              Dirección de correo:
+              Email address:
             </label>
             <input
               id="email"
@@ -63,7 +63,7 @@ useEffect(()=>{
           </div>
           <div className="mb-3">
             <label htmlFor="message" className="form-label text-light">
-              Mensaje:
+              Message:
             </label>
             <textarea id="message" name="message" className="form-control" placeholder="I think you're awesome!" />
             <ValidationError
