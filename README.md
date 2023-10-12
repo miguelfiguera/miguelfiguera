@@ -1,6 +1,6 @@
 # I'm Miguel Figuera Quintero.
 
-I'm a Web Developer that has (almost) finished The Odin Project curriculum.
+I'm a Web Developer that finished The Odin Project curriculum.
 I did the rails path and now Im trying to end the Node.js Path too.
 
 You can contact me through [here by phone](https://wa.me/584241727988) or [using linkedin](https://www.linkedin.com/in/miguel-quintero725/).
