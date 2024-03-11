@@ -183,9 +183,16 @@ const DeveloperCV = {
   profile: "FullStack Developer on NextJS and Ruby on Rails. ",
   //profile2: "Going boldly to become an ethical hacker.",
   languages: ["English: conversational.", "Spanish: Native."],
-  experience: [{text:"Sistemas Globales ARC",link:"www.sistemasgarc.com.ve"},
-    {text:"Vocacion Cientifica",link:" https://miguelfiguera.github.io/vocacion-cientifica/"},
-    {text:"Miguel Figuera",link:" https://miguelfiguera.github.io/miguelfiguera/"}
+  experience: [
+    { text: "Sistemas Globales ARC", link: "www.sistemasgarc.com.ve" },
+    {
+      text: "Vocacion Cientifica",
+      link: " https://miguelfiguera.github.io/vocacion-cientifica/",
+    },
+    {
+      text: "Miguel Figuera",
+      link: " https://miguelfiguera.github.io/miguelfiguera/",
+    },
   ],
   programmingLanguages: [
     "Python: intermediate.",

@@ -1,34 +1,35 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import {useRef,useEffect,useState} from 'react'
+import { useEffect, useState } from "react";
+import NavBarMobile from "./NavBarMobile";
 
 export default function Navbar() {
-const myRef=useRef()
-const [visible,setVisible]=useState('myHidden')
+  const [size, setSize] = useState(0);
 
-useEffect(()=>{
-  const observer=new IntersectionObserver((entries)=>{
-    const entry=entries[0]
-    if(entry.isIntersecting &&window.innerWidth<650 ){
-      setVisible('myshowMobile')
-    }
-    else if (entry.isIntersecting) {
-      setVisible("myShow");
-    }
-    else{ setVisible('myHidden')}
-  },{threshold:0})
-  observer.observe(myRef.current)
-},[])
+  useEffect(() => {
+   function updateSize(){
+    window.addEventListener('resize',() => {
+      setSize(window.innerWidth)
+    })
+   }
+   updateSize()
 
+  }, [size]); 
+
+  if(size < 650){
+    return <NavBarMobile/>
+  }
 
   return (
-    <div className={ `sticky-top container mt-5 mb-3 ${visible} bg-dark rounded-3 fs-5`} ref={myRef}>
-      <div className="row align-items-start text-center mb-5">
-      {/*   <Link className="fs-6 text-reset col mx-2" to="/miguelfiguera/#projects">
+    <div
+      className={`sticky-top container mt-5 mb-3 myShow bg-dark rounded-3 fs-5`}
+    >
+
+      <div className="row align-items-start text-center mb-5 py-1">
+        {/*   <Link className="fs-6 text-reset col mx-2" to="/miguelfiguera/#projects">
           projects
         </Link> */}
-
-        <Link
+                <Link
           className="nav-link active text-reset col mx-2"
           aria-current="page"
           to="/miguelfiguera/#about"
