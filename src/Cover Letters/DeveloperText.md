@@ -1,23 +1,22 @@
-Dear Employer,
+### Dear Employer,
 
-I graduated from college as a Musician, this may sound too far away from the developer ecosystem, and it is. Becoming a developer was a self-taught journey most of the time. I had the help of some really extensive free resources like The Odin Project: https://www.theodinproject.com/ (where I took the Ruby on Rails path, React, Node.js, and Next.js) and Free Code Camp: https://www.freecodecamp.org/perrosaurio725 (where I centered my attention to JavaScript and Python).
+I graduated from college as a Musician, this may sound too far away from the developer ecosystem, and it is. Becoming a developer was a "kind of" self-taught journey most of the time. I had the help of some really extensive free resources like The Odin Project: https://www.theodinproject.com/ (where I took the Ruby on Rails path, React, Node.js, and Next.js) and Free Code Camp: https://www.freecodecamp.org/perrosaurio725 (where I centered my attention to JavaScript, Typescript and Python).
 
 Both of them gave me the content, but I had to earn all the knowledge with reading, practice, developing small toy projects up to big ones, and _walking the path_ as some say. I did this with only my will to learn.
 
-My toolkit is composed of:
+I am currently enrolled at the ***Universidad Nacional Experimental de las Telecomunicaciones e Informática*** (UNETI) on Venezuela. My goal is to pursue a comprehensive education and ultimately become a skilled Software Engineer. 
+
+#### My toolkit is composed of:
 
 1. Ruby & Ruby on Rails
 2. React
-3. Vite & webpack.
 4. git.
 5. Javascript.
 6. Next.JS
 7. NodeJs
-8. Html5
-9. Css3
-10. Bootstrap/Tailwind.
-11. gitHub
-12. Python (still learning).
+8. Bootstrap/Tailwind (FlowBite too).
+9. GitHub
+10. Python (still learning).
 
 This journey gave me the tools to understand how is usually the workflow of a developer, the way to tackle new unknown obstacles, and the resilience to keep up, because somewhere, on some web, someone has the answer even if I do not.
 
@@ -29,4 +28,6 @@ Thank you for your time and consideration. I wish you well.
 
 Sincerely
 
-Miguel Figuera
+### Miguel Figuera
+### miguelqui725@gmail.com
+### +58 424-172-7988
