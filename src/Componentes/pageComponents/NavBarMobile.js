@@ -7,7 +7,7 @@ export default function NavBarMobile() {
   return (
     <div className="sticky-top mb-3">
     <div
-      className={` container mt-5  myShow bg-dark rounded-3 fs-5`}
+      className={` container mt-5 bg-dark rounded-3 fs-5`}
     >
       <span
         onClick={() => {
