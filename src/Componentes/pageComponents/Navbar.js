@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import NavBarMobile from "./NavBarMobile";
 
 export default function Navbar() {
-  const [size, setSize] = useState(0);
+  const [size, setSize] = useState(window.innerWidth);
 
   useEffect(() => {
    function updateSize(){
