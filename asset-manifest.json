@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/miguelfiguera/static/css/main.7423ad19.css",
-    "main.js": "/miguelfiguera/static/js/main.22af7867.js",
+    "main.js": "/miguelfiguera/static/js/main.e6635a93.js",
     "static/js/787.ee7cd9df.chunk.js": "/miguelfiguera/static/js/787.ee7cd9df.chunk.js",
     "static/media/solyartes.png": "/miguelfiguera/static/media/solyartes.8509e739756755968a95.png",
     "static/media/Connect4.png": "/miguelfiguera/static/media/Connect4.d5652599e2f026cffd34.png",
@@ -36,11 +36,11 @@
     "static/media/css3.svg": "/miguelfiguera/static/media/css3.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html5.svg": "/miguelfiguera/static/media/html5.0107c93943a8f415b5db64ebb0a9d12d.svg",
     "main.7423ad19.css.map": "/miguelfiguera/static/css/main.7423ad19.css.map",
-    "main.22af7867.js.map": "/miguelfiguera/static/js/main.22af7867.js.map",
+    "main.e6635a93.js.map": "/miguelfiguera/static/js/main.e6635a93.js.map",
     "787.ee7cd9df.chunk.js.map": "/miguelfiguera/static/js/787.ee7cd9df.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7423ad19.css",
-    "static/js/main.22af7867.js"
+    "static/js/main.e6635a93.js"
   ]
 }
