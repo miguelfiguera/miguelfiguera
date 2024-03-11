@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {useRef,useEffect,useState} from 'react'
 import { theCert } from "../Helpers";
 import Certifications from'./Certifications'
+import CoverLetter from '../../CoverLetters/DeveloperText.pdf'
 
 export function Curriculums() {
   const myRef=useRef()
@@ -34,7 +35,7 @@ const certifications=theCert().filter((e)=>e.photo!=='').map((e)=>{
             Dev{" "}
           </Link>{" "}
           <br />
-          <a href=""> Download Dev Cover Letter</a>
+          <a href={CoverLetter} target="_blank" rel="noreferrer"> Download Dev Cover Letter</a>
         </div>
        {/*  <div className="container col text-center">
           <Link to="/miguelfiguera/music" className="btn btn-primary mb-3">
