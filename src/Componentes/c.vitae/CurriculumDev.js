@@ -1,9 +1,8 @@
 import React from "react";
-import { ReactDOM } from "react";
-import { Link } from "react-router-dom";
 import { DeveloperCv } from "../Helpers";
 import Li from "./Li";
-
+import LiLinks from "./LiLinks";
+import { Link } from "react-router-dom";
 //Create a Modal using dialog may be, for this part
 
 export default function CurriculumDev() {
@@ -14,14 +13,14 @@ export default function CurriculumDev() {
   });
 
   const experience = curriculum.experience.map((e) => {
-    return <Li object={e} />;
+    return <LiLinks object={e} />;
   });
 
   const programmingLanguages = curriculum.programmingLanguages.map((e) => {
     return <Li object={e} />;
   });
   const education = curriculum.education.map((e) => {
-    return <Li object={e} />;
+    return <Li object={e} key={e.id}/>;
   });
   const skills = curriculum.skills.map((e) => {
     return <Li object={e} />;
@@ -36,6 +35,7 @@ export default function CurriculumDev() {
   });
 
   return (
+
     <div className="container-fluid">
       <div className="container pb-2">
         <div className="row align-items-start pt-5 mb-5">
@@ -101,7 +101,7 @@ export default function CurriculumDev() {
         </div>
 
         <div className="modal-footer text-center mb-3">
-          <button className="btn btn-primary mx-3"> Print</button>
+          <button className="btn btn-primary mx-3" onClick={() => window.print()}> Print</button>
           <Link to="/miguelfiguera/">
             {" "}
             <button className="btn btn-danger mx-3"> Return</button>

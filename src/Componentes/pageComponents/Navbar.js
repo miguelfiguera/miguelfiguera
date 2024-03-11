@@ -1,6 +1,5 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { useInView } from 'react-intersection-observer';
 import {useRef,useEffect,useState} from 'react'
 
 export default function Navbar() {
@@ -23,11 +22,11 @@ useEffect(()=>{
 
 
   return (
-    <div className={ `container mt-5 mb-3 ${visible}`} ref={myRef}>
+    <div className={ `sticky-top container mt-5 mb-3 ${visible} bg-dark rounded-3 fs-5`} ref={myRef}>
       <div className="row align-items-start text-center mb-5">
-        <Link className="fs-6 text-reset col mx-2" to="/miguelfiguera/#projects">
+      {/*   <Link className="fs-6 text-reset col mx-2" to="/miguelfiguera/#projects">
           projects
-        </Link>
+        </Link> */}
 
         <Link
           className="nav-link active text-reset col mx-2"

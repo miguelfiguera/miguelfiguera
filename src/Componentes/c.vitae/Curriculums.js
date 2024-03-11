@@ -26,22 +26,24 @@ const certifications=theCert().filter((e)=>e.photo!=='').map((e)=>{
     <div ref={myRef} className={`container mb-5 pb-3 ${visible}`} id="resume">
       <h2 className="text-center fs-1"> Resume</h2>
       <div className="row mb-5 mt-5">
-        <div className="container col text-center border-end">
-          <Link to="/miguelfiguera/dev" className="mb-3 btn btn-primary">
+{/*       <div className="container col text-center border-end">
+ */}      <div className="container col text-center">
+
+          <Link to="/miguelfiguera/dev" className="mb-3 btn btn-primary" style={{scale:'1.5'}}>
             {" "}
             Dev{" "}
           </Link>{" "}
           <br />
           <a href=""> Download Dev Cover Letter</a>
         </div>
-        <div className="container col text-center">
+       {/*  <div className="container col text-center">
           <Link to="/miguelfiguera/music" className="btn btn-primary mb-3">
             {" "}
             Music
           </Link>{" "}
           <br />
           <a href=""> Download Musician Cover Letter </a>
-        </div>
+        </div> */}
       </div>
       <h2 className="fs-1 text-center">Certifications</h2>
 
