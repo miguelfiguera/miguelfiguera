@@ -1,7 +1,7 @@
 import React from "react";
 import FreeCodeCamp from "../../graphic_resources/teachers_logos/fcc_primary_large.svg";
 import { useRef, useEffect, useState } from "react";
-import theOtherLogoOfTop from "../../graphic_resources/teachers_logos/odinformobile.svg"
+import theOtherLogoOfTop from "../../graphic_resources/teachers_logos/odinformobile.svg";
 
 export default function Home() {
   const myRefHome = useRef();
@@ -15,10 +15,9 @@ export default function Home() {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
-        if(entry.isIntersecting &&size<650 ){
-          setvisibleHome('myshowMobile')
-        }
-        else if (entry.isIntersecting) {
+        if (entry.isIntersecting && size < 650) {
+          setvisibleHome("myshowMobile");
+        } else if (entry.isIntersecting) {
           setvisibleHome("myShow");
         } else {
           setvisibleHome("myHidden");
@@ -30,7 +29,6 @@ export default function Home() {
   }, []);
 
   const thisClass = size < 800 ? "container" : " row align-items-start";
-
 
   return (
     <div className={`container pt-5 ${visibleHome}`} ref={myRefHome} id="about">
@@ -64,8 +62,14 @@ export default function Home() {
             and I'm very thankful to all of them.
           </p>
 
+          <p>
+            Also, as part of the journey, I went back to college for a second
+            degree, this time on software engineering and computer science at
+            the UNETI, here on Venezuela.
+          </p>
+
           <p className="pb-5">
-            If you are looking for someone to develop, compose, or teach, please
+            If you are looking for someone to develop your dream project, please
             feel free to{" "}
             <strong>
               <em>
@@ -75,7 +79,7 @@ export default function Home() {
           </p>
         </div>
         <div className="col row">
-            <img src={theOtherLogoOfTop} alt="Odin Project Logo" className="" />
+          <img src={theOtherLogoOfTop} alt="Odin Project Logo" className="" />
           <img src={FreeCodeCamp} alt="Free Code Camp logo" className="mt-5" />
         </div>
       </div>
