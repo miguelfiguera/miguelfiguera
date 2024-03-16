@@ -20,7 +20,7 @@ export default function CurriculumDev() {
     return <Li object={e} />;
   });
   const education = curriculum.education.map((e) => {
-    return <Li object={e} key={e.id}/>;
+    return <Li object={e} key={e.id} />;
   });
   const skills = curriculum.skills.map((e) => {
     return <Li object={e} />;
@@ -34,8 +34,9 @@ export default function CurriculumDev() {
     return <p className="col text-center fs-5">{e}</p>;
   });
 
-  return (
 
+
+  return (
     <div className="container-fluid">
       <div className="container pb-2">
         <div className="row align-items-start pt-5 mb-5">
@@ -68,40 +69,49 @@ export default function CurriculumDev() {
           <p className="fs-4">{curriculum.profile2}</p>
         </div>
         <div className="container mt-2 mb-4 border-bottom">
-          <div className="row align-items-start">
-            <div className="container col">
-              <h3 className="mt-4">Education</h3>
-              <ul>{education}</ul>
+          <div className="container">
+            <h3 className="mt-4 text-decoration-underline">Education</h3>
+            <ul className="border-bottom pb-3">{education}</ul>
 
-              <h3 className="mt-4">Languages</h3>
-              <ul>{languages}</ul>
+            <h3 className="mt-4 text-decoration-underline">Languages</h3>
+            <ul className="border-bottom pb-3">{languages}</ul>
 
-              <h3 className="mt-4">Skills</h3>
-              <ul>{skills}</ul>
-            </div>
-
-            <div className="container col">
-              <h3 className="mt-4">Experience</h3>
-              <ul>{experience}</ul>
-
-              {curriculum.type === "music" ? null : (
-                <div>
-                  <h3 className="mt-4">Programming Languages</h3>
-                  <ul>{programmingLanguages}</ul>
-                </div>
-              )}
-
-              <h3 className="mt-4">Soft Skills</h3>
-              <ul>{softSkills}</ul>
-            </div>
+            <h3 className="mt-4 text-decoration-underline">Skills</h3>
+            <div className="row border-bottom ms-3">
+            <ul className="pb-3 col">{skills.slice(0,7)}</ul>
+            <ul className=" pb-3 col">{skills.slice(7)}</ul></div>
           </div>
+
+            <h3 className="mt-4 text-decoration-underline">Experience</h3>
+            <ul className="border-bottom pb-3">{experience}</ul>
+
+            {curriculum.type === "music" ? null : (
+              <div>
+                <h3 className="mt-4 text-decoration-underline">Programming Languages</h3>
+                <ul className="border-bottom pb-3">{programmingLanguages}</ul>
+              </div>
+            )}
+
+            <h3 className="mt-4 text-decoration-underline">Soft Skills</h3>
+            <ul className="">{softSkills}</ul>
+
+           {/* footer stuff */}
+
         </div>
         <div className="container row text-center align-items-start">
           {contact}
         </div>
 
+
+
         <div className="modal-footer text-center mb-3">
-          <button className="btn btn-primary mx-3" onClick={() => window.print()}> Print</button>
+          <button
+            className="btn btn-primary mx-3"
+            onClick={() => window.print()}
+          >
+            {" "}
+            Print
+          </button>
           <Link to="/miguelfiguera/">
             {" "}
             <button className="btn btn-danger mx-3"> Return</button>
