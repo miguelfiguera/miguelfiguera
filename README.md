@@ -9,7 +9,7 @@ You can contact me through [here by phone](https://wa.me/584241727988) or [using
 
 My set of tools are:
 
-1. JS, NodeJs, React, Nextjs.
+1. JS, NodeJs, Express, React, Nextjs.
 2. Ruby, Rails.
 3. Python (for other stuff and not precisely webDevelopment).
 
@@ -18,8 +18,8 @@ in the pass year.
 
 You can think that I'm self taught, but I will have to say like Arnold (yeah, Schwarzenegger) that _there is no self-made man_ because I owe getting this far to a lot of people. Even my pets get some credit too.
 
-You will find a lot of toy apps in my repositories, all of TOP or FreeCodeCamp.org, since I had too do some projects to earn the certifications.
+My previous experience is working as web developer for **AlphaComputer** and **Sistemas Globales ARC**, I'm currently employed on **Planet Solar Las Antillas** as an IT/Quoter. Also I have some freelance work as a FullStack Developer on NextJS and Ruby on Rails. I am eager to learn and grow in this community. I like to tackle new challenges and I'm looking for opportunities to do it.'.
 
 I wish you well, fellow coder.
 
-M.F.
+M.F.Q.

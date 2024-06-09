@@ -31,7 +31,7 @@ export function Curriculums() {
     });
 
   return (
-    <div ref={myRef} className={`container mb-5 pb-3 ${visible}`} id="resume">
+    <div ref={myRef} className={`container mb-5 pb-3 pt-5 ${visible}`} id="resume">
       <h2 className="text-center fs-1"> Resume</h2>
       <div className="row mb-5 mt-5">
         {/*       <div className="container col text-center border-end">
@@ -60,7 +60,7 @@ export function Curriculums() {
           <a href=""> Download Musician Cover Letter </a>
         </div> */}
       </div>
-      <h2 className="fs-1 text-center">Certifications</h2>
+      <h2 className="fs-1 text-center pt-5" id="certifications">Certifications</h2>
 
       <div className="container d-flex p-2 flex-wrap justify-content-center">
         {certifications}

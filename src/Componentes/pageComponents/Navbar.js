@@ -50,10 +50,17 @@ export default function Navbar() {
         </Link>
         <Link
           className="nav-link text-reset col mx-2"
+          to="/miguelfiguera/#certifications"
+        >
+          certifications
+        </Link>
+        <Link
+          className="nav-link text-reset col mx-2"
           to="/miguelfiguera/#contact"
         >
           contact me
         </Link>
+
 
         <Link
           className="nav-link text-reset col mx-2"
