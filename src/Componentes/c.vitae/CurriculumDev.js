@@ -34,8 +34,6 @@ export default function CurriculumDev() {
     return <p className="col text-center fs-5">{e}</p>;
   });
 
-
-
   return (
     <div className="container-fluid">
       <div className="container pb-2">
@@ -78,31 +76,31 @@ export default function CurriculumDev() {
 
             <h3 className="mt-4 text-decoration-underline">Skills</h3>
             <div className="row border-bottom ms-3">
-            <ul className="pb-3 col">{skills.slice(0,7)}</ul>
-            <ul className=" pb-3 col">{skills.slice(7)}</ul></div>
+              <ul className="pb-3 col">{skills.slice(0, 7)}</ul>
+              <ul className=" pb-3 col">{skills.slice(7)}</ul>
+            </div>
           </div>
 
-            <h3 className="mt-4 text-decoration-underline">Experience</h3>
-            <ul className="border-bottom pb-3">{experience}</ul>
+          <h3 className="mt-4 text-decoration-underline">Experience</h3>
+          <ul className="border-bottom pb-3">{experience}</ul>
 
-            {curriculum.type === "music" ? null : (
-              <div>
-                <h3 className="mt-4 text-decoration-underline">Programming Languages</h3>
-                <ul className="border-bottom pb-3">{programmingLanguages}</ul>
-              </div>
-            )}
+          {curriculum.type === "music" ? null : (
+            <div>
+              <h3 className="mt-4 text-decoration-underline">
+                Programming Languages
+              </h3>
+              <ul className="border-bottom pb-3">{programmingLanguages}</ul>
+            </div>
+          )}
 
-            <h3 className="mt-4 text-decoration-underline">Soft Skills</h3>
-            <ul className="">{softSkills}</ul>
+          <h3 className="mt-4 text-decoration-underline">Soft Skills</h3>
+          <ul className="">{softSkills}</ul>
 
-           {/* footer stuff */}
-
+          {/* footer stuff */}
         </div>
         <div className="container row text-center align-items-start">
           {contact}
         </div>
-
-
 
         <div className="modal-footer text-center mb-3">
           <button

@@ -1,10 +1,10 @@
 ### Notes about this project:
+
 1. I should add the cover letters so they can be downloaded.
 2. Maybe just do the specialisRevelo animation once.
 3. I should create (later) a portafolio component that puts all my projects in one place. But with more info and better photos.
 4. I want to add the 3D element tomorrow.
 5. This is looking really nice, Im proud up to some point.
-
 
 # Getting Started with Create React App
 

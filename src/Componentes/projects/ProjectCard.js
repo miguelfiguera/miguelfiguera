@@ -19,7 +19,9 @@ export default function ProjectCard({ object }) {
         style={{ height: "66%" }}
       />
       <div className="card-body" style={{ heigh: "33%" }}>
-        <h5 className="card-title text-end"><strong>{object.name}</strong></h5>
+        <h5 className="card-title text-end">
+          <strong>{object.name}</strong>
+        </h5>
         <p className="card-text text-end">{object.description}</p>
         <p className="card-text text-end">
           Builded with: <strong>{object.tools}</strong>

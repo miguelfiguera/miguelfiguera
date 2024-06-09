@@ -100,7 +100,13 @@ export default function CurriculumMusic() {
         </div>
 
         <div className="modal-footer text-center mb-3">
-          <button className="btn btn-primary mx-3" onClick={()=>window.print()}> Print</button>
+          <button
+            className="btn btn-primary mx-3"
+            onClick={() => window.print()}
+          >
+            {" "}
+            Print
+          </button>
           <Link to="/miguelfiguera/">
             {" "}
             <button className="btn btn-danger mx-3"> Return</button>

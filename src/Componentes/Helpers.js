@@ -30,8 +30,11 @@ import RandomQuote from "../graphic_resources/project_pictures/randomQuoteGenera
 import MarkDownpart from "../graphic_resources/project_pictures/markDownPreviewer.png";
 import creativeDirection from "../graphic_resources/project_pictures/gsapParallax.png";
 //Certifications photos
-import JavaScriptCertification from "../graphic_resources/certifications/javascriptbasics.png";
-import FrontEndLibraries from "../graphic_resources/certifications/FrontEndLibraries.png";
+import JavaScriptCertification from "../graphic_resources/certifications/Javascript.png";
+import FrontEndLibraries from "../graphic_resources/certifications/frontend.png";
+import pythonCert from "../graphic_resources/certifications/python.png";
+import railsCert from "../graphic_resources/certifications/rails.png";
+import sqlcert from "../graphic_resources/certifications/sql.png";
 
 const Tools = [
   {
@@ -193,6 +196,7 @@ const DeveloperCV = {
       text: "Miguel Figuera",
       link: " https://miguelfiguera.github.io/miguelfiguera/",
     },
+    {text: 'Planet Solar Las Antillas LLC', link:''}
   ],
   programmingLanguages: [
     "Python: intermediate.",
@@ -341,6 +345,18 @@ const certifications = [
     link: "https://www.freecodecamp.org/certification/perrosaurio725/front-end-development-libraries",
     photo: FrontEndLibraries,
   },
+  {
+    title: 'Ruby on Rails',
+    link:'https://www.testdome.com/certificates/f9ee7ac387a848328f05bd8f9cae43fd',
+    photo:railsCert
+  },{
+    title: 'SQL',
+    link:'https://www.testdome.com/certificates/de391fb89b1d4e8ab1a0e0296a397cfd',
+    photo:sqlcert
+  },{title: 'Scientific Computing with Python',link:'https://www.freecodecamp.org/certification/perrosaurio725/scientific-computing-with-python-v7',
+  photo:pythonCert
+  }
+
 ];
 
 export function theCert() {

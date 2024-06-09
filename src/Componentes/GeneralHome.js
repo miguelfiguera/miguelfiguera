@@ -13,10 +13,11 @@ export default function GeneralHome() {
     <main className="container-fluid pt-5 mt-0">
       <Header />
       <Navbar />
-{/*       <Projects />
- */}      <Home />
+      {/*       <Projects />
+       */}{" "}
+      <Home />
       <About />
-      <Contact/>
+      <Contact />
       <Curriculums />
       <Footer />
     </main>

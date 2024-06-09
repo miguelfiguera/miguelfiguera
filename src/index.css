@@ -38,7 +38,7 @@ a {
 }
 
 .hovering-hover:hover {
-  animation: growth 1s ease-in forwards ;
+  animation: growth 1s ease-in forwards;
 }
 
 @keyframes growth {
@@ -47,79 +47,81 @@ a {
   }
 }
 
-
-.myHidden{
-  opacity:0;
+.myHidden {
+  opacity: 0;
 }
 
-.myShow{
-  animation: specialisRevelo 1s ease-in forwards
+.myShow {
+  animation: specialisRevelo 1s ease-in forwards;
 }
 
 @keyframes specialisRevelo {
-  0%{opacity: 0;
+  0% {
+    opacity: 0;
     filter: blur(5px);
-    scale:0.8;
+    scale: 0.8;
   }
 
-  100%{
+  100% {
     opacity: 1;
     filter: blur(0);
     scale: 1;
   }
-  
 }
 
-.myShowMobile{
-  animation: specialisRevelo2 1s ease-in forwards
-
+.myShowMobile {
+  animation: specialisRevelo2 1s ease-in forwards;
 }
 
 @keyframes specialisRevelo2 {
-  0%{opacity: 0;
-    scale:0.8;
+  0% {
+    opacity: 0;
+    scale: 0.8;
   }
 
-  100%{
+  100% {
     opacity: 1;
     scale: 1;
   }
-  
 }
 
-.myName{
-  animation: intro 1.5s ease-in forwards
+.myName {
+  animation: intro 1.5s ease-in forwards;
 }
-.mySubtitle{
+.mySubtitle {
   opacity: 0;
   animation: intro 1.5s ease-in forwards;
   animation-delay: 1s;
 }
 @keyframes intro {
-  0%{
-    display:none;
+  0% {
+    display: none;
     opacity: 0;
     filter: blur(5px);
-    translate:-100%;
+    translate: -100%;
   }
-  
 
-  100%{
+  100% {
     display: contents;
-    filter:blur(0px);
-    translate:0%;
+    filter: blur(0px);
+    translate: 0%;
     opacity: 1;
-    scale:1.2;
+    scale: 1.2;
     width: calc(100% / 1.2);
   }
 }
 
-input,#full-name,#email,#message{
+input,
+#full-name,
+#email,
+#message {
   background-color: rgb(40, 43, 40);
-  color:rgb(202, 202, 202)
+  color: rgb(202, 202, 202);
 }
 
-#full-name::placeholder, #email::placeholder, #message::placeholder{
-  color:rgb(202, 202, 202);
+#full-name::placeholder,
+#email::placeholder,
+#message::placeholder {
+  color: rgb(202, 202, 202);
   opacity: 0.5;
 }

@@ -4,19 +4,22 @@ I graduated from college as a Musician, this may sound too far away from the dev
 
 Both of them gave me the content, but I had to earn all the knowledge with reading, practice, developing small toy projects up to big ones, and _walking the path_ as some say. I did this with only my will to learn.
 
-I am currently enrolled at the ***Universidad Nacional Experimental de las Telecomunicaciones e Informática*** (UNETI) on Venezuela. My goal is to pursue a comprehensive education and ultimately become a skilled Software Engineer. 
+I am currently enrolled at the **_Universidad Nacional Experimental de las Telecomunicaciones e Informática_** (UNETI) on Venezuela. My goal is to pursue a comprehensive education and ultimately become a skilled Software Engineer.
 
 #### My toolkit is composed of:
 
 1. Ruby & Ruby on Rails
 2. React
-4. git.
-5. Javascript.
-6. Next.JS
-7. NodeJs
-8. Bootstrap/Tailwind (FlowBite too).
-9. GitHub
-10. Python (still learning).
+3. git.
+4. Javascript.
+5. Next.JS
+6. NodeJs
+7. Bootstrap/Tailwind (FlowBite too).
+8. GitHub
+9. Python (still learning).
+10. PostgreSQL
+11. Firebase
+12. Mongo DB
 
 This journey gave me the tools to understand how is usually the workflow of a developer, the way to tackle new unknown obstacles, and the resilience to keep up, because somewhere, on some web, someone has the answer even if I do not.
 
@@ -29,5 +32,7 @@ Thank you for your time and consideration. I wish you well.
 Sincerely
 
 ### Miguel Figuera
+
 ### miguelqui725@gmail.com
+
 ### +58 424-172-7988
