@@ -11,7 +11,7 @@ My set of tools are:
 
 1. JS, NodeJs, React, Nextjs.
 2. Ruby, Rails.
-3. Python (for other stuff and not precisely webDevelopment yet).
+3. Python (for other stuff and not precisely webDevelopment).
 
 If you do not desire to wander in my repos, you can check [my page](https://miguelfiguera.github.io/miguelfiguera/#contact) to see the best (told by me) projects that I have done
 in the pass year.
