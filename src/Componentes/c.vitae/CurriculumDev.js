@@ -22,9 +22,19 @@ export default function CurriculumDev() {
   const education = curriculum.education.map((e) => {
     return <Li object={e} key={e.id} />;
   });
-  const skills = curriculum.skills.map((e) => {
+
+
+  const skills1 = curriculum.skills.slice(0,(curriculum.skills.length/2+1)).map((e) => {
     return <Li object={e} />;
   });
+
+  const skills2 =curriculum.skills.slice((curriculum.skills.length/2+1)).map((e) => {
+    return <Li object={e} />;
+  });
+
+
+
+
 
   const softSkills = curriculum.softSkills.map((e) => {
     return <Li object={e} />;
@@ -76,8 +86,8 @@ export default function CurriculumDev() {
 
             <h3 className="mt-4 text-decoration-underline">Skills</h3>
             <div className="row border-bottom ms-3">
-              <ul className="pb-3 col">{skills.slice(0, 7)}</ul>
-              <ul className=" pb-3 col">{skills.slice(7)}</ul>
+              <ul className="pb-3 col">{skills1}</ul>
+              <ul className=" pb-3 col">{skills2}</ul>
             </div>
           </div>
 

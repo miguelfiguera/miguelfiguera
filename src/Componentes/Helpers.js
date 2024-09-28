@@ -196,7 +196,10 @@ const DeveloperCV = {
       text: "Miguel Figuera",
       link: " https://miguelfiguera.github.io/miguelfiguera/",
     },
-    {text: 'Planet Solar Las Antillas LLC', link:''}
+    {text:'AlphaComputer: 2021 - 2024 / FullStack Developer'},
+    {text: 'Planet Solar Las Antillas LLC: 2023-2024 / Quoter', link:'https://planetsolarpr.net/'},
+    {text: 'Towerware: 2024 (ongoing) / Chief Technical Officer', link:'https://towerware.com/'},
+    {text: 'Digital Lab 2023 (ongoing) / fullStack Developer'}
   ],
   programmingLanguages: [
     "Python: intermediate.",
@@ -209,7 +212,7 @@ const DeveloperCV = {
   education: [
     "Computer Science - UNETI (2023 - ongoing)",
     "FreeCodeCamp.org Curriculum (2023)",
-    "The Odin Project: Ruby Path (2022)",
+    "The Odin Project: Ruby Path (2021)",
     "Diploma on techno - pedagogy and new technologies for teaching. UPEL(2020) ",
     "B.A. in Jazz Music - UNEARTE (2018)",
   ],
@@ -223,13 +226,19 @@ const DeveloperCV = {
     "Ruby on Rails",
     "Ruby",
     "Python",
-    //  "Vitejs",
-    "Heroku",
+    "Vitejs",
+    "Heroku - Deployment",
     "Netlify",
     "Prisma ORM",
     "Firebase",
-    "Relational Databases",
-    "Non Relational Databases",
+    "Relational Databases (MySql, Sqlite, PostgreSql)",
+    "Non Relational Databases (MongoDB, Firebase)",
+    "DigitalOcean",
+    "Git - version manager",
+    "Gmail Admin",
+    "3CX Telephony",
+    "API integration for third party services",
+    "Twilio,Telnyx,Wavix -APIs"
   ],
   softSkills: [
     "Problem Solver",
