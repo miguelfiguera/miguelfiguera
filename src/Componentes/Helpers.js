@@ -230,7 +230,6 @@ const DeveloperCV = {
     "Heroku - Deployment",
     "Netlify",
     "Prisma ORM",
-    "Firebase",
     "Relational Databases (MySql, Sqlite, PostgreSql)",
     "Non Relational Databases (MongoDB, Firebase)",
     "DigitalOcean",
