@@ -189,7 +189,7 @@ const DeveloperCV = {
   experience: [
     { text: "Sistemas Globales ARC", link: "www.sistemasgarc.com.ve" },
     {
-      text: "Vocacion Cientifica",
+      text: "Vocacion Cientifica / WebDev",
       link: " https://miguelfiguera.github.io/vocacion-cientifica/",
     },
     {
@@ -199,7 +199,8 @@ const DeveloperCV = {
     {text:'AlphaComputer: 2021 - 2024 / FullStack Developer'},
     {text: 'Planet Solar Las Antillas LLC: 2023-2024 / Quoter', link:'https://planetsolarpr.net/'},
     {text: 'Towerware: 2024 (ongoing) / Chief Technical Officer', link:'https://towerware.com/'},
-    {text: 'Digital Lab 2023 (ongoing) / fullStack Developer'}
+    {text: 'Digital Lab 2023 (ongoing) / fullStack Developer'},
+    {text: 'DV Enterprise Corp 2024( Ongoing) / Chief Technical Officer'}
   ],
   programmingLanguages: [
     "Python: intermediate.",
@@ -237,7 +238,7 @@ const DeveloperCV = {
     "Gmail Admin",
     "3CX Telephony",
     "API integration for third party services",
-    "Twilio,Telnyx,Wavix -APIs"
+    "Twilio,Telnyx,Wavix -APIs",
   ],
   softSkills: [
     "Problem Solver",
