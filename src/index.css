@@ -125,3 +125,42 @@ input,
   color: rgb(202, 202, 202);
   opacity: 0.5;
 }
+
+
+@media (max-width: 600px) {
+
+  .myName {
+    animation: intro 1.5s ease-in forwards;
+  }
+  .mySubtitle {
+    opacity: 0;
+    animation: intro 1.5s ease-in forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes intro {
+    0% {
+      opacity: 0;
+      scale: 0.8;
+    }
+  
+    100% {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+}
+
+
+@media print{
+
+  body {
+  }
+
+  .dont {
+    display:none
+  }
+
+
+}

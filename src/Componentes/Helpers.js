@@ -196,11 +196,20 @@ const DeveloperCV = {
       text: "Miguel Figuera",
       link: " https://miguelfiguera.github.io/miguelfiguera/",
     },
-    {text:'AlphaComputer: 2021 - 2024 / FullStack Developer'},
-    {text: 'Planet Solar Las Antillas LLC: 2023-2024 / Quoter', link:'https://planetsolarpr.net/'},
-    {text: 'Towerware: 2024 (ongoing) / Chief Technical Officer', link:'https://towerware.com/'},
-    {text: 'Digital Lab 2023 (ongoing) / fullStack Developer'},
-    {text: 'DV Enterprise Corp 2024( Ongoing) / Chief Technical Officer'}
+    { text: "AlphaComputer: 2021 - 2024 / FullStack Developer" },
+    {
+      text: "Planet Solar Las Antillas LLC: 2023-2024 / Quoter",
+      link: "https://planetsolarpr.net/",
+    },
+    {
+      text: "Towerware: 05/2024-11/2024 / Chief Technical Officer",
+      link: "https://towerware.com/",
+    },
+    { text: "Digital Lab 2023 (ongoing) / fullStack Developer" },
+    {
+      text: "R&R Advisor 2024( Ongoing) / Chief Technical Officer",
+      link: "https://rradvisor.net/",
+    },
   ],
   programmingLanguages: [
     "Python: intermediate.",
@@ -355,17 +364,20 @@ const certifications = [
     photo: FrontEndLibraries,
   },
   {
-    title: 'Ruby on Rails',
-    link:'https://www.testdome.com/certificates/f9ee7ac387a848328f05bd8f9cae43fd',
-    photo:railsCert
-  },{
-    title: 'SQL',
-    link:'https://www.testdome.com/certificates/de391fb89b1d4e8ab1a0e0296a397cfd',
-    photo:sqlcert
-  },{title: 'Scientific Computing with Python',link:'https://www.freecodecamp.org/certification/perrosaurio725/scientific-computing-with-python-v7',
-  photo:pythonCert
-  }
-
+    title: "Ruby on Rails",
+    link: "https://www.testdome.com/certificates/f9ee7ac387a848328f05bd8f9cae43fd",
+    photo: railsCert,
+  },
+  {
+    title: "SQL",
+    link: "https://www.testdome.com/certificates/de391fb89b1d4e8ab1a0e0296a397cfd",
+    photo: sqlcert,
+  },
+  {
+    title: "Scientific Computing with Python",
+    link: "https://www.freecodecamp.org/certification/perrosaurio725/scientific-computing-with-python-v7",
+    photo: pythonCert,
+  },
 ];
 
 export function theCert() {

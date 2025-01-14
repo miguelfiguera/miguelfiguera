@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { DeveloperCv } from "../Helpers";
 import Li from "./Li";
 import LiLinks from "./LiLinks";
@@ -23,18 +23,17 @@ export default function CurriculumDev() {
     return <Li object={e} key={e.id} />;
   });
 
+  const skills1 = curriculum.skills
+    .slice(0, curriculum.skills.length / 2 + 1)
+    .map((e) => {
+      return <Li object={e} />;
+    });
 
-  const skills1 = curriculum.skills.slice(0,(curriculum.skills.length/2+1)).map((e) => {
-    return <Li object={e} />;
-  });
-
-  const skills2 =curriculum.skills.slice((curriculum.skills.length/2+1)).map((e) => {
-    return <Li object={e} />;
-  });
-
-
-
-
+  const skills2 = curriculum.skills
+    .slice(curriculum.skills.length / 2 + 1)
+    .map((e) => {
+      return <Li object={e} />;
+    });
 
   const softSkills = curriculum.softSkills.map((e) => {
     return <Li object={e} />;
@@ -112,9 +111,9 @@ export default function CurriculumDev() {
           {contact}
         </div>
 
-        <div className="modal-footer text-center mb-3">
+        <div className="modal-footer text-center mb-3 dont">
           <button
-            className="btn btn-primary mx-3"
+            className="btn btn-primary mx-3 dont"
             onClick={() => window.print()}
           >
             {" "}
