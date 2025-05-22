@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
 import MobileNav from "./MobileNav";
 
 interface Props {

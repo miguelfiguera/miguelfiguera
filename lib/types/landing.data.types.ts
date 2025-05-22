@@ -5,6 +5,8 @@ export interface Project {
   description: string;
   image: string;
   technologies: string[];
+  link: string;
+  github: string;
 }
 
 export interface Certification {
@@ -16,7 +18,7 @@ export interface Certification {
   link: string;
 }
 
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 export interface Benefit {
   id: number;
@@ -30,8 +32,8 @@ export interface BlogPost {
   title: string;
   category: string;
   description: string;
-  slug:string;
-  excerpt:string;
+  slug: string;
+  excerpt: string;
   date: string;
   image?: string;
   link?: string;

@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, Code, FileText, Layers, Mail, Menu, X } from "lucide-react";
+import { Calendar, Code, FileText, Layers, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -17,6 +16,8 @@ import { InlineWidget } from "react-calendly";
 import Hero from "@/components/landingPage/Hero";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import RecentProjects from "@/components/landingPage/RecentProjects";
+import { Project } from "@/lib/types/landing.data.types";
 
 export default function Home() {
   return (
@@ -25,80 +26,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
 
-        <section
-          id="projects"
-          className="py-20 bg-gradient-to-b from-gray-900 to-black"
-        >
-          <div className="container">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-              <div>
-                <Badge className="mb-4 bg-gray-800 text-silver hover:bg-gray-800/90">
-                  Featured Work
-                </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold">
-                  Recent Projects
-                </h2>
-              </div>
-              <Link href="/portfolio">
-                <Button
-                  variant="link"
-                  className="text-silver hover:text-white p-0"
-                >
-                  View All Projects →
-                </Button>
-              </Link>
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project) => (
-                <Card
-                  key={project.id}
-                  className="bg-gray-900 border-gray-800 overflow-hidden"
-                >
-                  <div className="aspect-video relative">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-xl text-white">
-                      {project.title}
-                    </CardTitle>
-                    <CardDescription className="text-gray-400">
-                      {project.category}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">{project.description}</p>
-                  </CardContent>
-                  <CardFooter className="flex justify-between border-t border-gray-800 pt-4">
-                    <div className="flex gap-2">
-                      {project.technologies.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="secondary"
-                          className="bg-gray-800 text-silver"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                    <Link href={`/portfolio/${project.id}`}>
-                      <Button
-                        variant="ghost"
-                        className="text-silver hover:text-white hover:bg-gray-800"
-                      >
-                        View Project
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+        <RecentProjects projects={projects} />
 
         <section id="certifications" className="py-20 bg-black">
           <div className="container">
@@ -337,7 +265,7 @@ export default function Home() {
 }
 
 // Sample data
-const projects = [
+const projects: Project[] = [
   {
     id: 1,
     title: "E-commerce Platform",
@@ -346,6 +274,8 @@ const projects = [
       "A full-featured e-commerce platform with payment processing and inventory management.",
     image: "/placeholder.svg?height=300&width=500",
     technologies: ["React", "Node.js", "MongoDB"],
+    link: "https://example.com/ecommerce", // Replace with actual link
+    github: "https://github.com/user/ecommerce", // Replace with actual GitHub repo
   },
   {
     id: 2,
@@ -355,6 +285,8 @@ const projects = [
       "Secure and intuitive mobile banking application with real-time transaction tracking.",
     image: "/placeholder.svg?height=300&width=500",
     technologies: ["React Native", "Firebase"],
+    link: "https://example.com/banking", // Replace with actual link
+    github: "https://github.com/user/banking", // Replace with actual GitHub repo
   },
   {
     id: 3,
@@ -364,6 +296,8 @@ const projects = [
       "Content generation tool powered by advanced AI algorithms for marketing teams.",
     image: "/placeholder.svg?height=300&width=500",
     technologies: ["Python", "TensorFlow", "AWS"],
+    link: "https://example.com/ai", // Replace with actual link
+    github: "https://github.com/user/ai", // Replace with actual GitHub repo
   },
 ];
 
