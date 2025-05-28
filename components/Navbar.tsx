@@ -62,11 +62,11 @@ function Navbar(props: Props) {
               Admin
             </Button>
           </Link>
-          <Link href="/cv-builder">
+          {/*           <Link href="/cv-builder">
             <Button className="bg-silver hover:bg-gray-300 text-black">
               CV Builder
             </Button>
-          </Link>
+          </Link> */}
           <MobileNav />
         </div>
       </div>

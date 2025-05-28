@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 
-function MobileNav() {
+const MobileNav: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -82,19 +82,19 @@ function MobileNav() {
               >
                 Admin
               </Link>
-              <Link
+              {/*               <Link
                 href="/cv-builder"
                 className="block text-lg font-medium text-white hover:text-silver"
                 onClick={() => setIsOpen(false)}
               >
                 CV Builder
-              </Link>
+              </Link> */}
             </nav>
           </div>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default MobileNav;

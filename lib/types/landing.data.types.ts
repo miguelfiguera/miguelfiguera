@@ -31,7 +31,7 @@ export interface BlogPost {
   id: number;
   title: string;
   category: string;
-  description: string;
+  text: string;
   slug: string;
   excerpt: string;
   date: string;

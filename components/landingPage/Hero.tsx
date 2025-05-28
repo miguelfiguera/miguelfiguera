@@ -35,7 +35,7 @@ function Hero(props: Props) {
               <Link href="/portfolio">
                 <Button
                   variant="outline"
-                  className="border-gray-700 text-silver hover:bg-gray-900"
+                  className="border-gray-700 text-silver hover:bg-gray-900 hover:text-white"
                 >
                   View Portfolio
                 </Button>
