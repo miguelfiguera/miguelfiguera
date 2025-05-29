@@ -21,7 +21,6 @@ import Certifications from "@/components/landingPage/Certifications";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
-      <Navbar />
       <main className="flex-1">
         <Hero />
 

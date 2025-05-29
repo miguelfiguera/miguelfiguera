@@ -1,13 +1,32 @@
 import React, { FC } from "react";
 import { Badge } from "../ui/badge";
-import { Benefit, WhyChooseMeContent } from "@/lib/types/landing.data.types";
+import {
+  Benefit,
+  WhyChooseMeContent,
+  LucideIconName,
+} from "@/lib/types/landing.data.types";
 import Image from "next/image";
+import { Code, CheckSquare, Layers, Headphones } from "lucide-react";
 
 interface Props {
   benefits: Benefit[];
   content: WhyChooseMeContent;
 }
 
+const renderBenefitIcon = (iconName: LucideIconName, className: string) => {
+  switch (iconName) {
+    case "Code":
+      return <Code className={className} />;
+    case "CheckSquare":
+      return <CheckSquare className={className} />;
+    case "Layers":
+      return <Layers className={className} />;
+    case "Headphones":
+      return <Headphones className={className} />;
+    default:
+      return null;
+  }
+};
 const WhyChooseMe: FC<Props> = (props) => {
   const { benefits, content } = props;
 
@@ -26,8 +45,8 @@ const WhyChooseMe: FC<Props> = (props) => {
             <div className="grid gap-4 sm:grid-cols-2">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-silver/10 flex items-center justify-center mt-1">
-                    {benefit.icon}
+                  <div className="w-10 h-10 rounded-full bg-silver/10 flex items-center justify-center mt-1 text-silver">
+                    {renderBenefitIcon(benefit.iconName, "w-5 h-5")}
                   </div>
                   <div>
                     <h3 className="font-medium text-white">{benefit.title}</h3>

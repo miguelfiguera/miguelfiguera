@@ -20,11 +20,22 @@ export interface Certification {
 
 import { ReactNode } from "react";
 
+export type LucideIconName =
+  | "Layers"
+  | "Server"
+  | "Layout"
+  | "CheckSquare"
+  | "Cpu"
+  | "Globe"
+  | "Headphones"
+  | "Code"
+  | "Database";
+
 export interface Benefit {
   id: number;
   title: string;
   description: string;
-  icon: ReactNode;
+  iconName: LucideIconName;
 }
 
 export interface BlogPost {
@@ -56,4 +67,32 @@ export interface WorkProcessStep {
   title: string;
   description: string;
   id: number;
+}
+
+export interface ServiceItem {
+  id: number;
+  title: string;
+  shortDescription: string;
+  description: string;
+  iconName: LucideIconName;
+  features: string[];
+}
+
+export interface ServiceListIntro {
+  badge: string;
+  title: string;
+  description: string;
+}
+
+export interface TechnologyItem {
+  id: number;
+  name: string;
+  iconName: LucideIconName;
+}
+
+export interface TechnologiesIntro {
+  badge: string;
+  title: string;
+  description: string;
+  buttonText: string;
 }
