@@ -6,7 +6,15 @@ import {
   LucideIconName,
 } from "@/lib/types/landing.data.types";
 import Image from "next/image";
-import { Code, CheckSquare, Layers, Headphones } from "lucide-react";
+import {
+  Code,
+  CheckSquare,
+  Layers,
+  Headphones,
+  Cpu,
+  Layout,
+  Database,
+} from "lucide-react";
 
 interface Props {
   benefits: Benefit[];
@@ -23,6 +31,12 @@ const renderBenefitIcon = (iconName: LucideIconName, className: string) => {
       return <Layers className={className} />;
     case "Headphones":
       return <Headphones className={className} />;
+    case "Cpu":
+      return <Cpu className={className} />;
+    case "Database":
+      return <Database className={className} />;
+    case "Layout":
+      return <Layout className={className} />;
     default:
       return null;
   }
