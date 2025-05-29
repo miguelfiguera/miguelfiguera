@@ -55,6 +55,13 @@ const MobileNav: FC = () => {
                 Certifications
               </Link>
               <Link
+                href="/services"
+                className="block text-lg font-medium text-white hover:text-silver"
+                onClick={() => setIsOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
                 href="/blog"
                 className="block text-lg font-medium text-white hover:text-silver"
                 onClick={() => setIsOpen(false)}

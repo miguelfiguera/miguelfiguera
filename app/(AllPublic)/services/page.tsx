@@ -1,62 +1,53 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code, Database, Server, Layout, CheckSquare, Cpu, Globe, Headphones, ArrowRight, Layers } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Code,
+  Database,
+  Server,
+  Layout,
+  CheckSquare,
+  Cpu,
+  Globe,
+  Headphones,
+  ArrowRight,
+  Layers,
+} from "lucide-react";
+import WhyChooseMe from "@/components/GeneralUse/WhyChooseMe";
+import {
+  Benefit,
+  CTAContent,
+  WhyChooseMeContent,
+  WorkProcessStep,
+} from "@/lib/types/landing.data.types";
+import CTA from "@/components/GeneralUse/CTA";
+import HowIWork from "@/components/ServiceComponents/HowIWork";
 
 export default function ServicesPage() {
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
-      <header className="sticky top-0 z-40 w-full border-b border-gray-800 bg-black/95 backdrop-blur">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-silver">MF</span>
-              <span className="hidden sm:inline-block text-xl font-semibold">Miguel Figuera</span>
-            </Link>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-sm font-medium text-gray-400 hover:text-silver transition-colors">
-              Home
-            </Link>
-            <Link href="/services" className="text-sm font-medium text-silver transition-colors">
-              Services
-            </Link>
-            <Link href="/portfolio" className="text-sm font-medium text-gray-400 hover:text-silver transition-colors">
-              Portfolio
-            </Link>
-            <Link href="/blog" className="text-sm font-medium text-gray-400 hover:text-silver transition-colors">
-              Blog
-            </Link>
-            <Link href="/#contact" className="text-sm font-medium text-gray-400 hover:text-silver transition-colors">
-              Contact
-            </Link>
-                        <Link href="/services" className="text-sm font-medium text-gray-400 hover:text-silver transition-colors">
-              Services
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link href="/admin" className="hidden md:block">
-              <Button variant="outline" className="border-gray-700 text-silver hover:bg-gray-900 hover:text-white">
-                Admin
-              </Button>
-            </Link>
-            <Link href="/cv-builder">
-              <Button className="bg-silver hover:bg-gray-300 text-black">CV Builder</Button>
-            </Link>
-          </div>
-        </div>
-      </header>
-
       <main className="flex-1">
         <section className="py-12 md:py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center space-y-4 mb-12">
-              <Badge className="mb-2 bg-gray-800 text-silver hover:bg-gray-800/90">Professional Services</Badge>
-              <h1 className="text-3xl md:text-5xl font-bold tracking-tight">Expert Solutions for Your Business</h1>
+              <Badge className="mb-2 bg-gray-800 text-silver hover:bg-gray-800/90">
+                Professional Services
+              </Badge>
+              <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
+                Expert Solutions for Your Business
+              </h1>
               <p className="text-gray-400 md:text-xl max-w-[800px]">
-                Comprehensive development and technology services to help your business thrive in the digital landscape.
+                Comprehensive development and technology services to help your
+                business thrive in the digital landscape.
               </p>
             </div>
 
@@ -70,8 +61,12 @@ export default function ServicesPage() {
                     <div className="w-12 h-12 rounded-lg bg-silver/10 flex items-center justify-center mb-4">
                       {service.icon}
                     </div>
-                    <CardTitle className="text-xl text-white">{service.title}</CardTitle>
-                    <CardDescription className="text-gray-400">{service.shortDescription}</CardDescription>
+                    <CardTitle className="text-xl text-white">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-gray-400">
+                      {service.shortDescription}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">{service.description}</p>
@@ -93,13 +88,18 @@ export default function ServicesPage() {
                               <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                           </div>
-                          <span className="text-sm text-gray-300">{feature}</span>
+                          <span className="text-sm text-gray-300">
+                            {feature}
+                          </span>
                         </div>
                       ))}
                     </div>
                   </CardContent>
                   <CardFooter>
-                    <Link href="/#contact" className="text-silver hover:text-white flex items-center gap-1 text-sm">
+                    <Link
+                      href="/#contact"
+                      className="text-silver hover:text-white flex items-center gap-1 text-sm"
+                    >
                       Learn more <ArrowRight className="h-4 w-4" />
                     </Link>
                   </CardFooter>
@@ -109,75 +109,9 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-black">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-12 md:grid-cols-2 items-center">
-              <div>
-                <Badge className="mb-4 bg-gray-800 text-silver hover:bg-gray-800/90">Why Choose Me</Badge>
-                <h2 className="text-3xl font-bold mb-6">Expertise That Delivers Results</h2>
-                <p className="text-gray-300 mb-8">
-                  With years of experience across multiple technologies and industries, I bring a comprehensive approach
-                  to every project. My services are tailored to meet your specific needs and business goals.
-                </p>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-silver/10 flex items-center justify-center mt-1">
-                        {benefit.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-medium text-white">{benefit.title}</h3>
-                        <p className="text-sm text-gray-400">{benefit.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-xl bg-gradient-to-tr from-silver/20 via-silver/10 to-transparent blur-xl"></div>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-gray-800">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Miguel Figuera working"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <WhyChooseMe benefits={benefits} content={whyChooseMeContent} />
 
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-          <div className="container px-4 md:px-6">
-            <div className="text-center mb-12">
-              <Badge className="mb-4 bg-gray-800 text-silver hover:bg-gray-800/90">Process</Badge>
-              <h2 className="text-3xl font-bold mb-4">How I Work</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                My structured approach ensures that your project is delivered on time, within budget, and to the highest
-                standards.
-              </p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-4">
-              {workProcess.map((step, index) => (
-                <div key={index} className="relative">
-                  {index < workProcess.length - 1 && (
-                    <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-silver/30 to-transparent z-0"></div>
-                  )}
-                  <div className="relative z-10 flex flex-col items-center text-center">
-                    <div className="w-20 h-20 rounded-full bg-silver/10 border border-silver/30 flex items-center justify-center mb-4 text-silver font-bold text-2xl">
-                      {index + 1}
-                    </div>
-                    <h3 className="text-xl font-medium mb-2">{step.title}</h3>
-                    <p className="text-gray-400">{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <HowIWork workProcess={workProcess} />
 
         <section className="py-20 bg-black">
           <div className="container px-4 md:px-6">
@@ -198,88 +132,42 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <Badge className="mb-4 bg-gray-800 text-silver hover:bg-gray-800/90">Technologies</Badge>
-                <h2 className="text-3xl font-bold mb-6">Cutting-Edge Tools & Technologies</h2>
+                <Badge className="mb-4 bg-gray-800 text-silver hover:bg-gray-800/90">
+                  Technologies
+                </Badge>
+                <h2 className="text-3xl font-bold mb-6">
+                  Cutting-Edge Tools & Technologies
+                </h2>
                 <p className="text-gray-300 mb-6">
-                  I stay up-to-date with the latest technologies and tools to deliver modern, efficient, and scalable
-                  solutions for your business.
+                  I stay up-to-date with the latest technologies and tools to
+                  deliver modern, efficient, and scalable solutions for your
+                  business.
                 </p>
                 <Link href="/#contact">
-                  <Button className="bg-silver hover:bg-gray-300 text-black">Discuss Your Project</Button>
+                  <Button className="bg-silver hover:bg-gray-300 text-black">
+                    Discuss Your Project
+                  </Button>
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-          <div className="container px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold mb-8">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 mb-10 max-w-2xl mx-auto">
-              Let's collaborate to create innovative solutions that drive your business forward. Contact me today to
-              discuss your project requirements.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/#contact">
-                <Button className="bg-silver hover:bg-gray-300 text-black px-8 py-6 text-lg">
-                  Schedule a Consultation
-                </Button>
-              </Link>
-              <Link href="/portfolio">
-                <Button variant="outline" className="border-gray-700 text-silver hover:bg-gray-900 px-8 py-6 text-lg">
-                  View My Work
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <CTA content={ctaContent} />
       </main>
-
-      <footer className="bg-black border-t border-gray-800 py-12">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center gap-2 mb-4 md:mb-0">
-              <span className="text-2xl font-bold text-silver">MF</span>
-              <span className="text-xl font-semibold">Miguel Figuera</span>
-            </div>
-            <nav className="flex gap-6">
-              <Link href="/" className="text-sm text-gray-400 hover:text-silver">
-                Home
-              </Link>
-              <Link href="/services" className="text-sm text-silver">
-                Services
-              </Link>
-              <Link href="/portfolio" className="text-sm text-gray-400 hover:text-silver">
-                Portfolio
-              </Link>
-              <Link href="/blog" className="text-sm text-gray-400 hover:text-silver">
-                Blog
-              </Link>
-              <Link href="/#contact" className="text-sm text-gray-400 hover:text-silver">
-                Contact
-              </Link>
-            </nav>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Miguel Figuera. All rights reserved.
-            </p>
-            <div className="flex gap-4 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-400 hover:text-silver text-sm">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-silver text-sm">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
-  )
+  );
 }
 
 // Sample data
+const ctaContent: CTAContent = {
+  title: "Ready to Transform Your Business?",
+  description:
+    "Let's collaborate to create innovative solutions that drive your business forward. Contact me today to discuss your project requirements.",
+  primaryButtonText: "Schedule a Consultation",
+  secondaryButtonText: "View My Work",
+};
+
 const services = [
   {
     title: "Fullstack Development",
@@ -407,49 +295,65 @@ const services = [
       "Scalable solutions",
     ],
   },
-]
+];
+
+const whyChooseMeContent: WhyChooseMeContent = {
+  badgeText: "Why Choose Me",
+  title: "Expertise That Delivers Results",
+  description:
+    "With years of experience across multiple technologies and industries, I bring a comprehensive approach to every project. My services are tailored to meet your specific needs and business goals.",
+};
 
 const benefits = [
   {
+    id: 5,
     title: "Technical Expertise",
     description: "Deep knowledge across multiple technologies and frameworks.",
     icon: <Code className="w-5 h-5 text-silver" />,
   },
   {
+    id: 6,
     title: "Proven Track Record",
     description: "Successful projects delivered for clients across industries.",
     icon: <CheckSquare className="w-5 h-5 text-silver" />,
   },
   {
+    id: 7,
     title: "Agile Methodology",
     description: "Flexible, iterative approach to project management.",
     icon: <Layers className="w-5 h-5 text-silver" />,
   },
   {
+    id: 8,
     title: "Ongoing Support",
-    description: "Continued assistance and maintenance after project completion.",
+    description:
+      "Continued assistance and maintenance after project completion.",
     icon: <Headphones className="w-5 h-5 text-silver" />,
   },
-]
+] satisfies Benefit[];
 
-const workProcess = [
+const workProcess: WorkProcessStep[] = [
   {
     title: "Discovery",
     description: "Understanding your business goals and project requirements.",
+    id: 10,
   },
   {
     title: "Planning",
     description: "Creating a detailed roadmap and technical architecture.",
+    id: 11,
   },
   {
     title: "Development",
     description: "Building your solution with regular updates and feedback.",
+    id: 12,
   },
   {
     title: "Delivery",
     description: "Thorough testing, deployment, and knowledge transfer.",
+    id: 13,
   },
-]
+];
 
 const technologies = [
   { name: "React", icon: <Code className="w-5 h-5 text-silver" /> },
@@ -464,4 +368,4 @@ const technologies = [
   { name: "Docker", icon: <Server className="w-5 h-5 text-silver" /> },
   { name: "Odoo", icon: <Globe className="w-5 h-5 text-silver" /> },
   { name: "AI/ML", icon: <Cpu className="w-5 h-5 text-silver" /> },
-]
+];

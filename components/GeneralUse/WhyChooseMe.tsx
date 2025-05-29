@@ -1,14 +1,15 @@
 import React, { FC } from "react";
 import { Badge } from "../ui/badge";
-import { Benefit } from "@/lib/types/landing.data.types";
+import { Benefit, WhyChooseMeContent } from "@/lib/types/landing.data.types";
 import Image from "next/image";
 
 interface Props {
   benefits: Benefit[];
+  content: WhyChooseMeContent;
 }
 
-const WhyChooseMe: FC<Props> = (props: Props) => {
-  const { benefits } = props;
+const WhyChooseMe: FC<Props> = (props) => {
+  const { benefits, content } = props;
 
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -16,16 +17,12 @@ const WhyChooseMe: FC<Props> = (props: Props) => {
         <div className="grid gap-8 md:grid-cols-2 items-center">
           <div>
             <Badge className="mb-4 bg-gray-800 text-silver hover:bg-gray-800/90">
-              Why Choose Me
+              {content.badgeText}
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Delivering Excellence in Every Project
+              {content.title}
             </h2>
-            <p className="text-gray-300 mb-8">
-              With a proven track record of successful projects and satisfied
-              clients, I bring technical expertise and creative problem-solving
-              to every challenge.
-            </p>
+            <p className="text-gray-300 mb-8">{content.description}</p>
             <div className="grid gap-4 sm:grid-cols-2">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">

@@ -5,13 +5,18 @@ import Hero from "@/components/landingPage/Hero";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import RecentProjects from "@/components/landingPage/RecentProjects";
-import { Project } from "@/lib/types/landing.data.types";
-import CTA from "@/components/landingPage/CTA";
-import { BlogPost } from "@/lib/types/landing.data.types";
+import CTA from "@/components/GeneralUse/CTA";
 import LatestArticles from "@/components/landingPage/LatestArticles";
 import Contact from "@/components/landingPage/Contact";
-import WhyChooseMe from "@/components/landingPage/WhyChooseMe";
-import { Benefit, Certification } from "@/lib/types/landing.data.types";
+import WhyChooseMe from "@/components/GeneralUse/WhyChooseMe";
+import {
+  Benefit,
+  Certification,
+  BlogPost,
+  Project,
+  WhyChooseMeContent,
+  CTAContent,
+} from "@/lib/types/landing.data.types";
 import Certifications from "@/components/landingPage/Certifications";
 export default function Home() {
   return (
@@ -24,12 +29,13 @@ export default function Home() {
 
         <Certifications certifications={certifications} />
 
-        <WhyChooseMe benefits={benefits} />
+        <WhyChooseMe benefits={benefits} content={content} />
 
         <Contact />
 
         <LatestArticles blogPosts={blogPosts} />
-        <CTA />
+
+        <CTA content={ctaSectionContent} />
       </main>
       <Footer />
     </div>
@@ -37,6 +43,14 @@ export default function Home() {
 }
 
 // Sample data
+
+const ctaSectionContent: CTAContent = {
+  title: "Ready to Transform Your Business?",
+  description:
+    "Let's collaborate to create innovative solutions that drive your business forward. Contact me today to discuss your project requirements.",
+  primaryButtonText: "Schedule a Consultation",
+  secondaryButtonText: "View My Work",
+};
 const projects: Project[] = [
   {
     id: 1,
@@ -188,3 +202,10 @@ const blogPosts = [
     date: "February 10, 2023",
   },
 ] satisfies Omit<BlogPost, "text">[];
+
+const content: WhyChooseMeContent = {
+  badgeText: "Why Choose Me",
+  title: "Delivering Excellence in Every Project",
+  description:
+    "With a proven track record of successful projects and satisfied clients, I bring technical expertise and creative problem-solving to every challenge.",
+};

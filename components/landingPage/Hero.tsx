@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "../ui/button";
@@ -7,7 +7,7 @@ interface Props {
   [key: string]: never;
 }
 
-function Hero(props: Props) {
+const Hero: FC<Props> = (props) => {
   const {} = props;
 
   return (
@@ -57,6 +57,6 @@ function Hero(props: Props) {
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

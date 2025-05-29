@@ -38,3 +38,22 @@ export interface BlogPost {
   image?: string;
   link?: string;
 }
+
+export interface WhyChooseMeContent {
+  badgeText: string;
+  title: string;
+  description: string;
+}
+
+export interface CTAContent {
+  title: string;
+  description: string;
+  primaryButtonText: string;
+  secondaryButtonText: string;
+}
+
+export interface WorkProcessStep {
+  title: string;
+  description: string;
+  id: number;
+}

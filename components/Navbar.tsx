@@ -35,6 +35,12 @@ function Navbar(props: Props) {
             Certifications
           </Link>
           <Link
+            href="/services"
+            className="text-sm font-medium text-gray-400 hover:text-silver transition-colors"
+          >
+            Services
+          </Link>
+          <Link
             href="/blog"
             className="text-sm font-medium text-gray-400 hover:text-silver transition-colors"
           >

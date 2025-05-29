@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import BlogCard from "../GeneralUse/BlogCard";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -9,9 +9,7 @@ interface Props {
   blogPosts: Omit<BlogPost, "text">[];
 }
 
-function LatestArticles(props: Props) {
-  const { blogPosts } = props;
-
+const LatestArticles: FC<Props> = ({ blogPosts }) => {
   return (
     <section className="py-20 bg-black">
       <div className="container text-center">
@@ -41,6 +39,6 @@ function LatestArticles(props: Props) {
       </div>
     </section>
   );
-}
+};
 
 export default LatestArticles;
