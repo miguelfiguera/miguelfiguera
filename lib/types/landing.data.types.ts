@@ -96,3 +96,43 @@ export interface TechnologiesIntro {
   description: string;
   buttonText: string;
 }
+
+export interface BlogPostPreview {
+  // I should create an index based on the slug+id or something like that
+  // for a friendlier seo on /blog/slug instead of /blog/id
+  id: number;
+  title: string;
+  slug: string;
+  excerpt: string;
+  image: string;
+  category: string;
+  date: string;
+}
+export interface BlogPostPreview {
+  id: number;
+  title: string;
+  slug: string;
+  excerpt: string;
+  image: string;
+  category: string;
+  date: string;
+}
+
+export interface ProjectData {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  technologies: string[];
+}
+
+export interface ProcessStep {
+  title: string;
+  description: string;
+}
+export interface Testimonial {
+  quote: string;
+  name: string;
+  company: string;
+}
