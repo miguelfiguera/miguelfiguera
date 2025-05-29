@@ -1,5 +1,3 @@
-"use client";
-
 import Hero from "@/components/landingPage/Hero";
 import RecentProjects from "@/components/landingPage/RecentProjects";
 import CTA from "@/components/GeneralUse/CTA";
