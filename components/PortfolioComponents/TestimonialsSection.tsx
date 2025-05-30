@@ -37,7 +37,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gray-800 overflow-hidden">

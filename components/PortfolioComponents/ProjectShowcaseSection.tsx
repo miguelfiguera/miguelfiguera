@@ -70,14 +70,6 @@ export const ProjectShowcaseSection: React.FC<ProjectShowcaseSectionProps> = ({
             </TabsList>
           </div>
 
-          {/* 
-            Instead of multiple TabsContent, we can render one based on filteredProjects.
-            However, the Tabs component expects a TabsContent for each TabsTrigger value
-            to manage visibility. So, we'll keep the structure but filter inside.
-            A more advanced approach might involve a single TabsContent and dynamically
-            rendering its children, but this is simpler with the current Tabs component.
-          */}
-
           {tabCategories.map((tab) => (
             <TabsContent key={tab.value} value={tab.value} className="mt-0">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -91,11 +83,9 @@ export const ProjectShowcaseSection: React.FC<ProjectShowcaseSectionProps> = ({
             </TabsContent>
           ))}
           {/* Fallback or message if no projects match (optional) */}
-          {/* {filteredProjects.length === 0 && activeTab !== "all" && (
-            <div className="text-center py-10 text-gray-400">
-              No projects found in the "{activeTab}" category.
-            </div>
-          )} */}
+          {filteredProjects.length === 0 && activeTab !== "all" && (
+            <div className="text-center py-10 text-gray-400"></div>
+          )}
         </Tabs>
       </div>
     </section>

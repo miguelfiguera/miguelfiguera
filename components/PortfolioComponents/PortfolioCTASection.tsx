@@ -10,7 +10,7 @@ const PortfolioCTASection: React.FC = () => {
           Ready to Start Your Project?
         </h2>
         <p className="text-gray-300 mb-10 max-w-2xl mx-auto">
-          Let's collaborate to create something exceptional that meets your
+          Let&apos;s collaborate to create something exceptional that meets your
           business goals and exceeds expectations.
         </p>
         <Link href="/#contact">

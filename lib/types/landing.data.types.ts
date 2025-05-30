@@ -18,8 +18,6 @@ export interface Certification {
   link: string;
 }
 
-import { ReactNode } from "react";
-
 export type LucideIconName =
   | "Layers"
   | "Server"

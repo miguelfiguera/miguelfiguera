@@ -23,8 +23,8 @@ function Contact(props: Props) {
               Schedule a Meeting
             </h2>
             <p className="text-gray-300 mb-8 max-w-md">
-              Let's discuss your project requirements and how I can help bring
-              your vision to life.
+              Let&apos;s discuss your project requirements and how I can help
+              bring your vision to life.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">

@@ -1,11 +1,24 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { BarChart, Users, FileText, Settings, PlusCircle, Search } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  BarChart,
+  Users,
+  FileText,
+  Settings,
+  PlusCircle,
+  Search,
+} from "lucide-react";
 
 export default function AdminPage() {
   return (
@@ -19,7 +32,9 @@ export default function AdminPage() {
         </div>
         <nav className="flex-1 overflow-auto py-4">
           <div className="px-4 py-2">
-            <h2 className="mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Dashboard</h2>
+            <h2 className="mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+              Dashboard
+            </h2>
             <div className="space-y-1">
               <Link
                 href="/admin"
@@ -52,7 +67,9 @@ export default function AdminPage() {
             </div>
           </div>
           <div className="px-4 py-2">
-            <h2 className="mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Settings</h2>
+            <h2 className="mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+              Settings
+            </h2>
             <div className="space-y-1">
               <Link
                 href="/admin/settings"
@@ -112,7 +129,10 @@ export default function AdminPage() {
           </div>
           <div className="ml-auto flex items-center gap-2">
             <Link href="/">
-              <Button variant="outline" className="border-gray-700 text-silver hover:bg-gray-900 hover:text-white">
+              <Button
+                variant="outline"
+                className="border-gray-700 text-silver hover:bg-gray-900 hover:text-white"
+              >
                 View Site
               </Button>
             </Link>
@@ -122,12 +142,17 @@ export default function AdminPage() {
           <div className="container py-6">
             <div className="mb-8">
               <h1 className="text-2xl font-bold">Dashboard</h1>
-              <p className="text-gray-400">Welcome back, Miguel. Here's what's happening with your site.</p>
+              <p className="text-gray-400">
+                Welcome back, Miguel. Here&apos;s what&apos;s happening with
+                your site.
+              </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <Card className="bg-gray-950 border-gray-800">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-sm font-medium text-gray-400">Total Views</CardTitle>
+                  <CardTitle className="text-sm font-medium text-gray-400">
+                    Total Views
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">24,532</div>
@@ -136,7 +161,9 @@ export default function AdminPage() {
               </Card>
               <Card className="bg-gray-950 border-gray-800">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-sm font-medium text-gray-400">Blog Posts</CardTitle>
+                  <CardTitle className="text-sm font-medium text-gray-400">
+                    Blog Posts
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">12</div>
@@ -145,7 +172,9 @@ export default function AdminPage() {
               </Card>
               <Card className="bg-gray-950 border-gray-800">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-sm font-medium text-gray-400">Projects</CardTitle>
+                  <CardTitle className="text-sm font-medium text-gray-400">
+                    Projects
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">8</div>
@@ -154,7 +183,9 @@ export default function AdminPage() {
               </Card>
               <Card className="bg-gray-950 border-gray-800">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-sm font-medium text-gray-400">Messages</CardTitle>
+                  <CardTitle className="text-sm font-medium text-gray-400">
+                    Messages
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">5</div>
@@ -167,7 +198,10 @@ export default function AdminPage() {
               <Tabs defaultValue="blog">
                 <div className="flex items-center justify-between">
                   <TabsList className="bg-gray-900 border border-gray-800">
-                    <TabsTrigger value="blog" className="data-[state=active]:bg-silver data-[state=active]:text-black">
+                    <TabsTrigger
+                      value="blog"
+                      className="data-[state=active]:bg-silver data-[state=active]:text-black"
+                    >
                       Recent Blog Posts
                     </TabsTrigger>
                     <TabsTrigger
@@ -206,11 +240,21 @@ export default function AdminPage() {
                             <table className="w-full caption-bottom text-sm">
                               <thead className="border-b border-gray-800">
                                 <tr className="border-b border-gray-800 transition-colors hover:bg-gray-900/50">
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Title</th>
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Status</th>
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Date</th>
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Views</th>
-                                  <th className="h-10 px-4 text-right font-medium text-gray-400">Actions</th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Title
+                                  </th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Status
+                                  </th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Date
+                                  </th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Views
+                                  </th>
+                                  <th className="h-10 px-4 text-right font-medium text-gray-400">
+                                    Actions
+                                  </th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -219,14 +263,20 @@ export default function AdminPage() {
                                     key={post.id}
                                     className="border-b border-gray-800 transition-colors hover:bg-gray-900/50"
                                   >
-                                    <td className="p-4 align-middle">{post.title}</td>
+                                    <td className="p-4 align-middle">
+                                      {post.title}
+                                    </td>
                                     <td className="p-4 align-middle">
                                       <span className="inline-flex items-center rounded-full border border-green-500/30 px-2.5 py-0.5 text-xs font-semibold text-green-500">
                                         {post.status}
                                       </span>
                                     </td>
-                                    <td className="p-4 align-middle text-gray-400">{post.date}</td>
-                                    <td className="p-4 align-middle">{post.views}</td>
+                                    <td className="p-4 align-middle text-gray-400">
+                                      {post.date}
+                                    </td>
+                                    <td className="p-4 align-middle">
+                                      {post.views}
+                                    </td>
                                     <td className="p-4 align-middle text-right">
                                       <Button
                                         variant="ghost"
@@ -262,11 +312,21 @@ export default function AdminPage() {
                             <table className="w-full caption-bottom text-sm">
                               <thead className="border-b border-gray-800">
                                 <tr className="border-b border-gray-800 transition-colors hover:bg-gray-900/50">
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Title</th>
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Category</th>
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Status</th>
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Date</th>
-                                  <th className="h-10 px-4 text-right font-medium text-gray-400">Actions</th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Title
+                                  </th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Category
+                                  </th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Status
+                                  </th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Date
+                                  </th>
+                                  <th className="h-10 px-4 text-right font-medium text-gray-400">
+                                    Actions
+                                  </th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -275,14 +335,20 @@ export default function AdminPage() {
                                     key={project.id}
                                     className="border-b border-gray-800 transition-colors hover:bg-gray-900/50"
                                   >
-                                    <td className="p-4 align-middle">{project.title}</td>
-                                    <td className="p-4 align-middle">{project.category}</td>
+                                    <td className="p-4 align-middle">
+                                      {project.title}
+                                    </td>
+                                    <td className="p-4 align-middle">
+                                      {project.category}
+                                    </td>
                                     <td className="p-4 align-middle">
                                       <span className="inline-flex items-center rounded-full border border-green-500/30 px-2.5 py-0.5 text-xs font-semibold text-green-500">
                                         {project.status}
                                       </span>
                                     </td>
-                                    <td className="p-4 align-middle text-gray-400">{project.date}</td>
+                                    <td className="p-4 align-middle text-gray-400">
+                                      {project.date}
+                                    </td>
                                     <td className="p-4 align-middle text-right">
                                       <Button
                                         variant="ghost"
@@ -318,11 +384,21 @@ export default function AdminPage() {
                             <table className="w-full caption-bottom text-sm">
                               <thead className="border-b border-gray-800">
                                 <tr className="border-b border-gray-800 transition-colors hover:bg-gray-900/50">
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Name</th>
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Email</th>
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Subject</th>
-                                  <th className="h-10 px-4 text-left font-medium text-gray-400">Date</th>
-                                  <th className="h-10 px-4 text-right font-medium text-gray-400">Actions</th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Name
+                                  </th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Email
+                                  </th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Subject
+                                  </th>
+                                  <th className="h-10 px-4 text-left font-medium text-gray-400">
+                                    Date
+                                  </th>
+                                  <th className="h-10 px-4 text-right font-medium text-gray-400">
+                                    Actions
+                                  </th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -331,10 +407,18 @@ export default function AdminPage() {
                                     key={message.id}
                                     className="border-b border-gray-800 transition-colors hover:bg-gray-900/50"
                                   >
-                                    <td className="p-4 align-middle">{message.name}</td>
-                                    <td className="p-4 align-middle">{message.email}</td>
-                                    <td className="p-4 align-middle">{message.subject}</td>
-                                    <td className="p-4 align-middle text-gray-400">{message.date}</td>
+                                    <td className="p-4 align-middle">
+                                      {message.name}
+                                    </td>
+                                    <td className="p-4 align-middle">
+                                      {message.email}
+                                    </td>
+                                    <td className="p-4 align-middle">
+                                      {message.subject}
+                                    </td>
+                                    <td className="p-4 align-middle text-gray-400">
+                                      {message.date}
+                                    </td>
                                     <td className="p-4 align-middle text-right">
                                       <Button
                                         variant="ghost"
@@ -361,13 +445,19 @@ export default function AdminPage() {
               <Card className="bg-gray-950 border-gray-800">
                 <CardHeader>
                   <CardTitle>Quick Draft</CardTitle>
-                  <CardDescription className="text-gray-400">Create a new blog post draft.</CardDescription>
+                  <CardDescription className="text-gray-400">
+                    Create a new blog post draft.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="title">Title</Label>
-                      <Input id="title" placeholder="Post title" className="bg-gray-900 border-gray-800 text-white" />
+                      <Input
+                        id="title"
+                        placeholder="Post title"
+                        className="bg-gray-900 border-gray-800 text-white"
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="excerpt">Excerpt</Label>
@@ -377,7 +467,9 @@ export default function AdminPage() {
                         className="min-h-[100px] bg-gray-900 border-gray-800 text-white"
                       />
                     </div>
-                    <Button className="bg-silver hover:bg-gray-300 text-black">Save Draft</Button>
+                    <Button className="bg-silver hover:bg-gray-300 text-black">
+                      Save Draft
+                    </Button>
                   </form>
                 </CardContent>
               </Card>
@@ -385,7 +477,9 @@ export default function AdminPage() {
               <Card className="bg-gray-950 border-gray-800">
                 <CardHeader>
                   <CardTitle>Recent Activity</CardTitle>
-                  <CardDescription className="text-gray-400">Your recent actions and updates.</CardDescription>
+                  <CardDescription className="text-gray-400">
+                    Your recent actions and updates.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-8">
@@ -394,7 +488,9 @@ export default function AdminPage() {
                         <div className="mt-1 h-2 w-2 rounded-full bg-silver"></div>
                         <div>
                           <p className="text-sm">{activity.description}</p>
-                          <p className="text-xs text-gray-400">{activity.time}</p>
+                          <p className="text-xs text-gray-400">
+                            {activity.time}
+                          </p>
                         </div>
                       </div>
                     ))}
@@ -406,7 +502,7 @@ export default function AdminPage() {
         </main>
       </div>
     </div>
-  )
+  );
 }
 
 // Sample data
@@ -439,7 +535,7 @@ const blogPosts = [
     date: "April 25, 2023",
     views: 0,
   },
-]
+];
 
 const projects = [
   {
@@ -471,7 +567,7 @@ const projects = [
     status: "Completed",
     date: "February 05, 2023",
   },
-]
+];
 
 const messages = [
   {
@@ -495,11 +591,12 @@ const messages = [
     subject: "Consultation Request",
     date: "April 24, 2023",
   },
-]
+];
 
 const activities = [
   {
-    description: "Published new blog post: 'Building Scalable Web Applications'",
+    description:
+      "Published new blog post: 'Building Scalable Web Applications'",
     time: "2 hours ago",
   },
   {
@@ -518,4 +615,4 @@ const activities = [
     description: "Updated profile information",
     time: "3 days ago",
   },
-]
+];
