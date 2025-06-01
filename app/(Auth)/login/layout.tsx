@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
-import "../../(site)/globals.css";
+import "@/app/(site)/globals.css";
 import { ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {
   title: "Miguel Figuera",
-  description: "Admin-panel",
+  description: "Login.",
 };
 
-export default function AdminLayout({
+export default function AuthLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <ToastContainer />
-      <body>{children}</body>
+      <body>
+        <ToastContainer />
+        {children}
+      </body>
     </html>
   );
 }
