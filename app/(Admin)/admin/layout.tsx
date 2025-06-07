@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../../(site)/globals.css";
 import { ToastContainer } from "react-toastify";
+import AdminNav from "@/components/AdminNav";
 
 export const metadata: Metadata = {
   title: "Miguel Figuera",
@@ -14,8 +15,13 @@ export default function AdminLayout({
 }>) {
   return (
     <html lang="en">
-      <ToastContainer />
-      <body>{children}</body>
+      <body>
+        <ToastContainer />
+        <div className="flex min-h-screen bg-black text-white">
+          <AdminNav />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
