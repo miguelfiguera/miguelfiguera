@@ -1,6 +1,6 @@
 # Hi, I'm Miguel Figuera Quintero! 👋
 
-I'm a passionate **Full-Stack Web Developer** with a strong foundation from **The Odin Project** (completed both Ruby on Rails and Node.js paths). I thrive on building robust, scalable, and user-centric web applications.
+I'm a **Full-Stack Web Developer** with a strong foundation from **The Odin Project** (completed both Ruby on Rails and Node.js paths). I enjoy building robust, scalable, and user-centric web applications.
 
 Currently, I'm expanding my knowledge by pursuing a Bachelor's Degree in Computer Engineering at **Universidad Nacional Experimental de las Telecomunicaciones e Informática (UNETI)** in Venezuela, aiming to blend cutting-edge academic insights with practical, real-world development experience.
 
@@ -10,7 +10,7 @@ My expertise spans across the full development lifecycle, from conceptualization
 - Maintaining and enhancing legacy systems while developing new features.
 - Automating business processes through scripting and web scraping.
 - Integrating diverse APIs to streamline functionality.
-- Leveraging AI for efficient and robust code generation.
+- Leveraging AI for efficient and robust code generation using different models and IDEs.
 
 ---
 
@@ -26,9 +26,10 @@ My expertise spans across the full development lifecycle, from conceptualization
 
 **Languages & Core Frameworks:**
 
-- **JavaScript/TypeScript:** React, Next.js, Node.js (Express.js, NestJS)
+- **JavaScript/TypeScript:** React, Next.js, Intertia.js, Node.js (Express.js, NestJS)
 - **Ruby:** Ruby on Rails
-- **Python:** Django, Scrapy, Odoo (and general scripting)
+- **Python:** Scrapy, Odoo (and general scripting)
+- **Php:** Laravel
 
 **Databases:**
 
@@ -39,7 +40,7 @@ My expertise spans across the full development lifecycle, from conceptualization
 
 - Docker
 - Cloud Platforms: DigitalOcean, Heroku, Netlify, Vercel
-- Server Administration (Linux: Ubuntu, Kali)
+- Server Administration (Linux: Ubuntu)
 
 **Key Skills & Competencies (from my CV):**
 

@@ -1,0 +1,60 @@
+---
+description: 
+globs: *.tsx,*.ts
+alwaysApply: false
+---
+You are an expert AI assistant specializing in a modern, secure, full-stack Next.js application. Based on the project's dependencies, you must strictly adhere to the following architectural patterns and best practices.
+
+**Model Preference:** You should operate as if you are powered by the Gemini model family, leveraging its advanced reasoning and code generation capabilities.
+
+**1. Next.js 15 & React 19 Core Principles:**
+- We are using Next.js 15+ with the App Router. All components are server-side by default. Only add the `"use client";` directive when browser-specific APIs or hooks like `useState`, `useEffect`, or event handlers are required.
+- **Server Actions are the standard for mutations.** All form submissions and data mutations (create, update, delete) must be handled by Server Actions. Do not create API Route Handlers for these tasks.
+- API Route Handlers (`/app/api/.../route.ts`) should be reserved for webhooks, serving files, or creating endpoints for third-party services.
+- Always use TypeScript. All types, props, function signatures, and return values must be strongly typed.
+
+**2. Firebase: DUAL SDK Strategy (Crucial for Security)**
+- This project uses TWO Firebase SDKs. It is critical to use the correct one for the context.
+- **Firebase Admin SDK (`firebase-admin`): SERVER-SIDE ONLY.**
+    - This SDK is for privileged operations. It bypasses all security rules.
+    - **NEVER** import `firebase-admin` in any file that contains `"use client";`.
+    - It must **ONLY** be used in server-exclusive environments: Server Components (for data fetching), Server Actions, and Route Handlers.
+    - Assume a singleton instance is initialized in a server-only file, like `/lib/firebase-admin.ts`. Import services (like `adminDb`, `adminAuth`) from there.
+    - Use cases: User management, minting custom tokens, complex backend data processing, or any operation requiring admin privileges.
+- **Firebase Client SDK (`firebase`): CLIENT-SIDE FOCUSED.**
+    - This SDK respects your Firestore Security Rules.
+    - Primarily used in Client Components (`"use client";`).
+    - Assume a client-side app is initialized in `/lib/firebase.ts`. Import services (like `db`, `auth`) from there.
+    - Use cases: Managing the current user's auth state (`onAuthStateChanged`), real-time data listeners (`onSnapshot`), and performing operations directly from the user's browser that are permitted by security rules.
+
+**3. Styling: Tailwind CSS & Shadcn/ui**
+- All styling must be done with Tailwind CSS utility classes. Do not write separate CSS files.
+- You **MUST** import Shadcn/ui components from the local project path: `@/components/ui/...`. For example: `import { Button } from "@/components/ui/button";`.
+- Use the `cn` utility from `@/lib/utils` for merging and applying conditional classes to components. This is standard practice in this project.
+- When an icon is needed, you must use the `lucide-react` library.
+- For toast notifications, use the `react-toastify` library. 
+
+**4. Forms & Validation: The Zod + React Hook Form Pattern**
+- This is a non-negotiable, security-critical pattern.
+- All forms **MUST** be built using `react-hook-form`.
+- Define a `zod` schema for the form data. This schema is the single source of truth for validation.
+- Use the `@hookform/resolvers/zod` to apply the schema for client-side validation.
+- The **SAME** `zod` schema **MUST** be used inside the corresponding Server Action to validate the data on the server before it touches the database. This prevents tampering and ensures data integrity.
+
+    // Example Server Action structure:
+    "use server";
+    import { z } from "zod";
+    const formSchema = z.object({ ... });
+
+    export async function myAction(data: unknown) {
+      const validation = formSchema.safeParse(data);
+      if (!validation.success) {
+        return { error: "Invalid data." };
+      }
+      //... proceed with validated data (validation.data)
+    }
+
+**5. State Management: Zustand**
+- For simple, component-local state, use React hooks like `useState`.
+- For any complex, global, or cross-component client-side state (e.g., user session details, shopping cart, theme), you **MUST** use `zustand`.
+- Assume Zustand stores are defined in a directory like `/lib/zustand/`.
