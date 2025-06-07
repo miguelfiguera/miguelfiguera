@@ -3,28 +3,53 @@ import { adminAuth } from "@/lib/firebase/firebaseAdmin";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "@/lib/firebase/firebase";
 import { cookies } from "next/headers";
-import { Claims } from "@/lib/types/auth.types";
 import { revalidatePath } from "next/cache";
+import { z } from "zod";
+import {
+  claimsSchema,
+  loginCredentialsSchema,
+  adminCreationSchema,
+  claimsUpdateSchema,
+  securityCheckResponseSchema,
+  type ClaimsSchema,
+} from "@/lib/schemas/auth.schemas";
 
 // This are the main functions to create users and modify users.
 
 //search user by email to check if it exists
 export const searchUserByEmail = async (email: string) => {
-  const user = await adminAuth.getUserByEmail(email);
-  if (user) {
-    console.log("User already exists:", email);
-    return user.uid;
+  try {
+    const validation = z.string().email().safeParse(email);
+    if (!validation.success) {
+      throw new Error("Invalid email format");
+    }
+    const user = await adminAuth.getUserByEmail(validation.data);
+    if (user) {
+      console.log("User already exists:", validation.data);
+      return user.uid;
+    }
+    return false;
+  } catch (error) {
+    console.error("Error searching user:", error);
+    return false;
   }
-  return false;
 };
 
 //get custom claims, custom claims are permissions like admin or so.
 
 export const getUserCustomClaims = async (uid: string) => {
   try {
-    const user = await adminAuth.getUser(uid);
-    console.log("Successfully got custom claims:", user.customClaims);
-    return user.customClaims as Claims;
+    const validation = z.string().min(1).safeParse(uid);
+    if (!validation.success) {
+      throw new Error("Invalid user ID");
+    }
+    const user = await adminAuth.getUser(validation.data);
+    const claimsValidation = claimsSchema.safeParse(user.customClaims);
+    if (!claimsValidation.success) {
+      throw new Error("Invalid custom claims format");
+    }
+    console.log("Successfully got custom claims:", claimsValidation.data);
+    return claimsValidation.data;
   } catch (error) {
     console.error("Error getting custom claims:", error);
     return null;
@@ -32,9 +57,16 @@ export const getUserCustomClaims = async (uid: string) => {
 };
 
 // modify customClaims so each user can add public roles
-export const modifyCustomClaims = async (uid: string, claims: Claims) => {
+export const modifyCustomClaims = async (uid: string, claims: ClaimsSchema) => {
   try {
-    await adminAuth.setCustomUserClaims(uid, claims);
+    const validation = claimsUpdateSchema.safeParse({ uid, claims });
+    if (!validation.success) {
+      throw new Error("Invalid claims update data");
+    }
+    await adminAuth.setCustomUserClaims(
+      validation.data.uid,
+      validation.data.claims
+    );
     revalidatePath("/profile");
     return true;
   } catch (error) {
@@ -47,12 +79,16 @@ export const modifyCustomClaims = async (uid: string, claims: Claims) => {
 
 export const createAdmin = async (email: string, password: string) => {
   try {
+    const validation = adminCreationSchema.safeParse({ email, password });
+    if (!validation.success) {
+      throw new Error("Invalid admin creation data");
+    }
     const userCredential = await adminAuth.createUser({
-      email: email,
-      password: password,
+      email: validation.data.email,
+      password: validation.data.password,
     });
     console.log("Successfully created new user:", userCredential.uid);
-    adminAuth.setCustomUserClaims(userCredential.uid, {
+    await adminAuth.setCustomUserClaims(userCredential.uid, {
       admin: true,
     });
     return userCredential;
@@ -66,7 +102,15 @@ export const createAdmin = async (email: string, password: string) => {
 
 export const loginUser = async (email: string, password: string) => {
   try {
-    const user = await signInWithEmailAndPassword(auth, email, password);
+    const validation = loginCredentialsSchema.safeParse({ email, password });
+    if (!validation.success) {
+      throw new Error("Invalid login credentials");
+    }
+    const user = await signInWithEmailAndPassword(
+      auth,
+      validation.data.email,
+      validation.data.password
+    );
     const idToken = await user.user.getIdToken();
     const expirationTime = 60 * 60 * 24 * 5 * 1000;
     const sessionCookie = await adminAuth.createSessionCookie(idToken, {
@@ -102,7 +146,6 @@ export const securityCheck = async () => {
       return false;
     }
 
-    // checks authentication of token
     const decodedToken = await adminAuth.verifySessionCookie(
       sessionValue.value,
       true
@@ -113,7 +156,14 @@ export const securityCheck = async () => {
 
     const user = await adminAuth.getUser(decodedToken.uid);
     const parsed = user.toJSON();
-    return { parsed, valid: true };
+    const validation = securityCheckResponseSchema.safeParse({
+      parsed,
+      valid: true,
+    });
+    if (!validation.success) {
+      throw new Error("Invalid security check response");
+    }
+    return validation.data;
   } catch (error) {
     console.error("Error decoding token:", error);
     return null;
@@ -165,7 +215,11 @@ export const getUserIdFromCookie = async () => {
     if (!decodedToken) {
       return null;
     }
-    return decodedToken.uid;
+    const validation = z.string().min(1).safeParse(decodedToken.uid);
+    if (!validation.success) {
+      throw new Error("Invalid user ID from token");
+    }
+    return validation.data;
   } catch (error) {
     console.error("Error decoding token:", error);
     return null;
@@ -186,7 +240,11 @@ export const getUserFromCookie = async () => {
     if (!decodedToken) {
       return null;
     }
-    return decodedToken.uid;
+    const validation = z.string().min(1).safeParse(decodedToken.uid);
+    if (!validation.success) {
+      throw new Error("Invalid user ID from token");
+    }
+    return validation.data;
   } catch (error) {
     console.error("Error decoding token:", error);
     return null;
