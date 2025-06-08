@@ -16,7 +16,7 @@ globs:
 - Add two new lines after commit title without newline characters
 - Include diff summary of all changes
 - Add detailed explanations in commit body
-- End with signature "-Q"
+- End with signature "-miguelfiguera"
 - Push all to the remote of whatever the current branch is
 </rule>
 

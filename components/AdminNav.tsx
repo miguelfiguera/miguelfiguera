@@ -1,6 +1,18 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function AdminNav() {
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    if (path === "/admin") {
+      return pathname === path;
+    }
+    return pathname.startsWith(path);
+  };
+
   return (
     <aside className="hidden md:flex w-64 flex-col border-r border-gray-800 bg-gray-950">
       <div className="flex h-14 items-center border-b border-gray-800 px-4">
@@ -17,7 +29,12 @@ export default function AdminNav() {
           <div className="space-y-1">
             <Link
               href="/admin"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-gray-900 hover:text-white"
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/admin")
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
+              )}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +54,12 @@ export default function AdminNav() {
             </Link>
             <Link
               href="/admin/blog"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-gray-900 hover:text-white"
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/admin/blog")
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
+              )}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +79,16 @@ export default function AdminNav() {
             </Link>
             <Link
               href="/admin/portfolio"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium bg-gray-900 text-white"
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/admin/portfolio")
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
+              )}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 text-silver"
+                className="h-4 w-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -77,7 +104,12 @@ export default function AdminNav() {
             </Link>
             <Link
               href="/admin/messages"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-gray-900 hover:text-white"
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/admin/messages")
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
+              )}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +129,12 @@ export default function AdminNav() {
             </Link>
             <Link
               href="/admin/certifications"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-gray-900 hover:text-white"
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/admin/certifications")
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
+              )}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +154,12 @@ export default function AdminNav() {
             </Link>
             <Link
               href="/admin/curriculum"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-gray-900 hover:text-white"
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/admin/curriculum")
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
+              )}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +179,12 @@ export default function AdminNav() {
             </Link>
             <Link
               href="/admin/cover-letters"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-gray-900 hover:text-white"
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/admin/cover-letters")
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
+              )}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +211,12 @@ export default function AdminNav() {
           <div className="space-y-1">
             <Link
               href="/admin/settings"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-gray-900 hover:text-white"
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/admin/settings")
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
+              )}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +242,12 @@ export default function AdminNav() {
             </Link>
             <Link
               href="/admin/profile"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-gray-900 hover:text-white"
+              className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/admin/profile")
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
+              )}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +272,7 @@ export default function AdminNav() {
         <div className="flex items-center gap-3">
           <div className="h-8 w-8 rounded-full bg-gray-800"></div>
           <div>
-            <p className="text-sm font-medium">Miguel Figuera</p>
+            <p className="text-sm font-medium text-white">Miguel Figuera</p>
             <p className="text-xs text-gray-400">Admin</p>
           </div>
         </div>
