@@ -1,12 +1,19 @@
 ---
 import { services } from "../../data/services";
+import NetworkBackground from "../NetworkBackground.astro";
 
 const highlighted = services.filter((s) =>
   ["fullstack", "ai-automation", "custom-dev"].includes(s.id)
 );
 ---
 
-<section class="animate-on-scroll py-20 md:py-32">
+<section class="animate-on-scroll relative overflow-hidden py-20 md:py-32">
+  <div
+    class="pointer-events-none absolute inset-0 -z-10"
+    aria-hidden="true"
+  >
+    <NetworkBackground />
+  </div>
   <div class="mx-auto max-w-6xl px-8">
     <!-- Badge -->
     <div class="flex justify-center">

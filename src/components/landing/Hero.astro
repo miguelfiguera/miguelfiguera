@@ -1,5 +1,6 @@
 ---
 import { profile } from "../../data/profile";
+import NetworkBackground from "../NetworkBackground.astro";
 ---
 
 <section class="relative overflow-hidden py-20 md:py-32">
@@ -8,7 +9,7 @@ import { profile } from "../../data/profile";
     class="pointer-events-none absolute inset-0 -z-10"
     aria-hidden="true"
   >
-    <canvas id="hero-network" class="absolute inset-0 h-full w-full"></canvas>
+    <NetworkBackground />
     <div
       class="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-silver/5 blur-3xl"
     >
@@ -77,115 +78,3 @@ import { profile } from "../../data/profile";
     </div>
   </div>
 </section>
-
-<script>
-  const canvas = document.getElementById("hero-network") as HTMLCanvasElement | null;
-  const ctx = canvas?.getContext("2d");
-  const section = canvas?.closest("section");
-
-  if (canvas && ctx && section) {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    const NUM_POINTS = 35;
-    const MAX_DIST = 140;
-    const SPEED = 0.15;
-    const COLOR = "192, 192, 192"; // silver
-
-    type Point = { x: number; y: number; vx: number; vy: number };
-    let points: Point[] = [];
-    let width = 0;
-    let height = 0;
-    let running = false;
-
-    const resize = () => {
-      const rect = canvas.getBoundingClientRect();
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
-      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      width = rect.width;
-      height = rect.height;
-    };
-
-    const init = () => {
-      points = Array.from({ length: NUM_POINTS }, () => ({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * SPEED * 2,
-        vy: (Math.random() - 0.5) * SPEED * 2,
-      }));
-    };
-
-    const draw = () => {
-      ctx.clearRect(0, 0, width, height);
-
-      for (const p of points) {
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < 0 || p.x > width) p.vx *= -1;
-        if (p.y < 0 || p.y > height) p.vy *= -1;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${COLOR}, 0.55)`;
-        ctx.fill();
-      }
-
-      for (let i = 0; i < points.length; i++) {
-        for (let j = i + 1; j < points.length; j++) {
-          const dx = points[i].x - points[j].x;
-          const dy = points[i].y - points[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < MAX_DIST) {
-            const opacity = (1 - dist / MAX_DIST) * 0.3;
-            ctx.strokeStyle = `rgba(${COLOR}, ${opacity})`;
-            ctx.lineWidth = 0.6;
-            ctx.beginPath();
-            ctx.moveTo(points[i].x, points[i].y);
-            ctx.lineTo(points[j].x, points[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-
-      if (running) requestAnimationFrame(draw);
-    };
-
-    const start = () => {
-      if (running || prefersReducedMotion) return;
-      running = true;
-      requestAnimationFrame(draw);
-    };
-
-    const stop = () => {
-      running = false;
-    };
-
-    resize();
-    init();
-
-    if (prefersReducedMotion) {
-      draw();
-    } else {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) start();
-          else stop();
-        },
-        { threshold: 0 },
-      );
-      observer.observe(section);
-    }
-
-    let resizeTimer: number | undefined;
-    window.addEventListener("resize", () => {
-      if (resizeTimer) window.clearTimeout(resizeTimer);
-      resizeTimer = window.setTimeout(() => {
-        resize();
-        init();
-      }, 150);
-    });
-  }
-</script>
