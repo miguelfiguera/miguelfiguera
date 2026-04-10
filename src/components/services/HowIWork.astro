@@ -1,0 +1,55 @@
+---
+const steps = [
+  {
+    number: 1,
+    title: "Discovery",
+    description:
+      "We start with a conversation to understand your business goals, target audience, and technical requirements.",
+  },
+  {
+    number: 2,
+    title: "Planning",
+    description:
+      "I map out the architecture, choose the right stack, and define milestones so you know exactly what to expect.",
+  },
+  {
+    number: 3,
+    title: "Development",
+    description:
+      "I build iteratively with regular check-ins, keeping you in the loop as features take shape.",
+  },
+  {
+    number: 4,
+    title: "Delivery",
+    description:
+      "Thorough testing, deployment, and a handoff that includes documentation and ongoing support options.",
+  },
+];
+---
+
+<section class="py-20 md:py-32">
+  <div class="mx-auto max-w-6xl px-8">
+    <h2 class="text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+      How I Work
+    </h2>
+    <p class="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
+      A clear, collaborative process from first call to final deployment.
+    </p>
+
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {steps.map((step) => (
+        <div class="relative flex flex-col items-center text-center">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full border-2 border-silver/30 bg-silver/10 text-xl font-bold text-silver">
+            {step.number}
+          </div>
+          <h3 class="mt-4 text-lg font-semibold text-foreground">
+            {step.title}
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+            {step.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
