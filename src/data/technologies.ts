@@ -13,6 +13,8 @@ export const technologies: TechnologyCategory[] = [
     category: "Preferred LLMs",
     items: [
       { name: "Claude", iconName: "Bot" },
+      { name: "Claude Code", iconName: "Terminal" },
+      { name: "Claude Desktop", iconName: "Monitor" },
       { name: "Codex", iconName: "Bot" },
       { name: "Gemini", iconName: "Bot" },
     ],
