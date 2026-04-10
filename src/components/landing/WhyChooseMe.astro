@@ -1,0 +1,139 @@
+---
+const cards = [
+  {
+    title: "Clean Code",
+    description:
+      "Well-structured, readable, and maintainable code that follows industry best practices and coding standards.",
+    icon: "code",
+  },
+  {
+    title: "Scalable Architecture",
+    description:
+      "Systems designed to grow with your business, built on proven patterns that handle increasing demand gracefully.",
+    icon: "layers",
+  },
+  {
+    title: "Responsive Design",
+    description:
+      "Pixel-perfect interfaces that look and work beautifully on every device, from mobile phones to ultra-wide monitors.",
+    icon: "layout",
+  },
+  {
+    title: "Performance",
+    description:
+      "Optimized applications that load fast and run smooth, delivering the snappy experience your users expect.",
+    icon: "cpu",
+  },
+];
+---
+
+<section class="animate-on-scroll py-20 md:py-32">
+  <div class="mx-auto max-w-6xl px-8">
+    <!-- Badge -->
+    <div class="flex justify-center">
+      <span
+        class="inline-flex items-center rounded-full border border-silver/30 bg-silver/10 px-4 py-1.5 text-sm font-medium text-silver"
+      >
+        Why Choose Me
+      </span>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {
+        cards.map((card) => (
+          <div class="rounded-xl border bg-card text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
+                {card.icon === "code" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-silver"
+                  >
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                )}
+                {card.icon === "layers" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-silver"
+                  >
+                    <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.84Z" />
+                    <path d="m22 17.65-8.58 3.9a2 2 0 0 1-1.66 0L3.18 17.65" />
+                    <path d="m22 12.65-8.58 3.9a2 2 0 0 1-1.66 0L3.18 12.65" />
+                  </svg>
+                )}
+                {card.icon === "layout" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-silver"
+                  >
+                    <rect width="18" height="18" x="3" y="3" rx="2" />
+                    <path d="M3 9h18" />
+                    <path d="M9 21V9" />
+                  </svg>
+                )}
+                {card.icon === "cpu" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-silver"
+                  >
+                    <rect width="16" height="16" x="4" y="4" rx="2" />
+                    <rect width="6" height="6" x="9" y="9" rx="1" />
+                    <path d="M15 2v2" />
+                    <path d="M15 20v2" />
+                    <path d="M2 15h2" />
+                    <path d="M2 9h2" />
+                    <path d="M20 15h2" />
+                    <path d="M20 9h2" />
+                    <path d="M9 2v2" />
+                    <path d="M9 20v2" />
+                  </svg>
+                )}
+              </div>
+              <div class="font-semibold leading-none tracking-tight">
+                {card.title}
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-sm text-muted-foreground">{card.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CategorySidebar from "../components/products/CategorySidebar.astro";
+import ProductGrid from "../components/products/ProductGrid.astro";
+import CTA from "../components/shared/CTA.astro";
+---
+
+<Layout title="Products & Solutions | Miguel Figuera">
+  <main>
+    <!-- Page Header -->
+    <section class="animate-on-scroll py-20 md:py-32">
+      <div class="mx-auto max-w-6xl px-8 text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+          Products &amp; Solutions
+        </h1>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          Ready-made and customizable solutions to accelerate your business.
+          Full product catalog with live pricing coming soon.
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Catalog -->
+    <section class="animate-on-scroll pb-20 md:pb-32">
+      <div class="mx-auto flex max-w-6xl flex-col gap-8 px-8 lg:flex-row">
+        <CategorySidebar />
+        <ProductGrid />
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+</Layout>

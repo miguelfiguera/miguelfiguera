@@ -1,0 +1,85 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Discovery",
+    description:
+      "Understanding the problem space, gathering requirements, and defining clear goals before writing a single line of code.",
+    icon: "M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z",
+  },
+  {
+    number: "02",
+    title: "Design",
+    description:
+      "Architecting scalable solutions, choosing the right tools, and mapping out data flows and user experiences.",
+    icon: "M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42",
+  },
+  {
+    number: "03",
+    title: "Development",
+    description:
+      "Building iteratively with clean, maintainable code. Frequent commits, continuous integration, and regular feedback loops.",
+    icon: "M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5",
+  },
+  {
+    number: "04",
+    title: "Testing",
+    description:
+      "Verifying functionality through automated tests, manual QA, and cross-browser checks to ship with confidence.",
+    icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
+  {
+    number: "05",
+    title: "Deployment",
+    description:
+      "Shipping to production with CI/CD pipelines, monitoring performance, and iterating based on real-world usage.",
+    icon: "M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z",
+  },
+];
+---
+
+<section class="animate-on-scroll py-20 md:py-32">
+  <div class="mx-auto max-w-5xl px-8">
+    <div class="flex justify-center">
+      <span
+        class="inline-flex items-center rounded-full border border-silver/30 bg-silver/10 px-4 py-1.5 text-sm font-medium text-silver"
+      >
+        Process
+      </span>
+    </div>
+
+    <h2 class="mt-4 text-center text-3xl font-bold tracking-tight md:text-4xl">
+      How I Approach Work
+    </h2>
+    <p class="mt-2 text-center text-muted-foreground">
+      A structured process that balances speed with quality.
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+      {steps.map((step) => (
+        <div class="group rounded-xl border bg-card p-6 text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50">
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-silver/10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-5 w-5 text-silver"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d={step.icon} />
+              </svg>
+            </div>
+            <span class="text-xs font-bold tracking-widest text-silver/60">{step.number}</span>
+          </div>
+
+          <h3 class="mt-4 text-lg font-semibold">{step.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+            {step.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

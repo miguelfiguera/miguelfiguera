@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PortfolioCards from "../components/portfolio/PortfolioCards.astro";
+import WorkDetail from "../components/portfolio/WorkDetail.astro";
+import WorkApproach from "../components/portfolio/WorkApproach.astro";
+import CTA from "../components/shared/CTA.astro";
+---
+
+<Layout title="Portfolio | Miguel Figuera">
+  <main>
+    <!-- Page Header -->
+    <section class="animate-on-scroll py-20 md:py-32">
+      <div class="mx-auto max-w-6xl px-8 text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+          Portfolio
+        </h1>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          A collection of projects I've built — from full-stack platforms to
+          branding and design work.
+        </p>
+      </div>
+    </section>
+
+    <PortfolioCards />
+    <WorkDetail />
+    <WorkApproach />
+    <CTA />
+  </main>
+</Layout>

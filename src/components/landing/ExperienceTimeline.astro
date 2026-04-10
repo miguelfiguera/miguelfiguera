@@ -1,0 +1,63 @@
+---
+import { experiences } from "../../data/experience";
+
+function formatDate(date: string): string {
+  if (date === "present") return "Present";
+  const [year, month] = date.split("-");
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${months[parseInt(month) - 1]} ${year}`;
+}
+---
+
+<section class="animate-on-scroll py-20 md:py-32">
+  <div class="mx-auto max-w-4xl px-8">
+    <!-- Badge -->
+    <div class="flex justify-center">
+      <span
+        class="inline-flex items-center rounded-full border border-silver/30 bg-silver/10 px-4 py-1.5 text-sm font-medium text-silver"
+      >
+        Experience
+      </span>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative mt-12">
+      <!-- Vertical line -->
+      <div class="absolute left-4 top-0 h-full w-px bg-silver/20 md:left-1/2 md:-translate-x-px"></div>
+
+      {experiences.map((exp, i) => (
+        <div class:list={[
+          "relative mb-12 last:mb-0 pl-12 md:pl-0",
+          i % 2 === 0 ? "md:pr-[calc(50%+2rem)] md:text-right" : "md:pl-[calc(50%+2rem)]",
+        ]}>
+          <!-- Dot -->
+          <div class:list={[
+            "absolute left-2.5 top-1.5 h-3 w-3 rounded-full border-2 border-silver bg-background",
+            "md:left-1/2 md:-translate-x-1/2",
+          ]}></div>
+
+          <!-- Content -->
+          <div class="rounded-xl border bg-card p-5 text-card-foreground shadow transition-all duration-300 hover:shadow-lg hover:border-silver/50">
+            <div class="flex flex-col gap-1">
+              <span class="text-xs font-medium text-silver">
+                {formatDate(exp.startDate)} — {formatDate(exp.endDate)}
+              </span>
+              <h3 class="text-lg font-semibold leading-tight">{exp.title}</h3>
+              <p class="text-sm text-muted-foreground">
+                {exp.company} · {exp.location}{exp.remote ? " · Remote" : ""}
+              </p>
+            </div>
+            <ul class:list={[
+              "mt-3 space-y-1.5 text-sm text-muted-foreground",
+              i % 2 === 0 ? "md:text-right" : "",
+            ]}>
+              {exp.description.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

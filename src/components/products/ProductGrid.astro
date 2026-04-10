@@ -1,0 +1,47 @@
+---
+import { products } from "../../data/products";
+---
+
+<div class="grid flex-1 gap-6 sm:grid-cols-2 xl:grid-cols-3" data-erpnext-item="grid">
+  {products.map((product) => (
+    <article
+      data-erpnext-item={product.id}
+      data-product-category={product.category.toLowerCase().replace(/\s+/g, "-")}
+      data-erpnext-category={product.category.toLowerCase().replace(/\s+/g, "-")}
+      class="group flex flex-col rounded-xl border border-silver/10 bg-card text-card-foreground shadow transition-all duration-300 hover:shadow-lg hover:border-silver/50"
+    >
+      {/* Category + Title */}
+      <div class="flex flex-col space-y-1.5 p-6 pb-3">
+        <span class="text-xs font-medium uppercase tracking-wider text-silver">
+          {product.category}
+        </span>
+        <h3 class="text-lg font-semibold leading-tight tracking-tight text-foreground">
+          {product.title}
+        </h3>
+      </div>
+
+      {/* Description + Features */}
+      <div class="flex-1 px-6 pb-4">
+        <p class="text-sm text-muted-foreground">{product.description}</p>
+        <ul class="mt-3 space-y-1">
+          {product.features.map((feature) => (
+            <li class="flex items-start gap-2 text-xs text-muted-foreground">
+              <span class="mt-0.5 text-silver">&#10003;</span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* CTA */}
+      <div class="flex items-center p-6 pt-2">
+        <a
+          href="/#contact"
+          class="inline-flex h-10 w-full items-center justify-center rounded-md border border-silver/30 bg-transparent text-sm font-medium text-silver transition-all duration-300 hover:bg-silver/10 hover:shadow-lg"
+        >
+          Request Quote
+        </a>
+      </div>
+    </article>
+  ))}
+</div>

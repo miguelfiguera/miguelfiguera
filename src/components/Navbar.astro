@@ -1,0 +1,36 @@
+---
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/products", label: "Products" },
+];
+---
+
+<nav
+  class="sticky top-0 z-50 hidden md:flex items-center justify-between bg-background border-b border-border px-8 py-3"
+>
+  <a href="/" class="flex items-center gap-2">
+    <img src="/Logos/mfLogo.png" alt="Miguel Figuera" class="h-10 w-auto rounded" />
+  </a>
+
+  <div class="flex items-center gap-8">
+    {
+      links.map((link) => (
+        <a
+          href={link.href}
+          class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+        >
+          {link.label}
+        </a>
+      ))
+    }
+  </div>
+
+  <a
+    href="/#contact"
+    class="rounded-md bg-silver px-4 py-2 text-sm font-medium text-black transition-all duration-300 hover:opacity-90 hover:shadow-lg"
+  >
+    Contact Me
+  </a>
+</nav>

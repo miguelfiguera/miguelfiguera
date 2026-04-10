@@ -1,16 +1,60 @@
 # Hi, I'm Miguel Figuera Quintero! 👋
 
-I'm a passionate **Full-Stack Web Developer** with a strong foundation from **The Odin Project** (completed both Ruby on Rails and Node.js paths). I thrive on building robust, scalable, and user-centric web applications.
+I'm a passionate **Full-Stack Developer** with 4+ years of experience and a strong foundation from **The Odin Project** (completed both Ruby on Rails and Node.js paths). I thrive on building robust, scalable, and user-centric web applications.
 
-Currently, I'm expanding my knowledge by pursuing a Bachelor's Degree in Computer Engineering at **Universidad Nacional Experimental de las Telecomunicaciones e Informática (UNETI)** in Venezuela, aiming to blend cutting-edge academic insights with practical, real-world development experience.
+I hold an **Associate Degree in Computer Science (Técnico Superior Universitario)** from **UNETI** in Venezuela and I'm currently pursuing my Bachelor's in Computer Engineering at the same institution, blending academic insights with real-world development.
+
+I'm also an **Odoo Partner** with ERP implementation experience, and I specialize in **Shopify integrations** with platforms like Klaviyo, Algolia, Rebuy, Yotpo, and more.
 
 My expertise spans across the full development lifecycle, from conceptualization and backend architecture to frontend implementation and deployment. I have a proven track record in:
 
 - Developing and executing client projects, including cloud server configuration and database administration.
+- Building serverless architectures and cloud functions for scalable backends.
 - Maintaining and enhancing legacy systems while developing new features.
 - Automating business processes through scripting and web scraping.
-- Integrating diverse APIs to streamline functionality.
-- Leveraging AI for efficient and robust code generation.
+- Integrating diverse APIs and e-commerce platforms to streamline functionality.
+- AI-powered development — from autonomous pipelines and agent orchestration to AI-assisted code generation, testing, and workflow automation.
+
+---
+
+### 💼 Professional Experience:
+
+**FullStack Developer @ Simple-C Bookeeping Software** _(Jun 2025 – Present | Full-time | Arizona, US | Remote)_
+- Building and maintaining full-stack features with Laravel and React
+- Developing RESTful APIs and interactive UI components
+- Collaborating with the team on bookkeeping software solutions
+
+**Full Stack Developer @ Freelance** _(Apr 2025 – Present | Remote)_
+- Developing automation scripts and tools with Python
+- Systems management and server administration
+- Delivering custom web solutions for diverse clients
+- AI-powered development pipelines and agent orchestration
+
+**Full Stack Developer @ Digital Lab** _(Mar 2023 – Apr 2025 | 2 years | Aragua, VE | Remote)_
+- Built e-commerce applications with Next.js and React
+- Integrated Shopify API with Klaviyo, Algolia, Rebuy, Yotpo, and other platforms
+- Migrated UI framework from Bootstrap to Tailwind CSS
+- Implemented Firebase services including Firestore, Cloud Functions, and Authentication
+- Developed serverless architectures and cloud functions for scalable backends
+- Automated recurring tasks to improve team productivity
+
+**CTO @ R&R Advisor** _(Oct 2024 – Mar 2025 | Part-time | Puerto Rico | Remote)_
+- Led SaaS product development and architecture decisions
+- Managed cloud server infrastructure and administration
+- Integrated third-party APIs for business process automation
+- Conducted code reviews and managed project delivery
+
+**CTO @ Towerware** _(Jul 2024 – Jan 2025 | Part-time | Delray Beach, FL)_
+- Optimized database performance and implemented security measures
+- Automated business processes to reduce manual workload
+- Established QA workflows and testing standards
+- Integrated AI tools and Telnyx API for SMS campaign automation
+- Managed 3CX phone system configuration
+
+**Ruby on Rails Full Stack Developer @ Towerware** _(May 2024 – Jul 2024 | Delray Beach, FL)_
+- Maintained and upgraded legacy Ruby on Rails applications
+- Wrote comprehensive tests with Minitest, RSpec, Capybara, and Selenium
+- Performed application upgrades and dependency updates
 
 ---
 
@@ -26,22 +70,36 @@ My expertise spans across the full development lifecycle, from conceptualization
 
 **Languages & Core Frameworks:**
 
-- **JavaScript/TypeScript:** React, Next.js, Node.js (Express.js, NestJS)
+- **JavaScript/TypeScript:** React, Next.js, Astro, Node.js (Express.js, NestJS), Inertia.js
 - **Ruby:** Ruby on Rails
 - **Python:** Django, Scrapy, Odoo (and general scripting)
+- **PHP:** Laravel
 
 **Databases:**
 
 - **SQL:** PostgreSQL, MySQL, SQLite
 - **NoSQL:** Firebase, MongoDB
 
-**DevOps & Deployment:**
+**DevOps & Cloud:**
 
 - Docker
+- Serverless & Cloud Functions (Firebase, AWS Lambda)
 - Cloud Platforms: DigitalOcean, Heroku, Netlify, Vercel
 - Server Administration (Linux: Ubuntu, Kali)
 
-**Key Skills & Competencies (from my CV):**
+**E-commerce & Integrations:**
+
+- Shopify (Hydrogen, Next.js) with Klaviyo, Algolia, Rebuy, Yotpo
+- Odoo Partner & ERP Implementation
+
+**AI & Automation:**
+
+- AI-Powered Development Pipelines
+- Agent Orchestration & Multi-Agent Systems
+- AI-Assisted Code Generation & Testing
+- Workflow Automation & Process Optimization
+
+**Key Skills:**
 
 - Full-Stack Web Development
 - Server Administration & Cloud Configuration
@@ -49,14 +107,12 @@ My expertise spans across the full development lifecycle, from conceptualization
 - API Design & Integration
 - Code Review & Project Management
 - Automation & Scripting (including web scraping)
-- Prompt Engineering for AI Code Generation
-- Shopify Integrations (Hydrogen, Next.js)
-- Understanding of Digital Marketing Tech (SMS/Email campaign automation)
 
 ---
 
 🎓 **Education & Certifications:**
 
+- **Associate Degree in Computer Science (T.S.U.)** - _UNETI_ (completed)
 - **B.S. Computer Engineering** (Ongoing) - _UNETI_
 - **The Odin Project** - Ruby on Rails Path & Node.js Path (Completed)
 - **freeCodeCamp Certifications:**

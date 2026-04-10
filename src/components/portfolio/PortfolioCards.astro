@@ -1,0 +1,54 @@
+---
+import { projects } from "../../data/projects";
+---
+
+<section class="animate-on-scroll py-20 md:py-32">
+  <div class="mx-auto max-w-6xl px-8">
+    <div class="flex justify-center">
+      <span
+        class="inline-flex items-center rounded-full border border-silver/30 bg-silver/10 px-4 py-1.5 text-sm font-medium text-silver"
+      >
+        Portfolio
+      </span>
+    </div>
+
+    <h2 class="mt-4 text-center text-3xl font-bold tracking-tight md:text-4xl">
+      All Projects
+    </h2>
+    <p class="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
+      Every project I've delivered — from web platforms to branding and social media.
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => (
+        <div class="group flex flex-col rounded-xl border bg-card text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50">
+          <div class="flex flex-1 flex-col space-y-1.5 p-6">
+            <div class="flex items-center justify-between gap-2">
+              <h3 class="font-semibold leading-none tracking-tight">
+                {project.title}
+              </h3>
+              <span class="inline-flex shrink-0 items-center rounded-md border border-silver/30 bg-silver/10 px-2.5 py-0.5 text-xs font-semibold text-silver">
+                {project.category}
+              </span>
+            </div>
+            <p class="pt-2 text-sm text-muted-foreground">
+              {project.description}
+            </p>
+          </div>
+          <div class="flex items-center gap-3 p-6 pt-0">
+            {project.url && (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
+              >
+                Visit Site
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

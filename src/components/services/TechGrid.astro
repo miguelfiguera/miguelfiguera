@@ -1,0 +1,35 @@
+---
+import { technologies } from "@/data/technologies";
+import { Badge } from "@/components/ui/badge";
+---
+
+<section class="animate-on-scroll py-20 md:py-32">
+  <div class="mx-auto max-w-6xl px-8">
+    <h2 class="text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+      Technologies I Work With
+    </h2>
+    <p class="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
+      A curated stack of tools and frameworks I use to build reliable, scalable applications.
+    </p>
+
+    <div class="mt-12 space-y-10">
+      {technologies.map((category) => (
+        <div>
+          <h3 class="mb-4 text-lg font-semibold text-silver">
+            {category.category}
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            {category.items.map((tech) => (
+              <Badge
+                variant="secondary"
+                className="px-4 py-2 text-sm"
+              >
+                {tech.name}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
