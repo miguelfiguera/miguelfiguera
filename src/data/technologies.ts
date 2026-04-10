@@ -10,6 +10,14 @@ export interface TechnologyCategory {
 
 export const technologies: TechnologyCategory[] = [
   {
+    category: "Preferred LLMs",
+    items: [
+      { name: "Claude", iconName: "Bot" },
+      { name: "Codex", iconName: "Bot" },
+      { name: "Gemini", iconName: "Bot" },
+    ],
+  },
+  {
     category: "Languages & Frameworks",
     items: [
       { name: "React", iconName: "React" },
