@@ -1,0 +1,114 @@
+---
+import { services } from "../../data/services";
+
+const highlighted = services.filter((s) =>
+  ["fullstack", "ai-automation", "custom-dev"].includes(s.id)
+);
+---
+
+<section class="py-20 md:py-32">
+  <div class="mx-auto max-w-6xl px-8">
+    <!-- Badge -->
+    <div class="flex justify-center">
+      <span
+        class="inline-flex items-center rounded-full border border-silver/30 bg-silver/10 px-4 py-1.5 text-sm font-medium text-silver"
+      >
+        Services
+      </span>
+    </div>
+
+    <h2 class="mt-4 text-center text-3xl font-bold tracking-tight md:text-4xl">
+      What I Can Build for You
+    </h2>
+    <p class="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
+      From full-stack applications to AI-powered automation, I deliver solutions
+      tailored to your business.
+    </p>
+
+    <!-- Cards grid -->
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {highlighted.map((service) => (
+        <div class="flex flex-col rounded-xl border bg-card text-card-foreground shadow transition-colors hover:border-silver/40">
+          <div class="flex flex-1 flex-col space-y-1.5 p-6">
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
+              {service.id === "fullstack" && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-silver">
+                  <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.84Z" />
+                  <path d="m22 17.65-8.58 3.9a2 2 0 0 1-1.66 0L3.18 17.65" />
+                  <path d="m22 12.65-8.58 3.9a2 2 0 0 1-1.66 0L3.18 12.65" />
+                </svg>
+              )}
+              {service.id === "ai-automation" && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-silver">
+                  <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                  <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                  <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+                  <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
+                  <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+                  <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+                  <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
+                  <path d="M6 18a4 4 0 0 1-1.967-.516" />
+                  <path d="M19.967 17.484A4 4 0 0 1 18 18" />
+                </svg>
+              )}
+              {service.id === "custom-dev" && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-silver">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z" />
+                </svg>
+              )}
+            </div>
+            <h3 class="font-semibold leading-none tracking-tight">
+              {service.title}
+            </h3>
+            <p class="pt-2 text-sm text-muted-foreground">
+              {service.shortDescription}
+            </p>
+          </div>
+        </div>
+      ))}
+
+      <!-- Products teaser card -->
+      <div class="flex flex-col rounded-xl border border-dashed border-silver/30 bg-card text-card-foreground shadow transition-colors hover:border-silver/40">
+        <div class="flex flex-1 flex-col space-y-1.5 p-6">
+          <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-silver">
+              <path d="m7.5 4.27 9 5.15" />
+              <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg>
+          </div>
+          <h3 class="font-semibold leading-none tracking-tight">
+            Explore Our Products
+          </h3>
+          <p class="pt-2 text-sm text-muted-foreground">
+            A catalog of ready-made tools and templates is coming soon. Stay
+            tuned for products you can use right away.
+          </p>
+        </div>
+        <div class="flex items-center p-6 pt-0">
+          <a
+            href="/products"
+            class="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            Browse Products
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- View All link -->
+    <div class="mt-10 flex justify-center">
+      <a
+        href="/services"
+        class="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-silver px-8 text-sm font-medium text-black shadow transition-colors hover:bg-silver/80"
+      >
+        View All Services
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
