@@ -6,6 +6,7 @@ import { products } from "../../data/products";
   {products.map((product) => (
     <article
       data-erpnext-item={product.id}
+      data-product-category={product.category.toLowerCase().replace(/\s+/g, "-")}
       data-erpnext-category={product.category.toLowerCase().replace(/\s+/g, "-")}
       class="group flex flex-col rounded-xl border border-silver/10 bg-card text-card-foreground shadow transition-all duration-300 hover:shadow-lg hover:border-silver/50"
     >

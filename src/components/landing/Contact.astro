@@ -45,82 +45,134 @@ const contactLinks = [
       these channels.
     </p>
 
-    <!-- Contact Cards -->
-    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-      {
-        contactLinks.map((link) => (
-          <a
-            href={link.href}
-            target={link.icon !== "mail" ? "_blank" : undefined}
-            rel={link.icon !== "mail" ? "noopener noreferrer" : undefined}
-            class="group rounded-xl border bg-card text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50"
+    <div class="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2">
+      <!-- Contact Form (ERPNext-ready) -->
+      <div class="rounded-xl border bg-card p-8 shadow">
+        <h3 class="mb-6 text-lg font-semibold">Send a Message</h3>
+        <form
+          data-erpnext-form="contact"
+          data-erpnext-doctype="Web Form Submission"
+          class="space-y-4"
+          id="contact-form"
+        >
+          <div>
+            <label for="contact-name" class="mb-1.5 block text-sm font-medium">Name</label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              required
+              data-erpnext-field="sender_full_name"
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              placeholder="Your name"
+            />
+          </div>
+          <div>
+            <label for="contact-email" class="mb-1.5 block text-sm font-medium">Email</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              required
+              data-erpnext-field="email_address"
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              placeholder="your@email.com"
+            />
+          </div>
+          <div>
+            <label for="contact-subject" class="mb-1.5 block text-sm font-medium">Subject</label>
+            <input
+              type="text"
+              id="contact-subject"
+              name="subject"
+              data-erpnext-field="subject"
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              placeholder="Project inquiry"
+            />
+          </div>
+          <div>
+            <label for="contact-message" class="mb-1.5 block text-sm font-medium">Message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              required
+              rows="4"
+              data-erpnext-field="message"
+              class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              placeholder="Tell me about your project..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="inline-flex h-10 w-full items-center justify-center rounded-md bg-silver px-8 text-sm font-medium text-black shadow transition-all duration-300 hover:bg-silver/80 hover:shadow-lg"
           >
-            <div class="flex flex-col items-center space-y-3 p-8 text-center">
-              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
+            Send Message
+          </button>
+          <p id="form-status" class="hidden text-center text-sm"></p>
+        </form>
+      </div>
+
+      <!-- Direct Contact Cards -->
+      <div class="flex flex-col gap-6">
+        <p class="text-sm text-muted-foreground">Or reach out directly:</p>
+        {
+          contactLinks.map((link) => (
+            <a
+              href={link.href}
+              target={link.icon !== "mail" ? "_blank" : undefined}
+              rel={link.icon !== "mail" ? "noopener noreferrer" : undefined}
+              class="group flex items-center gap-4 rounded-xl border bg-card p-6 text-card-foreground shadow transition-all duration-300 hover:shadow-lg hover:border-silver/50"
+            >
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-silver/10">
                 {link.icon === "mail" && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-silver"
-                  >
-                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-silver"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
                 )}
                 {link.icon === "whatsapp" && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-silver"
-                  >
-                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-                    <line x1="12" x2="12.01" y1="17" y2="17" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-silver"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" x2="12.01" y1="17" y2="17" /></svg>
                 )}
                 {link.icon === "linkedin" && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-silver"
-                  >
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                    <rect width="4" height="12" x="2" y="9" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-silver"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
                 )}
               </div>
-              <div class="font-semibold leading-none tracking-tight text-lg">
-                {link.label}
+              <div>
+                <div class="font-semibold">{link.label}</div>
+                <p class="text-sm text-muted-foreground group-hover:text-silver transition-colors">{link.description}</p>
               </div>
-              <p class="text-sm text-muted-foreground group-hover:text-silver transition-colors">
-                {link.description}
-              </p>
-            </div>
-          </a>
-        ))
-      }
+            </a>
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  function initContactForm() {
+    const form = document.getElementById("contact-form") as HTMLFormElement | null;
+    const status = document.getElementById("form-status");
+    if (!form || !status) return;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // ERPNext integration point: replace this with actual API call
+      // Example: fetch('/api/method/frappe.client.insert', { ... })
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      // For now, open mailto with the form data
+      const subject = encodeURIComponent(String(data.subject || "Website Inquiry"));
+      const body = encodeURIComponent(
+        `Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`
+      );
+      window.location.href = `mailto:miguelqui725@gmail.com?subject=${subject}&body=${body}`;
+
+      status.textContent = "Opening your email client...";
+      status.className = "text-center text-sm text-silver mt-2";
+      form.reset();
+    });
+  }
+
+  initContactForm();
+  document.addEventListener("astro:after-swap", initContactForm);
+</script>

@@ -12,11 +12,11 @@ import { categories } from "../../data/products";
         {categories.map((cat) => (
           <li>
             <button
-              data-erpnext-category={cat === "All" ? "all" : cat.toLowerCase().replace(/\s+/g, "-")}
+              data-category-filter={cat === "All" ? "all" : cat.toLowerCase().replace(/\s+/g, "-")}
               class:list={[
-                "w-full rounded-md px-3 py-2 text-left text-sm transition-colors",
+                "w-full rounded-md px-3 py-2 text-left text-sm transition-colors category-btn",
                 cat === "All"
-                  ? "bg-silver/10 font-medium text-silver"
+                  ? "bg-silver/10 font-medium text-silver active"
                   : "text-muted-foreground hover:bg-silver/5 hover:text-foreground",
               ]}
             >
@@ -26,11 +26,38 @@ import { categories } from "../../data/products";
         ))}
       </ul>
     </nav>
-
-    <div class="mt-6 border-t border-silver/10 pt-6">
-      <p class="text-xs text-muted-foreground">
-        Product catalog powered by ERPNext. Filters and search coming soon.
-      </p>
-    </div>
   </div>
 </aside>
+
+<script>
+  function initCategoryFilter() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>("[data-category-filter]");
+    const products = document.querySelectorAll<HTMLElement>("[data-product-category]");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.categoryFilter;
+
+        // Update active button
+        buttons.forEach((b) => {
+          b.classList.remove("bg-silver/10", "font-medium", "text-silver", "active");
+          b.classList.add("text-muted-foreground");
+        });
+        btn.classList.add("bg-silver/10", "font-medium", "text-silver", "active");
+        btn.classList.remove("text-muted-foreground");
+
+        // Filter products
+        products.forEach((product) => {
+          if (filter === "all" || product.dataset.productCategory === filter) {
+            product.style.display = "";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+
+  initCategoryFilter();
+  document.addEventListener("astro:after-swap", initCategoryFilter);
+</script>
