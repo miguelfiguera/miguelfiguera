@@ -1,115 +1,412 @@
 {
   "tasks": {
-    "0a": { "name": "Create branch feat/astro-migration from dev", "status": "pending" },
-    "0a-adv": { "name": "ADV: Verify branch is feat/astro-migration", "status": "pending" },
-    "0b": { "name": "Remove Next.js directories (app, components, lib, hooks, .next, .cursor, node_modules)", "status": "pending" },
-    "0b-adv": { "name": "ADV: Verify no Next.js dirs remain", "status": "pending" },
-    "0c": { "name": "Remove Next.js config files (next.config, postcss, tailwind, tsconfig, eslint, components.json, middleware, package*)", "status": "pending" },
-    "0c-adv": { "name": "ADV: Verify only .ralph, AGENTS.md, PRD, scripts, .git, .claude, .gitignore, public, README remain", "status": "pending" },
-    "0d": { "name": "Preserve public assets to .ralph/preserved-assets/", "status": "pending" },
-    "0d-adv": { "name": "ADV: Verify mySelf.png, logos, favicon preserved", "status": "pending" },
-    "0e": { "name": "Init Astro minimal project at root with typescript strict", "status": "pending" },
-    "0e-adv": { "name": "ADV: Verify astro init, package.json has astro, src/ exists, build passes", "status": "pending" },
-    "0f": { "name": "Add React and Tailwind integrations to Astro", "status": "pending" },
-    "0f-adv": { "name": "ADV: Verify astro.config has react+tailwind, build passes", "status": "pending" },
-    "0g": { "name": "Install runtime deps (lucide-react, clsx, tailwind-merge, tailwindcss-animate, class-variance-authority)", "status": "pending" },
-    "0g-adv": { "name": "ADV: Verify all 5 runtime deps in package.json dependencies", "status": "pending" },
-    "0h": { "name": "Install dev deps (vitest, @testing-library/react, @testing-library/jest-dom, jsdom)", "status": "pending" },
-    "0h-adv": { "name": "ADV: Verify all 4 dev deps in devDependencies", "status": "pending" },
-    "0i": { "name": "Restore preserved assets to public/ and cleanup .ralph/preserved-assets", "status": "pending" },
-    "0i-adv": { "name": "ADV: Verify public/Logos/, public/myPhoto/mySelf.png exist, build passes", "status": "pending" },
-
-    "1a": { "name": "Create globals.css with exact HSL variables (light+dark) and silver", "status": "pending" },
-    "1a-adv": { "name": "ADV: Diff every CSS variable against PRD list, zero differences", "status": "pending" },
-    "1b": { "name": "Create tailwind.config.mjs with HSL colors, silver, borderRadius, keyframes, animate plugin", "status": "pending" },
-    "1b-adv": { "name": "ADV: Verify tailwind config has all extends + plugin, build passes", "status": "pending" },
-    "1c": { "name": "Create src/lib/utils.ts with cn() function", "status": "pending" },
-    "1c-adv": { "name": "ADV: Verify cn() exports correctly, build passes", "status": "pending" },
-    "1d": { "name": "Create shadcn Button component with all variants (default, destructive, outline, secondary, ghost, link) and sizes", "status": "pending" },
-    "1d-adv": { "name": "ADV: Verify Button has 6 variants + 4 sizes, uses cn(), build passes", "status": "pending" },
-    "1e": { "name": "Create shadcn Badge component with variants (default, secondary, destructive, outline)", "status": "pending" },
-    "1e-adv": { "name": "ADV: Verify Badge has 4 variants, uses cn(), build passes", "status": "pending" },
-    "1f": { "name": "Create shadcn Card component (Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter)", "status": "pending" },
-    "1f-adv": { "name": "ADV: Verify Card exports 6 named components, uses cn(), build passes", "status": "pending" },
-    "1g": { "name": "Create shadcn Input component", "status": "pending" },
-    "1g-adv": { "name": "ADV: Verify Input uses cn() and theme vars, build passes", "status": "pending" },
-    "1h": { "name": "Create shadcn Textarea and Separator components", "status": "pending" },
-    "1h-adv": { "name": "ADV: Verify Textarea+Separator export correctly, build passes", "status": "pending" },
-
-    "2a": { "name": "Create src/data/profile.ts — real name, headline, about, contact, odooPartner=true, shopifyExperience=true", "status": "pending" },
-    "2a-adv": { "name": "ADV: Verify email=miguelqui725@gmail.com, whatsapp=584241727988, odooPartner+shopify flags true", "status": "pending" },
-    "2b": { "name": "Create src/data/experience.ts — 6 real roles with dates, companies, bullets", "status": "pending" },
-    "2b-adv": { "name": "ADV: Verify 6 roles, each date/company matches LinkedIn PRD data", "status": "pending" },
-    "2c": { "name": "Create src/data/education.ts — UNETI (ongoing) + UPEL diploma", "status": "pending" },
-    "2c-adv": { "name": "ADV: Verify 2 entries, UNETI sept2023-dic2028, UPEL sept2020-dic2020", "status": "pending" },
-    "2d": { "name": "Create src/data/services.ts — 9 services with id, title, shortDesc, desc, iconName, features[]", "status": "pending" },
-    "2d-adv": { "name": "ADV: Verify 9 services each with non-empty features array", "status": "pending" },
-    "2e": { "name": "Create src/data/technologies.ts — real tech grouped by category from README", "status": "pending" },
-    "2e-adv": { "name": "ADV: Verify includes Rails, React, Laravel, Next.js, Docker, PostgreSQL, Firebase", "status": "pending" },
-    "2f": { "name": "Create src/data/certifications.ts — ONLY real certs (freeCodeCamp x3, Odin x2, UPEL)", "status": "pending" },
-    "2f-adv": { "name": "ADV: Verify ZERO fake certs (no AWS, Google Cloud, Azure, Kubernetes, Meta)", "status": "pending" },
-    "2g": { "name": "Create src/data/projects.ts — 9 real projects from thedigitallab.dev with URLs", "status": "pending" },
-    "2g-adv": { "name": "ADV: Verify 9 projects, real URLs (rradvisor.net, alphacomputer.netlify.app, etc)", "status": "pending" },
-
-    "3a": { "name": "Create Layout.astro — html lang=en class=dark, import globals.css, meta tags, slot", "status": "pending" },
-    "3a-adv": { "name": "ADV: Verify Layout has dark class, charset, viewport, globals import, slot", "status": "pending" },
-    "3b": { "name": "Create Navbar.astro — sticky, logo, links (Home, Services, Portfolio, Products), Contact button silver", "status": "pending" },
-    "3b-adv": { "name": "ADV: Verify 4 nav links + Contact btn, correct hrefs, hidden on mobile", "status": "pending" },
-    "3c": { "name": "Create MobileNav.tsx React island — hamburger toggle, overlay, same links, close on click", "status": "pending" },
-    "3c-adv": { "name": "ADV: Verify MobileNav has useState toggle, aria-label, same links as Navbar", "status": "pending" },
-    "3d": { "name": "Create Footer.astro — social links (LinkedIn, GitHub, WhatsApp, Email real URLs), copyright", "status": "pending" },
-    "3d-adv": { "name": "ADV: Verify real social URLs, no example.com, copyright present", "status": "pending" },
-    "3e": { "name": "Wire Layout with Navbar+MobileNav(client:load)+Footer, create 4 placeholder pages", "status": "pending" },
-    "3e-adv": { "name": "ADV: Build test — 4 pages (/, /services, /portfolio, /products) compile with zero errors", "status": "pending" },
-
-    "4a": { "name": "Build Hero.astro — mySelf.png photo, name, headline, about, 2 CTA shadcn Buttons", "status": "pending" },
-    "4a-adv": { "name": "ADV: Verify Hero uses /myPhoto/mySelf.png, real name, silver accent on CTA, responsive", "status": "pending" },
-    "4b": { "name": "Build WhyChooseMe.astro — 4 benefit shadcn Cards with Lucide icons, responsive grid", "status": "pending" },
-    "4b-adv": { "name": "ADV: Verify 4 cards, icons render, grid 1/2/4 cols at breakpoints", "status": "pending" },
-    "4c": { "name": "Build ExperienceTimeline.astro — 6 roles from experience.ts, vertical timeline", "status": "pending" },
-    "4c-adv": { "name": "ADV: Verify 6 roles, real dates/companies, responsive timeline", "status": "pending" },
-    "4d": { "name": "Build ProjectsShowcase.astro — 6 best projects from thedigitallab.dev, shadcn Cards", "status": "pending" },
-    "4d-adv": { "name": "ADV: Verify 6 cards, real URLs (rradvisor, alphacomputer, etc), category badges", "status": "pending" },
-    "4e": { "name": "Build ServicesPreview.astro — 3 highlighted services + Products teaser card linking to /products", "status": "pending" },
-    "4e-adv": { "name": "ADV: Verify 3 service cards + 1 products card, links to /services and /products", "status": "pending" },
-    "4f": { "name": "Build CertsAndPartners.astro — Odoo Partner badge, Shopify badge, real freeCodeCamp certs", "status": "pending" },
-    "4f-adv": { "name": "ADV: Verify 'Odoo Partner' text present, 'Shopify' present, ZERO fake certs", "status": "pending" },
-    "4g": { "name": "Build Contact.astro — mailto:, wa.me/, linkedin direct links. NO formspree, NO form backend", "status": "pending" },
-    "4g-adv": { "name": "ADV: Verify no formspree anywhere (grep returns 0), links are mailto/wa.me/linkedin", "status": "pending" },
-    "4h": { "name": "Assemble index.astro — import all 7 sections in order, consistent py-16/py-20 spacing", "status": "pending" },
-    "4h-adv": { "name": "ADV: Build test landing page, all 7 sections present, zero errors", "status": "pending" },
-
-    "5a": { "name": "Build ServiceList.astro — 9 service shadcn Cards with icon, title, desc, features", "status": "pending" },
-    "5a-adv": { "name": "ADV: Verify 9 cards each with icon+title+desc+features[], responsive grid", "status": "pending" },
-    "5b": { "name": "Build TechGrid.astro — technology badges grouped by category", "status": "pending" },
-    "5b-adv": { "name": "ADV: Verify tech includes React/Rails/Laravel/Docker/PostgreSQL, grouped", "status": "pending" },
-    "5c": { "name": "Build HowIWork.astro — 4 numbered steps (Discovery, Planning, Development, Delivery)", "status": "pending" },
-    "5c-adv": { "name": "ADV: Verify 4 steps with titles+descriptions, visual numbering", "status": "pending" },
-    "5d": { "name": "Assemble services.astro — header + ServiceList + TechGrid + HowIWork + CTA", "status": "pending" },
-    "5d-adv": { "name": "ADV: Build test Services page, zero errors", "status": "pending" },
-
-    "6a": { "name": "Build PortfolioCards.astro — all 9 projects from thedigitallab.dev with links/demos", "status": "pending" },
-    "6a-adv": { "name": "ADV: Verify 9 projects with real URLs", "status": "pending" },
-    "6b": { "name": "Build WorkDetail.astro — detailed experience + WorkApproach 5 steps", "status": "pending" },
-    "6b-adv": { "name": "ADV: Verify real experience data, 5 approach steps", "status": "pending" },
-    "6c": { "name": "Assemble portfolio.astro — header + cards + work detail + CTA", "status": "pending" },
-    "6c-adv": { "name": "ADV: Build test Portfolio page, zero errors", "status": "pending" },
-
-    "7a": { "name": "Build Products page — ERPNext-ready grid structure, category placeholders, coming soon items", "status": "pending" },
-    "7a-adv": { "name": "ADV: Verify Products page builds, has grid structure for items/categories", "status": "pending" },
-
-    "8a": { "name": "Setup vitest.config.ts + setup file + data tests for profile, experience, services", "status": "pending" },
-    "8a-adv": { "name": "ADV: Verify vitest run passes, 3+ test files, all green", "status": "pending" },
-    "8b": { "name": "Write data tests for certifications (no fakes), technologies, projects, education", "status": "pending" },
-    "8b-adv": { "name": "ADV: Verify cert test explicitly checks no AWS/Google/Azure/Meta, all pass", "status": "pending" },
-    "8c": { "name": "Write React component render tests (Button, Card, MobileNav)", "status": "pending" },
-    "8c-adv": { "name": "ADV: Verify component tests render real content, all pass", "status": "pending" },
-    "8d": { "name": "Write integration tests (build verification, 4 page routes exist, data integrity)", "status": "pending" },
-    "8d-adv": { "name": "ADV: Verify all tests pass, coverage >= 80%", "status": "pending" },
-
-    "9a": { "name": "Responsive polish — verify all components at 3 breakpoints, add hover/transition/scroll animations", "status": "pending" },
-    "9a-adv": { "name": "ADV: Spot-check 5+ components for responsive + animations", "status": "pending" },
-    "9b": { "name": "Write README.md — mv existing to deprecated, new one with About/Experience/Education/Tech/Setup/Tests/Contact in English", "status": "pending" },
-    "9b-adv": { "name": "ADV: FINAL GATE — build+tests+README+no placeholders+no formspree+Odoo+Shopify, 12 checks", "status": "pending" }
+    "0a": {
+      "name": "Create branch feat/astro-migration from dev",
+      "status": "completed"
+    },
+    "0a-adv": {
+      "name": "ADV: Verify branch is feat/astro-migration",
+      "status": "completed"
+    },
+    "0b": {
+      "name": "Remove Next.js directories (app, components, lib, hooks, .next, .cursor, node_modules)",
+      "status": "completed"
+    },
+    "0b-adv": {
+      "name": "ADV: Verify no Next.js dirs remain",
+      "status": "completed"
+    },
+    "0c": {
+      "name": "Remove Next.js config files (next.config, postcss, tailwind, tsconfig, eslint, components.json, middleware, package*)",
+      "status": "completed"
+    },
+    "0c-adv": {
+      "name": "ADV: Verify only .ralph, AGENTS.md, PRD, scripts, .git, .claude, .gitignore, public, README remain",
+      "status": "completed"
+    },
+    "0d": {
+      "name": "Preserve public assets to .ralph/preserved-assets/",
+      "status": "completed"
+    },
+    "0d-adv": {
+      "name": "ADV: Verify mySelf.png, logos, favicon preserved",
+      "status": "completed"
+    },
+    "0e": {
+      "name": "Init Astro minimal project at root with typescript strict",
+      "status": "completed"
+    },
+    "0e-adv": {
+      "name": "ADV: Verify astro init, package.json has astro, src/ exists, build passes",
+      "status": "completed"
+    },
+    "0f": {
+      "name": "Add React and Tailwind integrations to Astro",
+      "status": "completed"
+    },
+    "0f-adv": {
+      "name": "ADV: Verify astro.config has react+tailwind, build passes",
+      "status": "completed"
+    },
+    "0g": {
+      "name": "Install runtime deps (lucide-react, clsx, tailwind-merge, tailwindcss-animate, class-variance-authority)",
+      "status": "completed"
+    },
+    "0g-adv": {
+      "name": "ADV: Verify all 5 runtime deps in package.json dependencies",
+      "status": "completed"
+    },
+    "0h": {
+      "name": "Install dev deps (vitest, @testing-library/react, @testing-library/jest-dom, jsdom)",
+      "status": "completed"
+    },
+    "0h-adv": {
+      "name": "ADV: Verify all 4 dev deps in devDependencies",
+      "status": "completed"
+    },
+    "0i": {
+      "name": "Restore preserved assets to public/ and cleanup .ralph/preserved-assets",
+      "status": "completed"
+    },
+    "0i-adv": {
+      "name": "ADV: Verify public/Logos/, public/myPhoto/mySelf.png exist, build passes",
+      "status": "completed"
+    },
+    "1a": {
+      "name": "Create globals.css with exact HSL variables (light+dark) and silver",
+      "status": "completed"
+    },
+    "1a-adv": {
+      "name": "ADV: Diff every CSS variable against PRD list, zero differences",
+      "status": "completed"
+    },
+    "1b": {
+      "name": "Create tailwind.config.mjs with HSL colors, silver, borderRadius, keyframes, animate plugin",
+      "status": "completed"
+    },
+    "1b-adv": {
+      "name": "ADV: Verify tailwind config has all extends + plugin, build passes",
+      "status": "completed"
+    },
+    "1c": {
+      "name": "Create src/lib/utils.ts with cn() function",
+      "status": "completed"
+    },
+    "1c-adv": {
+      "name": "ADV: Verify cn() exports correctly, build passes",
+      "status": "completed"
+    },
+    "1d": {
+      "name": "Create shadcn Button component with all variants (default, destructive, outline, secondary, ghost, link) and sizes",
+      "status": "completed"
+    },
+    "1d-adv": {
+      "name": "ADV: Verify Button has 6 variants + 4 sizes, uses cn(), build passes",
+      "status": "completed"
+    },
+    "1e": {
+      "name": "Create shadcn Badge component with variants (default, secondary, destructive, outline)",
+      "status": "completed"
+    },
+    "1e-adv": {
+      "name": "ADV: Verify Badge has 4 variants, uses cn(), build passes",
+      "status": "completed"
+    },
+    "1f": {
+      "name": "Create shadcn Card component (Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter)",
+      "status": "completed"
+    },
+    "1f-adv": {
+      "name": "ADV: Verify Card exports 6 named components, uses cn(), build passes",
+      "status": "completed"
+    },
+    "1g": {
+      "name": "Create shadcn Input component",
+      "status": "completed"
+    },
+    "1g-adv": {
+      "name": "ADV: Verify Input uses cn() and theme vars, build passes",
+      "status": "completed"
+    },
+    "1h": {
+      "name": "Create shadcn Textarea and Separator components",
+      "status": "completed"
+    },
+    "1h-adv": {
+      "name": "ADV: Verify Textarea+Separator export correctly, build passes",
+      "status": "completed"
+    },
+    "2a": {
+      "name": "Create src/data/profile.ts \u2014 real name, headline, about, contact, odooPartner=true, shopifyExperience=true",
+      "status": "completed"
+    },
+    "2a-adv": {
+      "name": "ADV: Verify email=miguelqui725@gmail.com, whatsapp=584241727988, odooPartner+shopify flags true",
+      "status": "completed"
+    },
+    "2b": {
+      "name": "Create src/data/experience.ts \u2014 6 real roles with dates, companies, bullets",
+      "status": "completed"
+    },
+    "2b-adv": {
+      "name": "ADV: Verify 6 roles, each date/company matches LinkedIn PRD data",
+      "status": "completed"
+    },
+    "2c": {
+      "name": "Create src/data/education.ts \u2014 UNETI (ongoing) + UPEL diploma",
+      "status": "completed"
+    },
+    "2c-adv": {
+      "name": "ADV: Verify 2 entries, UNETI sept2023-dic2028, UPEL sept2020-dic2020",
+      "status": "completed"
+    },
+    "2d": {
+      "name": "Create src/data/services.ts \u2014 9 services with id, title, shortDesc, desc, iconName, features[]",
+      "status": "completed"
+    },
+    "2d-adv": {
+      "name": "ADV: Verify 9 services each with non-empty features array",
+      "status": "completed"
+    },
+    "2e": {
+      "name": "Create src/data/technologies.ts \u2014 real tech grouped by category from README",
+      "status": "completed"
+    },
+    "2e-adv": {
+      "name": "ADV: Verify includes Rails, React, Laravel, Next.js, Docker, PostgreSQL, Firebase",
+      "status": "completed"
+    },
+    "2f": {
+      "name": "Create src/data/certifications.ts \u2014 ONLY real certs (freeCodeCamp x3, Odin x2, UPEL)",
+      "status": "completed"
+    },
+    "2f-adv": {
+      "name": "ADV: Verify ZERO fake certs (no AWS, Google Cloud, Azure, Kubernetes, Meta)",
+      "status": "completed"
+    },
+    "2g": {
+      "name": "Create src/data/projects.ts \u2014 9 real projects from thedigitallab.dev with URLs",
+      "status": "completed"
+    },
+    "2g-adv": {
+      "name": "ADV: Verify 9 projects, real URLs (rradvisor.net, alphacomputer.netlify.app, etc)",
+      "status": "completed"
+    },
+    "3a": {
+      "name": "Create Layout.astro \u2014 html lang=en class=dark, import globals.css, meta tags, slot",
+      "status": "completed"
+    },
+    "3a-adv": {
+      "name": "ADV: Verify Layout has dark class, charset, viewport, globals import, slot",
+      "status": "completed"
+    },
+    "3b": {
+      "name": "Create Navbar.astro \u2014 sticky, logo, links (Home, Services, Portfolio, Products), Contact button silver",
+      "status": "completed"
+    },
+    "3b-adv": {
+      "name": "ADV: Verify 4 nav links + Contact btn, correct hrefs, hidden on mobile",
+      "status": "completed"
+    },
+    "3c": {
+      "name": "Create MobileNav.tsx React island \u2014 hamburger toggle, overlay, same links, close on click",
+      "status": "completed"
+    },
+    "3c-adv": {
+      "name": "ADV: Verify MobileNav has useState toggle, aria-label, same links as Navbar",
+      "status": "completed"
+    },
+    "3d": {
+      "name": "Create Footer.astro \u2014 social links (LinkedIn, GitHub, WhatsApp, Email real URLs), copyright",
+      "status": "completed"
+    },
+    "3d-adv": {
+      "name": "ADV: Verify real social URLs, no example.com, copyright present",
+      "status": "completed"
+    },
+    "3e": {
+      "name": "Wire Layout with Navbar+MobileNav(client:load)+Footer, create 4 placeholder pages",
+      "status": "completed"
+    },
+    "3e-adv": {
+      "name": "ADV: Build test \u2014 4 pages (/, /services, /portfolio, /products) compile with zero errors",
+      "status": "completed"
+    },
+    "4a": {
+      "name": "Build Hero.astro \u2014 mySelf.png photo, name, headline, about, 2 CTA shadcn Buttons",
+      "status": "completed"
+    },
+    "4a-adv": {
+      "name": "ADV: Verify Hero uses /myPhoto/mySelf.png, real name, silver accent on CTA, responsive",
+      "status": "completed"
+    },
+    "4b": {
+      "name": "Build WhyChooseMe.astro \u2014 4 benefit shadcn Cards with Lucide icons, responsive grid",
+      "status": "completed"
+    },
+    "4b-adv": {
+      "name": "ADV: Verify 4 cards, icons render, grid 1/2/4 cols at breakpoints",
+      "status": "completed"
+    },
+    "4c": {
+      "name": "Build ExperienceTimeline.astro \u2014 6 roles from experience.ts, vertical timeline",
+      "status": "completed"
+    },
+    "4c-adv": {
+      "name": "ADV: Verify 6 roles, real dates/companies, responsive timeline",
+      "status": "completed"
+    },
+    "4d": {
+      "name": "Build ProjectsShowcase.astro \u2014 6 best projects from thedigitallab.dev, shadcn Cards",
+      "status": "completed"
+    },
+    "4d-adv": {
+      "name": "ADV: Verify 6 cards, real URLs (rradvisor, alphacomputer, etc), category badges",
+      "status": "completed"
+    },
+    "4e": {
+      "name": "Build ServicesPreview.astro \u2014 3 highlighted services + Products teaser card linking to /products",
+      "status": "completed"
+    },
+    "4e-adv": {
+      "name": "ADV: Verify 3 service cards + 1 products card, links to /services and /products",
+      "status": "completed"
+    },
+    "4f": {
+      "name": "Build CertsAndPartners.astro \u2014 Odoo Partner badge, Shopify badge, real freeCodeCamp certs",
+      "status": "completed"
+    },
+    "4f-adv": {
+      "name": "ADV: Verify 'Odoo Partner' text present, 'Shopify' present, ZERO fake certs",
+      "status": "completed"
+    },
+    "4g": {
+      "name": "Build Contact.astro \u2014 mailto:, wa.me/, linkedin direct links. NO formspree, NO form backend",
+      "status": "completed"
+    },
+    "4g-adv": {
+      "name": "ADV: Verify no formspree anywhere (grep returns 0), links are mailto/wa.me/linkedin",
+      "status": "completed"
+    },
+    "4h": {
+      "name": "Assemble index.astro \u2014 import all 7 sections in order, consistent py-16/py-20 spacing",
+      "status": "completed"
+    },
+    "4h-adv": {
+      "name": "ADV: Build test landing page, all 7 sections present, zero errors",
+      "status": "completed"
+    },
+    "5a": {
+      "name": "Build ServiceList.astro \u2014 9 service shadcn Cards with icon, title, desc, features",
+      "status": "completed"
+    },
+    "5a-adv": {
+      "name": "ADV: Verify 9 cards each with icon+title+desc+features[], responsive grid",
+      "status": "completed"
+    },
+    "5b": {
+      "name": "Build TechGrid.astro \u2014 technology badges grouped by category",
+      "status": "completed"
+    },
+    "5b-adv": {
+      "name": "ADV: Verify tech includes React/Rails/Laravel/Docker/PostgreSQL, grouped",
+      "status": "completed"
+    },
+    "5c": {
+      "name": "Build HowIWork.astro \u2014 4 numbered steps (Discovery, Planning, Development, Delivery)",
+      "status": "completed"
+    },
+    "5c-adv": {
+      "name": "ADV: Verify 4 steps with titles+descriptions, visual numbering",
+      "status": "completed"
+    },
+    "5d": {
+      "name": "Assemble services.astro \u2014 header + ServiceList + TechGrid + HowIWork + CTA",
+      "status": "completed"
+    },
+    "5d-adv": {
+      "name": "ADV: Build test Services page, zero errors",
+      "status": "completed"
+    },
+    "6a": {
+      "name": "Build PortfolioCards.astro \u2014 all 9 projects from thedigitallab.dev with links/demos",
+      "status": "completed"
+    },
+    "6a-adv": {
+      "name": "ADV: Verify 9 projects with real URLs",
+      "status": "completed"
+    },
+    "6b": {
+      "name": "Build WorkDetail.astro \u2014 detailed experience + WorkApproach 5 steps",
+      "status": "completed"
+    },
+    "6b-adv": {
+      "name": "ADV: Verify real experience data, 5 approach steps",
+      "status": "completed"
+    },
+    "6c": {
+      "name": "Assemble portfolio.astro \u2014 header + cards + work detail + CTA",
+      "status": "completed"
+    },
+    "6c-adv": {
+      "name": "ADV: Build test Portfolio page, zero errors",
+      "status": "completed"
+    },
+    "7a": {
+      "name": "Build Products page \u2014 ERPNext-ready grid structure, category placeholders, coming soon items",
+      "status": "completed"
+    },
+    "7a-adv": {
+      "name": "ADV: Verify Products page builds, has grid structure for items/categories",
+      "status": "completed"
+    },
+    "8a": {
+      "name": "Setup vitest.config.ts + setup file + data tests for profile, experience, services",
+      "status": "completed"
+    },
+    "8a-adv": {
+      "name": "ADV: Verify vitest run passes, 3+ test files, all green",
+      "status": "completed"
+    },
+    "8b": {
+      "name": "Write data tests for certifications (no fakes), technologies, projects, education",
+      "status": "completed"
+    },
+    "8b-adv": {
+      "name": "ADV: Verify cert test explicitly checks no AWS/Google/Azure/Meta, all pass",
+      "status": "completed"
+    },
+    "8c": {
+      "name": "Write React component render tests (Button, Card, MobileNav)",
+      "status": "completed"
+    },
+    "8c-adv": {
+      "name": "ADV: Verify component tests render real content, all pass",
+      "status": "completed"
+    },
+    "8d": {
+      "name": "Write integration tests (build verification, 4 page routes exist, data integrity)",
+      "status": "completed"
+    },
+    "8d-adv": {
+      "name": "ADV: Verify all tests pass, coverage >= 80%",
+      "status": "completed"
+    },
+    "9a": {
+      "name": "Responsive polish \u2014 verify all components at 3 breakpoints, add hover/transition/scroll animations",
+      "status": "completed"
+    },
+    "9a-adv": {
+      "name": "ADV: Spot-check 5+ components for responsive + animations",
+      "status": "completed"
+    },
+    "9b": {
+      "name": "Write README.md \u2014 mv existing to deprecated, new one with About/Experience/Education/Tech/Setup/Tests/Contact in English",
+      "status": "completed"
+    },
+    "9b-adv": {
+      "name": "ADV: FINAL GATE \u2014 build+tests+README+no placeholders+no formspree+Odoo+Shopify, 12 checks",
+      "status": "completed"
+    }
   }
 }

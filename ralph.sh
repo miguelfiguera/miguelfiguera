@@ -156,8 +156,35 @@ while true; do
   TASK_SECTION=$(get_task_section "$NEXT")
   CURRENT_STATUS=$(get_task_status "$NEXT")
 
+  # Build the protocol prefix that EVERY agent gets — this is critical because
+  # agents in headless mode (-p) do NOT auto-read AGENTS.md
+  PROTOCOL="You are executing task ${NEXT} in the Ralph pipeline. Your task ID is: ${NEXT}
+
+MANDATORY STEPS — do ALL of these or the pipeline breaks:
+
+STEP 1 (BEFORE work): Mark your task in_progress:
+python3 -c \"import json; f=open('.ralph/status.json','r'); data=json.load(f); f.close(); data['tasks']['${NEXT}']['status']='in_progress'; f=open('.ralph/status.json','w'); json.dump(data,f,indent=2); f.close(); print('${NEXT} marked in_progress')\"
+
+STEP 2: Read .ralph/learnings.md for prior agent learnings. Don't repeat mistakes.
+
+STEP 3: Do the work described below.
+
+STEP 4 (AFTER work): Append what you learned to .ralph/learnings.md
+
+STEP 5 (CRITICAL — if you skip this the pipeline considers your work FAILED):
+python3 -c \"import json; f=open('.ralph/status.json','r'); data=json.load(f); f.close(); data['tasks']['${NEXT}']['status']='completed'; f=open('.ralph/status.json','w'); json.dump(data,f,indent=2); f.close(); print('${NEXT} marked completed')\"
+
+STEP 6: Git commit with conventional commits. Never mention AI/Claude/Anthropic.
+
+STEP 7: STOP. Do not continue to the next task.
+
+If blocked, mark status as 'blocked' instead of 'completed' and document why in learnings.md.
+
+--- TASK INSTRUCTIONS ---
+"
+
   if [ "$CURRENT_STATUS" = "in_progress" ]; then
-    RESUME_PREFIX="RESUMING TASK: A previous agent started but didn't finish. Check existing work first. If done and verified, just update learnings.md, mark completed, commit. Don't redo existing work.
+    RESUME_PREFIX="RESUMING: A previous agent started this task but didn't finish. Check existing work first (git log, ls). If work is already done, just write learnings, mark completed, commit. Don't redo.
 
 "
   else
@@ -190,7 +217,7 @@ while true; do
       --mcp-config "$MCP_CONFIG" \
       --output-format stream-json \
       --verbose \
-      "${RESUME_PREFIX}${TASK_SECTION}" 2>&1 | tee "${LOG}.json" | format_stream || true
+      "${PROTOCOL}${RESUME_PREFIX}${TASK_SECTION}" 2>&1 | tee "${LOG}.json" | format_stream || true
 
     EXIT_CODE=${PIPESTATUS[0]}
     set -o pipefail
