@@ -12,79 +12,79 @@ export const projects: Project[] = [
     id: "rr-advisor",
     title: "R&R Advisor",
     description:
-      "Financial advisory platform providing personalized investment guidance and portfolio management tools.",
+      "Complete website redesign for a financial advisory firm, resulting in a 120% increase in conversions.",
     category: "Web",
     url: "https://rradvisor.net",
-    imageAlt: "R&R Advisor website screenshot",
+    imageAlt: "R&R Advisor landing page",
   },
   {
     id: "alpha-computer",
     title: "AlphaComputer",
     description:
-      "Computer retail and services website showcasing products, repairs, and tech support offerings.",
+      "E-commerce proposal for computer products and tech services, featuring product catalog and shopping cart.",
     category: "Web",
     url: "https://alphacomputer.netlify.app",
-    imageAlt: "AlphaComputer website screenshot",
+    imageAlt: "AlphaComputer e-commerce proposal",
   },
   {
     id: "dv-enterprise",
     title: "DV Enterprise",
     description:
-      "Complete brand identity design including logo, color palette, and visual guidelines for a professional enterprise.",
+      "Complete corporate identity development for a backoffice startup, including logo, branding guidelines, and web presence.",
     category: "Branding",
     url: "https://dventerprise.net",
-    imageAlt: "DV Enterprise branding showcase",
+    imageAlt: "DV Enterprise corporate identity",
   },
   {
     id: "impacto-20x",
     title: "Impacto20x",
     description:
-      "Business coaching and consulting website designed to drive growth and maximize impact for entrepreneurs.",
+      "VSL (Video Sales Letter) landing page designed for Luis Fonten, optimized for mobile conversions and lead generation.",
     category: "Web",
     url: "https://impacto20x.com",
-    imageAlt: "Impacto20x website screenshot",
+    imageAlt: "Impacto20x sales page",
   },
   {
     id: "claro-de-luna",
     title: "Claro De Luna",
     description:
-      "Brand identity and visual design project delivering a cohesive aesthetic across all brand touchpoints.",
+      "Branding and e-learning platform development for a music school, including course content management and student evaluations.",
     category: "Branding",
-    imageAlt: "Claro De Luna branding showcase",
+    imageAlt: "Claro De Luna e-learning platform",
   },
   {
     id: "dulzura-natural-social",
-    title: "Dulzura Natural Social Media",
+    title: "Dulzura Natural — Social Media",
     description:
-      "Social media strategy and content creation for a natural products brand, boosting engagement and brand awareness.",
+      "Social media campaign featuring product photography to increase follower engagement and build regional customer loyalty.",
     category: "Social Media",
     imageAlt: "Dulzura Natural social media campaign",
   },
   {
     id: "dulzura-natural-ecommerce",
-    title: "Dulzura Natural E-commerce",
+    title: "Dulzura Natural — E-commerce Redesign",
     description:
-      "Online store for natural products featuring a product catalog, shopping cart, and seamless checkout experience.",
+      "E-commerce redesign proposal to refresh the brand's online store with a modern look and improved user experience.",
     category: "Web",
     url: "https://propuesta-dulzura-natural.netlify.app",
-    imageAlt: "Dulzura Natural e-commerce website screenshot",
+    imageAlt: "Dulzura Natural e-commerce redesign",
   },
   {
     id: "tabay-commerce",
     title: "TabayCommerce",
     description:
-      "E-commerce platform with product listings, filtering, and a modern shopping experience built for performance.",
+      "Tech-focused e-commerce mockup built for dropshipping, with product listings, filtering, and a streamlined checkout flow.",
     category: "Web",
     url: "https://techsmart725.netlify.app",
-    imageAlt: "TabayCommerce website screenshot",
+    imageAlt: "TabayCommerce tech e-commerce",
   },
   {
     id: "eureka",
     title: "Eureka",
     description:
-      "Real estate listing platform with property search, filtering, and detailed property pages for buyers and agents.",
+      "Real estate web app template for property listing, rental, and sales with search and filtering capabilities.",
     category: "Web",
     url: "https://realstate-template.netlify.app",
-    imageAlt: "Eureka real estate website screenshot",
+    imageAlt: "Eureka real estate template",
   },
 ];
