@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Terminal } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
@@ -15,8 +15,9 @@ export default function MobileNav() {
   return (
     <div className="md:hidden">
       <div className="sticky top-0 z-50 flex items-center justify-between bg-background border-b border-border px-4 py-3">
-        <a href="/" className="flex items-center gap-2">
-          <img src="/Logos/mfLogo.png" alt="Miguel Figuera" className="h-8 w-auto" />
+        <a href="/" className="flex items-center gap-2 text-foreground">
+          <Terminal size={22} />
+          <span className="text-lg font-bold tracking-tight">Miguel Figuera</span>
         </a>
 
         <button

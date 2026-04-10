@@ -54,3 +54,8 @@ hooks/
 
 # coverage
 coverage/
+
+# playwright mcp artifacts
+.playwright-mcp/
+*.png
+!public/**/*.png
