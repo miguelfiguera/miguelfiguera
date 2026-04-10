@@ -1,0 +1,126 @@
+---
+import { profile } from "../../data/profile";
+
+const contactLinks = [
+  {
+    label: "Email",
+    href: `mailto:${profile.email}`,
+    description: profile.email,
+    icon: "mail",
+  },
+  {
+    label: "WhatsApp",
+    href: profile.whatsapp,
+    description: "Send a message",
+    icon: "whatsapp",
+  },
+  {
+    label: "LinkedIn",
+    href: profile.linkedin,
+    description: "Connect on LinkedIn",
+    icon: "linkedin",
+  },
+];
+---
+
+<section class="py-20 md:py-32">
+  <div class="mx-auto max-w-6xl px-8">
+    <!-- Badge -->
+    <div class="flex justify-center">
+      <span
+        class="inline-flex items-center rounded-full border border-silver/30 bg-silver/10 px-4 py-1.5 text-sm font-medium text-silver"
+      >
+        Contact
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <h2
+      class="mt-6 text-center text-3xl font-bold tracking-tight md:text-4xl"
+    >
+      Get In Touch
+    </h2>
+    <p class="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
+      Have a project in mind or want to collaborate? Reach out through any of
+      these channels.
+    </p>
+
+    <!-- Contact Cards -->
+    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+      {
+        contactLinks.map((link) => (
+          <a
+            href={link.href}
+            target={link.icon !== "mail" ? "_blank" : undefined}
+            rel={link.icon !== "mail" ? "noopener noreferrer" : undefined}
+            class="group rounded-xl border bg-card text-card-foreground shadow transition-colors hover:border-silver/40"
+          >
+            <div class="flex flex-col items-center space-y-3 p-8 text-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
+                {link.icon === "mail" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-silver"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                )}
+                {link.icon === "whatsapp" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-silver"
+                  >
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" x2="12.01" y1="17" y2="17" />
+                  </svg>
+                )}
+                {link.icon === "linkedin" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-silver"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                )}
+              </div>
+              <div class="font-semibold leading-none tracking-tight text-lg">
+                {link.label}
+              </div>
+              <p class="text-sm text-muted-foreground group-hover:text-silver transition-colors">
+                {link.description}
+              </p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
