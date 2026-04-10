@@ -1,0 +1,71 @@
+---
+import { experiences } from "../../data/experience";
+
+function formatDate(date: string): string {
+  if (date === "present") return "Present";
+  const [year, month] = date.split("-");
+  const months = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+  ];
+  return `${months[parseInt(month) - 1]} ${year}`;
+}
+
+const typeLabels: Record<string, string> = {
+  "full-time": "Full-Time",
+  "part-time": "Part-Time",
+  freelance: "Freelance",
+};
+---
+
+<section class="py-20 md:py-32">
+  <div class="mx-auto max-w-5xl px-8">
+    <div class="flex justify-center">
+      <span
+        class="inline-flex items-center rounded-full border border-silver/30 bg-silver/10 px-4 py-1.5 text-sm font-medium text-silver"
+      >
+        Experience
+      </span>
+    </div>
+
+    <h2 class="mt-4 text-center text-3xl font-bold tracking-tight md:text-4xl">
+      Where I've Worked
+    </h2>
+    <p class="mt-2 text-center text-muted-foreground">
+      A closer look at my professional journey and contributions.
+    </p>
+
+    <div class="mt-12 space-y-6">
+      {experiences.map((exp) => (
+        <div class="rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:border-silver/40">
+          <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <div class="flex-1">
+              <div class="flex flex-wrap items-center gap-3">
+                <h3 class="text-xl font-semibold">{exp.title}</h3>
+                <span class="rounded-full border border-silver/30 bg-silver/10 px-3 py-0.5 text-xs font-medium text-silver">
+                  {typeLabels[exp.type]}
+                </span>
+              </div>
+              <p class="mt-1 text-sm font-medium text-silver">{exp.company}</p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 text-sm text-muted-foreground md:text-right">
+              <span>{formatDate(exp.startDate)} — {formatDate(exp.endDate)}</span>
+              <span class="hidden h-1 w-1 rounded-full bg-silver/40 md:inline-block"></span>
+              <span>{exp.location}{exp.remote ? " · Remote" : ""}</span>
+            </div>
+          </div>
+
+          <ul class="mt-4 grid gap-2 sm:grid-cols-2">
+            {exp.description.map((bullet) => (
+              <li class="flex items-start gap-2 text-sm text-muted-foreground">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-silver/60"></span>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
