@@ -1,6 +1,7 @@
 ---
 import "../styles/globals.css";
 import Navbar from "../components/Navbar.astro";
+import MobileNav from "../components/MobileNav";
 
 interface Props {
   title: string;
@@ -21,6 +22,7 @@ const { title, description = "Miguel Figuera's portfolio" } = Astro.props;
   </head>
   <body>
     <Navbar />
+    <MobileNav client:load />
     <slot />
   </body>
 </html>
