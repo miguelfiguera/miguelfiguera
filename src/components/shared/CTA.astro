@@ -1,0 +1,31 @@
+---
+import { profile } from "../../data/profile";
+---
+
+<section class="py-20 md:py-32">
+  <div class="mx-auto max-w-4xl px-8 text-center">
+    <h2 class="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+      Ready to Transform Your Business?
+    </h2>
+    <p class="mx-auto mt-4 max-w-2xl text-muted-foreground">
+      Let's discuss how I can help you build the right solution. Whether you need
+      a full web application, an e-commerce store, or process automation — I'm
+      here to help.
+    </p>
+
+    <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <a
+        href={`mailto:${profile.email}`}
+        class="inline-flex h-11 items-center justify-center rounded-md bg-silver px-8 text-sm font-medium text-background transition-colors hover:bg-silver/90"
+      >
+        Get in Touch
+      </a>
+      <a
+        href="/services"
+        class="inline-flex h-11 items-center justify-center rounded-md border border-silver/30 bg-transparent px-8 text-sm font-medium text-silver transition-colors hover:bg-silver/10"
+      >
+        View Services
+      </a>
+    </div>
+  </div>
+</section>
