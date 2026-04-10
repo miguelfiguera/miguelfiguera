@@ -28,3 +28,28 @@ secrets.json
 
 # temp scaffold dirs
 tender-telescope/
+hooks/
+
+# IDE
+.idea
+.vscode
+
+# shell / environment configs
+.bash_profile
+.bashrc
+.profile
+.zprofile
+.zshrc
+.gitconfig
+.ripgreprc
+
+# claude code / MCP
+.claude/
+.ralph/
+.mcp.json
+
+# submodules (unused)
+.gitmodules
+
+# coverage
+coverage/
