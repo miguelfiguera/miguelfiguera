@@ -1,0 +1,150 @@
+---
+const partners = [
+  {
+    name: "Odoo Partner",
+    description:
+      "Official Odoo partner delivering ERP implementations, customizations, and integrations for businesses of all sizes.",
+    type: "partner",
+  },
+  {
+    name: "Shopify",
+    description:
+      "Experienced building and customizing Shopify storefronts, themes, and integrations for e-commerce businesses.",
+    type: "experience",
+  },
+];
+
+const certifications = [
+  {
+    name: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+  },
+  {
+    name: "JavaScript Algorithms and Data Structures",
+    issuer: "freeCodeCamp",
+  },
+  {
+    name: "Front End Development Libraries",
+    issuer: "freeCodeCamp",
+  },
+  {
+    name: "Foundations",
+    issuer: "The Odin Project",
+  },
+  {
+    name: "Full Stack JavaScript",
+    issuer: "The Odin Project",
+  },
+];
+---
+
+<section class="py-20 md:py-32">
+  <div class="mx-auto max-w-6xl px-8">
+    <!-- Badge -->
+    <div class="flex justify-center">
+      <span
+        class="inline-flex items-center rounded-full border border-silver/30 bg-silver/10 px-4 py-1.5 text-sm font-medium text-silver"
+      >
+        Certifications & Partners
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <h2
+      class="mt-6 text-center text-3xl font-bold tracking-tight md:text-4xl"
+    >
+      Credentials & Partnerships
+    </h2>
+    <p class="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
+      Verified certifications and official partnerships that back every project.
+    </p>
+
+    <!-- Partners -->
+    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+      {
+        partners.map((partner) => (
+          <div class="rounded-xl border bg-card text-card-foreground shadow transition-colors hover:border-silver/40">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
+                {partner.type === "partner" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-silver"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                )}
+                {partner.type === "experience" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-silver"
+                  >
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                    <path d="M3 6h18" />
+                    <path d="M16 10a4 4 0 0 1-8 0" />
+                  </svg>
+                )}
+              </div>
+              <div class="font-semibold leading-none tracking-tight text-lg">
+                {partner.name}
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-sm text-muted-foreground">
+                {partner.description}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Certifications -->
+    <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        certifications.map((cert) => (
+          <div class="flex items-start gap-3 rounded-xl border bg-card p-5 shadow transition-colors hover:border-silver/40">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-silver/10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-silver"
+              >
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-medium leading-tight">{cert.name}</div>
+              <p class="mt-1 text-xs text-muted-foreground">{cert.issuer}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
