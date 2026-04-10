@@ -14,9 +14,9 @@ export interface Profile {
 
 export const profile: Profile = {
   name: "Miguel Figuera Quintero",
-  headline: "Full-Stack Web Developer",
+  headline: "Full-Stack Developer | Odoo Partner | Shopify Integrations",
   about:
-    "Full-Stack Web Developer with a strong foundation from The Odin Project (completed both Ruby on Rails and Node.js paths). Currently pursuing a B.S. in Computer Engineering at UNETI in Venezuela. Expertise spans the full development lifecycle, from backend architecture to frontend implementation and deployment, including cloud server configuration, database administration, business process automation, API integration, and AI-assisted development.",
+    "Full-Stack Developer with 4+ years of experience building robust and efficient web solutions. Specialized in Ruby on Rails, React, Next.js, Laravel, and Express.js. Odoo Partner with expertise in ERP implementation. Experienced integrating Shopify with Klaviyo, Algolia, Rebuy, Yotpo, and other e-commerce platforms. Proficient in serverless architectures, cloud functions, and cloud server administration. Skilled in AI-powered development — from building autonomous pipelines and agent orchestration systems to leveraging AI for code generation, testing, and workflow automation.",
   location: "Venezuela",
   email: "miguelqui725@gmail.com",
   linkedin: "https://www.linkedin.com/in/miguel-quintero725/",

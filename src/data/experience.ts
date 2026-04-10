@@ -12,7 +12,7 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     company: "Simple-C Bookeeping Software",
-    title: "FullStack Dev",
+    title: "FullStack Developer",
     type: "full-time",
     startDate: "2025-06",
     endDate: "present",
@@ -26,7 +26,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Freelance",
-    title: "Programador Full Stack",
+    title: "Full Stack Developer",
     type: "freelance",
     startDate: "2025-04",
     endDate: "present",
@@ -36,11 +36,12 @@ export const experiences: Experience[] = [
       "Developing automation scripts and tools with Python",
       "Systems management and server administration",
       "Delivering custom web solutions for diverse clients",
+      "AI-powered development pipelines and agent orchestration",
     ],
   },
   {
     company: "Digital Lab",
-    title: "Programador Full Stack",
+    title: "Full Stack Developer",
     type: "full-time",
     startDate: "2023-03",
     endDate: "2025-04",
@@ -48,15 +49,16 @@ export const experiences: Experience[] = [
     remote: true,
     description: [
       "Built e-commerce applications with Next.js and React",
-      "Integrated Shopify API for product management and storefronts",
+      "Integrated Shopify API with Klaviyo, Algolia, Rebuy, Yotpo, and other platforms",
       "Migrated UI framework from Bootstrap to Tailwind CSS",
-      "Implemented Firebase services including Firestore and Authentication",
+      "Implemented Firebase services including Firestore, Cloud Functions, and Authentication",
+      "Developed serverless architectures and cloud functions for scalable backends",
       "Automated recurring tasks to improve team productivity",
     ],
   },
   {
     company: "R&R Advisor",
-    title: "Director de TI",
+    title: "CTO",
     type: "part-time",
     startDate: "2024-10",
     endDate: "2025-03",
@@ -87,7 +89,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Towerware",
-    title: "Ruby on Rails Full Stack Dev",
+    title: "Ruby on Rails Full Stack Developer",
     type: "full-time",
     startDate: "2024-05",
     endDate: "2024-07",
