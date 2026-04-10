@@ -1,0 +1,36 @@
+---
+import { categories } from "../../data/products";
+---
+
+<aside data-erpnext-category="sidebar" class="w-full lg:w-64 shrink-0">
+  <div class="rounded-xl border border-silver/10 bg-card p-6">
+    <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+      Categories
+    </h3>
+    <nav>
+      <ul class="space-y-1">
+        {categories.map((cat) => (
+          <li>
+            <button
+              data-erpnext-category={cat === "All" ? "all" : cat.toLowerCase().replace(/\s+/g, "-")}
+              class:list={[
+                "w-full rounded-md px-3 py-2 text-left text-sm transition-colors",
+                cat === "All"
+                  ? "bg-silver/10 font-medium text-silver"
+                  : "text-muted-foreground hover:bg-silver/5 hover:text-foreground",
+              ]}
+            >
+              {cat}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="mt-6 border-t border-silver/10 pt-6">
+      <p class="text-xs text-muted-foreground">
+        Product catalog powered by ERPNext. Filters and search coming soon.
+      </p>
+    </div>
+  </div>
+</aside>
