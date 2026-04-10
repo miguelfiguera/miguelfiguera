@@ -8,6 +8,8 @@ const FORBIDDEN_CERTS = [
   "Cisco",
   "CompTIA",
   "Certified Kubernetes",
+  "Meta",
+  "Udacity",
 ];
 
 describe("certifications", () => {

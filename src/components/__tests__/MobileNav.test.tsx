@@ -51,4 +51,27 @@ describe("MobileNav", () => {
     const servicesLink = screen.getByText("Services");
     expect(servicesLink.closest("a")).toHaveAttribute("href", "/services");
   });
+
+  it("closes the menu when clicking the backdrop overlay", () => {
+    render(<MobileNav />);
+    fireEvent.click(screen.getByLabelText("Open menu"));
+    expect(screen.getByText("Services")).toBeInTheDocument();
+
+    // The backdrop is the div with bg-black/50 class
+    const backdrop = document.querySelector(".fixed.inset-0");
+    expect(backdrop).toBeTruthy();
+    fireEvent.click(backdrop!);
+
+    expect(screen.queryByText("Services")).not.toBeInTheDocument();
+  });
+
+  it("closes the menu when clicking a nav link", () => {
+    render(<MobileNav />);
+    fireEvent.click(screen.getByLabelText("Open menu"));
+    expect(screen.getByText("Services")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByText("Services"));
+
+    expect(screen.queryByText("Services")).not.toBeInTheDocument();
+  });
 });
