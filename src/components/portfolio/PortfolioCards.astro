@@ -2,7 +2,7 @@
 import { projects } from "../../data/projects";
 ---
 
-<section class="py-20 md:py-32">
+<section class="animate-on-scroll py-20 md:py-32">
   <div class="mx-auto max-w-6xl px-8">
     <div class="flex justify-center">
       <span
@@ -21,7 +21,7 @@ import { projects } from "../../data/projects";
 
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => (
-        <div class="group flex flex-col rounded-xl border bg-card text-card-foreground shadow transition-colors hover:border-silver/40">
+        <div class="group flex flex-col rounded-xl border bg-card text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50">
           <div class="flex flex-1 flex-col space-y-1.5 p-6">
             <div class="flex items-center justify-between gap-2">
               <h3 class="font-semibold leading-none tracking-tight">
@@ -41,7 +41,7 @@ import { projects } from "../../data/projects";
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+                class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
               >
                 Visit Site
               </a>

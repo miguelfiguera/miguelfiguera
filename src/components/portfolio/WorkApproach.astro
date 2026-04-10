@@ -38,7 +38,7 @@ const steps = [
 ];
 ---
 
-<section class="py-20 md:py-32">
+<section class="animate-on-scroll py-20 md:py-32">
   <div class="mx-auto max-w-5xl px-8">
     <div class="flex justify-center">
       <span
@@ -57,7 +57,7 @@ const steps = [
 
     <div class="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
       {steps.map((step) => (
-        <div class="group rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:border-silver/40">
+        <div class="group rounded-xl border bg-card p-6 text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50">
           <div class="flex items-center gap-3">
             <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-silver/10">
               <svg

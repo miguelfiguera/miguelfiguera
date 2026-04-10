@@ -6,7 +6,7 @@ const highlighted = services.filter((s) =>
 );
 ---
 
-<section class="py-20 md:py-32">
+<section class="animate-on-scroll py-20 md:py-32">
   <div class="mx-auto max-w-6xl px-8">
     <!-- Badge -->
     <div class="flex justify-center">
@@ -28,7 +28,7 @@ const highlighted = services.filter((s) =>
     <!-- Cards grid -->
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {highlighted.map((service) => (
-        <div class="flex flex-col rounded-xl border bg-card text-card-foreground shadow transition-colors hover:border-silver/40">
+        <div class="flex flex-col rounded-xl border bg-card text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50">
           <div class="flex flex-1 flex-col space-y-1.5 p-6">
             <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
               {service.id === "fullstack" && (
@@ -68,7 +68,7 @@ const highlighted = services.filter((s) =>
       ))}
 
       <!-- Products teaser card -->
-      <div class="flex flex-col rounded-xl border border-dashed border-silver/30 bg-card text-card-foreground shadow transition-colors hover:border-silver/40">
+      <div class="flex flex-col rounded-xl border border-dashed border-silver/30 bg-card text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50">
         <div class="flex flex-1 flex-col space-y-1.5 p-6">
           <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-silver">
@@ -89,7 +89,7 @@ const highlighted = services.filter((s) =>
         <div class="flex items-center p-6 pt-0">
           <a
             href="/products"
-            class="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+            class="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:shadow-lg"
           >
             Browse Products
           </a>
@@ -101,7 +101,7 @@ const highlighted = services.filter((s) =>
     <div class="mt-10 flex justify-center">
       <a
         href="/services"
-        class="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-silver px-8 text-sm font-medium text-black shadow transition-colors hover:bg-silver/80"
+        class="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-silver px-8 text-sm font-medium text-black shadow transition-all duration-300 hover:bg-silver/80 hover:shadow-lg"
       >
         View All Services
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

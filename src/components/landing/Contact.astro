@@ -23,7 +23,7 @@ const contactLinks = [
 ];
 ---
 
-<section class="py-20 md:py-32">
+<section class="animate-on-scroll py-20 md:py-32">
   <div class="mx-auto max-w-6xl px-8">
     <!-- Badge -->
     <div class="flex justify-center">
@@ -53,7 +53,7 @@ const contactLinks = [
             href={link.href}
             target={link.icon !== "mail" ? "_blank" : undefined}
             rel={link.icon !== "mail" ? "noopener noreferrer" : undefined}
-            class="group rounded-xl border bg-card text-card-foreground shadow transition-colors hover:border-silver/40"
+            class="group rounded-xl border bg-card text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50"
           >
             <div class="flex flex-col items-center space-y-3 p-8 text-center">
               <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">

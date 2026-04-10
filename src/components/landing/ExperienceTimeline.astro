@@ -9,7 +9,7 @@ function formatDate(date: string): string {
 }
 ---
 
-<section class="py-20 md:py-32">
+<section class="animate-on-scroll py-20 md:py-32">
   <div class="mx-auto max-w-4xl px-8">
     <!-- Badge -->
     <div class="flex justify-center">
@@ -37,7 +37,7 @@ function formatDate(date: string): string {
           ]}></div>
 
           <!-- Content -->
-          <div class="rounded-xl border bg-card p-5 text-card-foreground shadow transition-colors hover:border-silver/40">
+          <div class="rounded-xl border bg-card p-5 text-card-foreground shadow transition-all duration-300 hover:shadow-lg hover:border-silver/50">
             <div class="flex flex-col gap-1">
               <span class="text-xs font-medium text-silver">
                 {formatDate(exp.startDate)} — {formatDate(exp.endDate)}

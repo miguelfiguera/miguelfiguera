@@ -27,7 +27,7 @@ const cards = [
 ];
 ---
 
-<section class="py-20 md:py-32">
+<section class="animate-on-scroll py-20 md:py-32">
   <div class="mx-auto max-w-6xl px-8">
     <!-- Badge -->
     <div class="flex justify-center">
@@ -42,7 +42,7 @@ const cards = [
     <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
       {
         cards.map((card) => (
-          <div class="rounded-xl border bg-card text-card-foreground shadow transition-colors hover:border-silver/40">
+          <div class="rounded-xl border bg-card text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50">
             <div class="flex flex-col space-y-1.5 p-6">
               <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
                 {card.icon === "code" && (

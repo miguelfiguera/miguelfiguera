@@ -34,7 +34,7 @@ export default function ServiceCard({ service }: { service: Service }) {
   const Icon = iconMap[service.iconName];
 
   return (
-    <Card className="flex flex-col transition-colors hover:border-silver/40">
+    <Card className="flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-silver/50">
       <CardHeader>
         <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-silver/10">
           {Icon && <Icon size={24} className="text-silver" />}
