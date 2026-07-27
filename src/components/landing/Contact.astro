@@ -46,15 +46,10 @@ const contactLinks = [
     </p>
 
     <div class="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2">
-      <!-- Contact Form (ERPNext-ready) -->
+      <!-- Contact Form (Dolibarr CRM) -->
       <div class="rounded-xl border bg-card p-8 shadow">
         <h3 class="mb-6 text-lg font-semibold">Send a Message</h3>
-        <form
-          data-erpnext-form="contact"
-          data-erpnext-doctype="Web Form Submission"
-          class="space-y-4"
-          id="contact-form"
-        >
+        <form class="space-y-4" id="contact-form">
           <div>
             <label for="contact-name" class="mb-1.5 block text-sm font-medium">Name</label>
             <input
@@ -62,7 +57,7 @@ const contactLinks = [
               id="contact-name"
               name="name"
               required
-              data-erpnext-field="sender_full_name"
+              maxlength="200"
               class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               placeholder="Your name"
             />
@@ -74,9 +69,22 @@ const contactLinks = [
               id="contact-email"
               name="email"
               required
-              data-erpnext-field="email_address"
+              maxlength="200"
               class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               placeholder="your@email.com"
+            />
+          </div>
+          <div>
+            <label for="contact-phone" class="mb-1.5 block text-sm font-medium">
+              Phone <span class="text-muted-foreground">(optional)</span>
+            </label>
+            <input
+              type="tel"
+              id="contact-phone"
+              name="phone"
+              maxlength="40"
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              placeholder="+1 555 000 0000"
             />
           </div>
           <div>
@@ -85,7 +93,7 @@ const contactLinks = [
               type="text"
               id="contact-subject"
               name="subject"
-              data-erpnext-field="subject"
+              maxlength="200"
               class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               placeholder="Project inquiry"
             />
@@ -97,10 +105,15 @@ const contactLinks = [
               name="message"
               required
               rows="4"
-              data-erpnext-field="message"
+              maxlength="4000"
               class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               placeholder="Tell me about your project..."
             ></textarea>
+          </div>
+          <!-- Honeypot anti-spam: oculto para humanos, los bots lo rellenan -->
+          <div class="hidden" aria-hidden="true">
+            <label for="contact-website">Website</label>
+            <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off" />
           </div>
           <button
             type="submit"
@@ -152,24 +165,45 @@ const contactLinks = [
     const status = document.getElementById("form-status");
     if (!form || !status) return;
 
-    form.addEventListener("submit", (e) => {
+    // Prefill subject from CTA links like /#contact?interest=odoo-implementation
+    const interest = new URLSearchParams(window.location.search).get("interest");
+    if (interest) {
+      const subjectInput = form.elements.namedItem("subject") as HTMLInputElement | null;
+      if (subjectInput && !subjectInput.value) subjectInput.value = interest;
+    }
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      // ERPNext integration point: replace this with actual API call
-      // Example: fetch('/api/method/frappe.client.insert', { ... })
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
+      const submitBtn = form.querySelector<HTMLButtonElement>("button[type=submit]");
+      const data = Object.fromEntries(new FormData(form));
 
-      // For now, open mailto with the form data
-      const subject = encodeURIComponent(String(data.subject || "Website Inquiry"));
-      const body = encodeURIComponent(
-        `Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`
-      );
-      window.location.href = `mailto:miguelqui725@gmail.com?subject=${subject}&body=${body}`;
+      status.textContent = "Sending...";
+      status.className = "text-center text-sm text-muted-foreground mt-2";
+      if (submitBtn) submitBtn.disabled = true;
 
-      status.textContent = "Opening your email client...";
-      status.className = "text-center text-sm text-silver mt-2";
-      form.reset();
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        if (!res.ok) {
+          const err = (await res.json().catch(() => null)) as { error?: string } | null;
+          throw new Error(err?.error || "Something went wrong.");
+        }
+
+        status.textContent = "Message sent! I'll get back to you soon.";
+        status.className = "text-center text-sm text-silver mt-2";
+        form.reset();
+      } catch (err) {
+        status.textContent =
+          err instanceof Error ? err.message : "Could not send the message. Please try again.";
+        status.className = "text-center text-sm text-red-400 mt-2";
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 

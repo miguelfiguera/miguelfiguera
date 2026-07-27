@@ -5,7 +5,8 @@ import { resolve } from "node:path";
 
 describe("production build", () => {
   const rootDir = resolve(__dirname, "../../..");
-  const distDir = resolve(rootDir, "dist");
+  // Con el adaptador Node (SSR), las páginas prerenderizadas van a dist/client/
+  const distDir = resolve(rootDir, "dist/client");
 
   it("completes with exit code 0", () => {
     expect(() => {
