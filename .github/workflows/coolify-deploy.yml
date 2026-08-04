@@ -1,0 +1,21 @@
+name: Deploy en Coolify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disparar deploy en Coolify
+        run: |
+          curl --fail-with-body -sS -m 30 -X POST \
+            -H "Authorization: Bearer ${COOLIFY_ACCESS_TOKEN}" \
+            -H "Accept: application/json" \
+            "${COOLIFY_BASE_URL}/api/v1/deploy?uuid=${APP_UUID}"
+        env:
+          COOLIFY_ACCESS_TOKEN: ${{ secrets.COOLIFY_ACCESS_TOKEN }}
+          COOLIFY_BASE_URL: ${{ secrets.COOLIFY_BASE_URL }}
+          APP_UUID: hsvilnffnuvcae62kii5o7ux
